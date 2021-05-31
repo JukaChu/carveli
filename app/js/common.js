@@ -182,8 +182,8 @@ let allRowSliders = [...document.querySelectorAll('.row-slides')];
 function brbrs(slide) {
     let testSlide = slide;
     let brr = testSlide.getBoundingClientRect().left;
-    console.log(brr + ' sho ce');
-    console.log(testSlide.offsetLeft + ' left?')
+    // console.log(brr + ' sho ce');
+    // console.log(testSlide.offsetLeft + ' left?')
 }
 function changeDisabledBtn(way, slide) {
     if (way !== 0) {
@@ -197,10 +197,11 @@ function changeDisabledBtn(way, slide) {
         let disLeft = slide.closest('.row-slides').querySelector('.slides-btn--prev');
         disLeft.classList.add('disabled');
     }
+
 }
 
 function useSliderRow(way, slide, width, margin, lastSlide, dir) {
-    console.log('slides-pos ++ ' + way);
+    // console.log('slides-pos ++ ' + way);
     changeDisabledBtn(way, slide);
     let toLeftWidth = lastSlide.getBoundingClientRect().left;
 
@@ -223,7 +224,7 @@ function useSliderRow(way, slide, width, margin, lastSlide, dir) {
     brbrs(lastSlide);
 
     // setTimeout(brbrs, 300);
-    console.log('lastSlide = ' + lastSlide);
+    // console.log('lastSlide = ' + lastSlide);
     // console.log('sumOfMargin = ' + sumOfMargin + ' slidewidth = ' + slideWidth);
 
 }
@@ -264,7 +265,7 @@ function ifHaveSlidesRow() {
                             } else {
                                 let way = -1;
                                 let dir = -1;
-                                console.log('click-next');
+                                // console.log('click-next');
                                 sliderPos += way;
                                 let margin = 0;
                                 if (window.innerWidth > 992) {
@@ -343,7 +344,7 @@ function ifHaveSliderGallery() {
                 return sliderGalleryLength;
             } else {
                 sliderGalleryLength += 1;
-                console.log(sliderGalleryLength + ' length-total');
+                // console.log(sliderGalleryLength + ' length-total');
                 sliderLinks.push(k);
                 return sliderGalleryLength;
 
@@ -365,7 +366,7 @@ function getDotsSlider() {
                 dot.dataset.slide = j + plusItem;
                 plusItem = plusItem + 1;
 
-                console.log(plusItem);
+                // console.log(plusItem);
                 dots[j + 1].dataset.slide = j + plusItem;
             } else {
                 dot.dataset.slide = j + plusItem;
@@ -420,7 +421,7 @@ function handleTouchMove(evt) {
             } else {
                 startPosNews = startPosNews + 1;
 
-                console.log(startPosNews + ' start + total ' + sliderGalleryLength);
+                // console.log(startPosNews + ' start + total ' + sliderGalleryLength);
                 let currentDot = document.querySelector(`.gallery-dot[data-slide='${startPosNews}']`);
                 if (!currentDot) {
 
@@ -439,10 +440,10 @@ function handleTouchMove(evt) {
                 startPosNews = startPosNews - 1;
                 let currentDot = document.querySelector(`.gallery-dot[data-slide='${startPosNews}']`);
                 if (!currentDot) {
-                    console.log('startPos =' + startPosNews);
+                    // console.log('startPos =' + startPosNews);
                     document.querySelector('.gallery-dot.active').classList.remove('active');
                     let prevPos = startPosNews - 1;
-                    console.log(prevPos);
+                    // console.log(prevPos);
                     let newCurrent = document.querySelector(`.gallery-dot[data-slide='${startPosNews - 1}']`);
                     newCurrent.classList.add('active');
 
@@ -524,8 +525,8 @@ function ifProdListContains2() {
                 if (Math.abs(xDiff4) > Math.abs(yDiff4)) {/*most significant*/
                     if (xDiff4 > 0) {
                         /* left swipe */
-                        console.log(prodBlocksScreenLine + ' start of left swipe');
-                        console.log(startPosProd2);
+                        // console.log(prodBlocksScreenLine + ' start of left swipe');
+                        // console.log(startPosProd2);
                         nextBtn.click();
 
 
