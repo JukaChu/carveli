@@ -559,13 +559,18 @@ main {
 .product-card__head {
   width: 100%;
   position: relative;
+  .fav-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: $second-font;
     font-style: normal;
     font-weight: 500;
     font-size: 32px;
-    line-height: 17px;
+    line-height: 34px;
     color: #222321;
   }
 
@@ -1725,6 +1730,14 @@ img.lazyload, video.lazyload {
   flex-direction: row;
   align-items: flex-start;
   justify-content: space-between;
+  .fav-btn {
+    top: 0;
+    right: 0;
+    background: none;
+    svg {
+      width: 26px;
+    }
+  }
 }
 
 .slide__discount {
@@ -1971,7 +1984,7 @@ img.lazyload, video.lazyload {
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
-    line-height: 17px;
+    line-height: 15px;
     color: $black;
   }
 }
@@ -2006,7 +2019,7 @@ img.lazyload, video.lazyload {
   width: 100%;
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
   justify-content: flex-start;
   margin-bottom: 11px;
 
@@ -2362,8 +2375,11 @@ img.lazyload, video.lazyload {
     color: $black;
   }
 }
+.mob-only {
+  display: none;
+}
 .product-gallery-mob {
-  display: flex;
+  display: none;
   order: 1;
   width: 100%;
   position: relative;
@@ -2375,6 +2391,7 @@ img.lazyload, video.lazyload {
   flex-direction: row;
   align-items: stretch;
   justify-content: flex-start;
+  transition: transform 0.3s ease-in-out;
 
   .img {
     width: 100%;
@@ -2396,5 +2413,67 @@ img.lazyload, video.lazyload {
 
   }
 }
+.reviewer-mob {
+  display: none;
+}
 
+.gallery-mob__dots {
+  width: 100%;
+  position: absolute;
+  bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.gallery-dot {
+  width: 9px;
+  height: 9px;
+  margin-right: 5px;
+  border-radius: 50%;
+  background: $grey;
+  &.active {
+    background: $black;
+  }
+}
+
+.fav-btn {
+  outline: none;
+  padding: 0;
+  border-radius: 50%;
+  border: none;
+  background: #FAFAFA;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  svg {
+    width: 29px;
+    height: auto;
+    transition: transform 0.3s ease;
+    path {
+      &.liked {
+        fill-opacity: 0;
+      }
+    }
+
+  }
+  &.like {
+    svg {
+      path {
+        fill-opacity: 0;
+        &.liked {
+          fill-opacity: 1;
+        }
+      }
+    }
+  }
+  &:active {
+    svg {
+      transform: scale(0.6, 0.6);
+      transition: transform 0.3s ease;
+    }
+  }
+}
 @import "media"; // Always at the end
