@@ -24,6 +24,11 @@
             <div class="header__bottom-container">
                 <div class="header__left">
                     <a href="/"><img src="./img/logo-home.png" alt=""></a>
+                    <div class="burger-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                     <ul>
                         <li class="active">
                             <p>Каталог</p>
@@ -75,8 +80,8 @@
                 </div>
                 <div class="header__right">
                     <ul>
-                        <li><a href="#"><div class="img"><img src="./img/phone-icon.svg" alt=""></div></a></li>
-                        <li><a href="#"><div class="img"><img src="./img/account-icon.svg" alt=""></div></a></li>
+                        <li class="header-account"><a href="#"><div class="img"><img src="./img/phone-icon.svg" alt=""></div></a></li>
+                        <li class="header-account"><a href="#"><div class="img"><img src="./img/account-icon.svg" alt=""></div></a></li>
                         <li><a href="#"><div class="img"><img src="./img/fav-icon.svg" alt=""></div></a></li>
                         <li><a href="#"><div class="img"><img src="./img/cart-icon.svg" alt=""></div></a></li>
                     </ul>
@@ -88,7 +93,22 @@
     </div>
 
 
+
 </header>
+<div class="header-mob">
+    <div class="header-mob__bg">
+
+    </div>
+    <div class="header-mob__container">
+        <div class="header-mob__top">
+
+        </div>
+        <div class="header-mob__bottom">
+
+        </div>
+    </div>
+
+</div>
 
 
 <main>
@@ -183,7 +203,19 @@
             </div>
 
         </div>
+        <div class="product-gallery-mob">
+            <div class="gallery-mob__track">
+                <div class="img img--big"><img class="lazyload" data-src="./img/bed-img-1.jpg" alt=""></div>
+                <div class="img img--big"><img class="lazyload" data-src="./img/bed-img-2.jpg" alt=""></div>
+                <div class="img"><img class="lazyload" data-src="./img/bed-img-3.jpg" alt=""></div>
+                <div class="img"><img class="lazyload" data-src="./img/bed-img-4.jpg" alt=""></div>
 
+            </div>
+            <div class="gallery-mob__dots">
+
+
+            </div>
+        </div>
         <aside class="product-right">
             <div class="product-card">
                 <div class="product-card__head">
@@ -893,7 +925,8 @@
                             </div>
                             <div class="single-review__item">
                                 <span>товар</span>
-                                <a href="#" target="_blank">Кровать с подьемным механизмом 180*200 см Бархат Cappucino</a>
+                                <a href="#" target="_blank">Кровать с подьемным механизмом 180*200 см Бархат
+                                    Cappucino</a>
 
                             </div>
                             <div class="single-review__photos">
@@ -934,7 +967,8 @@
                             </div>
                             <div class="single-review__item">
                                 <span>товар</span>
-                                <a href="#" target="_blank">Кровать с подьемным механизмом 180*200 см Бархат Cappucino</a>
+                                <a href="#" target="_blank">Кровать с подьемным механизмом 180*200 см Бархат
+                                    Cappucino</a>
 
                             </div>
                             <div class="single-review__photos">
@@ -975,7 +1009,8 @@
                             </div>
                             <div class="single-review__item">
                                 <span>товар</span>
-                                <a href="#" target="_blank">Кровать с подьемным механизмом 180*200 см Бархат Cappucino</a>
+                                <a href="#" target="_blank">Кровать с подьемным механизмом 180*200 см Бархат
+                                    Cappucino</a>
 
                             </div>
                             <div class="single-review__photos">
@@ -1016,7 +1051,8 @@
                             </div>
                             <div class="single-review__item">
                                 <span>товар</span>
-                                <a href="#" target="_blank">Кровать с подьемным механизмом 180*200 см Бархат Cappucino</a>
+                                <a href="#" target="_blank">Кровать с подьемным механизмом 180*200 см Бархат
+                                    Cappucino</a>
 
                             </div>
                             <div class="single-review__photos">
@@ -1038,10 +1074,55 @@
                     </div>
                 </div>
             </div>
+            <div class="pagination">
+                <ul>
+                    <li class="disabled"><a href="#"><img src="./img/right-arrow-black.svg" alt=""></a></li>
+                    <li><span>Страница 1 из 7</span></li>
+                    <li><a href="#"><img src="./img/right-arrow-black.svg" alt=""></a></li>
+                </ul>
+            </div>
 
         </div>
     </section>
 </main>
+
+
+<section class="mailing">
+    <div class="big-container">
+        <div class="mailing-container">
+            <div class="mailing__left">
+                <h3>Подпишитесь на рассылку и получите скидку 10%</h3>
+                <div class="mailing__form">
+                    <form action="">
+                        <label for="">
+                            <input type="email" placeholder="Электронная почта">
+                        </label>
+                        <button class="btn btn--default">Подписаться</button>
+                    </form>
+                </div>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the </p>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="footer">
+    <div class="footer__top">
+        <div class="big-container">
+
+        </div>
+    </div>
+    <div class="footer__bottom">
+        <div class="big-container">
+            <div class="footer__bottom-container">
+                <p>© 1993—2021
+                    Интернет-магазин Сarveli</p>
+
+            </div>
+
+        </div>
+    </div>
+
+</footer>
 
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
 <script

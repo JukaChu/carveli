@@ -252,8 +252,10 @@ function ifHaveSlidesRow() {
                                 sliderPos += way;
                                 let margin = 0;
                                 let dir = 1;
-                                if (window.innerWidth > 768) {
+                                if (window.innerWidth > 992) {
                                     margin = 30;
+                                } else if (window.innerWidth > 650 && window.innerWidth < 991) {
+                                    margin = 20;
                                 } else {
                                     margin = 5;
                                 }
@@ -265,8 +267,10 @@ function ifHaveSlidesRow() {
                                 console.log('click-next');
                                 sliderPos += way;
                                 let margin = 0;
-                                if (window.innerWidth > 768) {
+                                if (window.innerWidth > 992) {
                                     margin = 30;
+                                } else if (window.innerWidth > 650 && window.innerWidth < 991) {
+                                    margin = 20;
                                 } else {
                                     margin = 5;
                                 }
@@ -280,3 +284,19 @@ function ifHaveSlidesRow() {
         }
 }
 ifHaveSlidesRow();
+
+let burgerBtn = document.querySelector('.burger-btn');
+let headerMobile = document.querySelector('.header-mob');
+
+function openMobMenu() {
+    if (!burgerBtn) {
+
+    } else {
+        burgerBtn.addEventListener('click', () => {
+            headerMobile.classList.add('open');
+            document.body.classList.add('no-scroll');
+        })
+    }
+}
+
+openMobMenu();
