@@ -101,7 +101,7 @@ gulp.task('js', async function() {
 	gulp.src([
 		'app/js/*.*', // Always at the end
 		])
-	.pipe(concat('scripts.min.js'))
+	// .pipe(concat('scripts.min.js'))
 	// .pipe(uglify()) // Mifify js (opt.)
 	// .pipe(gulp.dest('app/js'))
 	.pipe(gulp.dest('dist/js'))
