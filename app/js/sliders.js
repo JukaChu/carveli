@@ -188,9 +188,18 @@ function getDotsSlider() {
 ifHaveSliderGallery();
 getDotsSlider();
 let startPosNews = 0;
-newsScreenContainer.addEventListener('touchstart', handleTouchStart, false);
-newsScreenContainer.addEventListener('touchmove', handleTouchMove, false);
 
+function ifHaveProdGallery() {
+    if (!newsScreenContainer) {
+
+    } else {
+        newsScreenContainer.addEventListener('touchstart', handleTouchStart, false);
+        newsScreenContainer.addEventListener('touchmove', handleTouchMove, false);
+
+    }
+
+}
+ifHaveProdGallery();
 var xDown2 = null;
 var yDown2 = null;
 

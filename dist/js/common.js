@@ -147,3 +147,17 @@ function ifHaveFooterMobMenu() {
     }
 }
 ifHaveFooterMobMenu();
+
+let infoBannerOpen = document.querySelector('.info-banner-container');
+
+function ifInfoBanner() {
+    if(!infoBannerOpen) {
+
+    } else {
+        let btnOpeneer = infoBannerOpen.querySelector('.info-banner-btn');
+        btnOpeneer.addEventListener('click', () => {
+            infoBannerOpen.classList.toggle('open');
+        })
+    }
+}
+ifInfoBanner();
