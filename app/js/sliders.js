@@ -3,6 +3,7 @@
 
 let allRowSliders = [...document.querySelectorAll('.row-slides')];
 
+
 function changeDisabledBtn(way, slide) {
     if (way !== 0) {
         let disBtn = slide.closest('.row-slides').querySelector('.slides-btn.disabled');

@@ -1,4 +1,5 @@
 //stars
+
 $('.rating-stars').raty(
     {
         readOnly:   true,

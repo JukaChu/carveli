@@ -15,6 +15,7 @@ document.onload = () => {
     scrollFunction();
 };
 
+
 let allLazyLoad = [...document.querySelectorAll('.lazyload')];
 
 function allLozadImg() {

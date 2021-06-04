@@ -157,6 +157,7 @@ var updateValues = function () {
     $to.prop("value", to);
 };
 
+
 $range.ionRangeSlider({
     onChange: function (data) {
         from = data.from;

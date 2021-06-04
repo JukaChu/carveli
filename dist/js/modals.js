@@ -1,5 +1,6 @@
 let btnSizeOpen = [...document.querySelectorAll('.product-size__btn')];
 let modalForProd = document.querySelector('.modal-for-prod');
+
 function openModalProdDet(item) {
     modalForProd.appendChild(item);
     modalForProd.classList.add('active');
