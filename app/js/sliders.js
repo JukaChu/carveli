@@ -281,10 +281,20 @@ function handleTouchMove(evt) {
 
 window.addEventListener('resize', () => {
     if (window.innerWidth > 992) {
-        newsBlocksScreen.style.transform = `translate(0, 0) translate(0, 0)`;
+        if (!newsBlocksScreen) {
+
+        } else {
+            newsBlocksScreen.style.transform = `translate(0, 0) translate(0, 0)`;
+        }
+
         // currentSlideLegend = 0;
     } else {
-        newsBlocksScreen.style.transform = `translate(-${startPosNews * 100}%, 0)`;
+        if (!newsBlocksScreen) {
+
+        } else {
+            newsBlocksScreen.style.transform = `translate(-${startPosNews * 100}%, 0)`;
+
+        }
 
     }
 });

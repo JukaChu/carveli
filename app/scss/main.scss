@@ -1698,6 +1698,7 @@ img.lazyload, video.lazyload {
       font-size: 14px;
       line-height: 22px;
       color: $black;
+      white-space: nowrap;
 
       strong {
         color: #767874;
@@ -3192,6 +3193,7 @@ img.lazyload, video.lazyload {
   .row-slides__slide {
     width: 100%;
     margin-bottom: 16px;
+    margin-right: 0;
 
     .text span {
       max-width: 320px;
@@ -3318,11 +3320,12 @@ img.lazyload, video.lazyload {
 
     .info-banner-btn {
       &::after {
-        content: '';
+        content: none;
       }
     }
   }
 }
+
 
 .info-banner-btn {
   width: 49px;
@@ -3735,7 +3738,20 @@ input[type=number] {
 }
 
 .irs--round .irs-bar {
-  background-color: #00C2C0;
+  background: #131413;
+  height: 2px;
+  top: 18px;
+}
+.irs--round .irs-handle {
+  width: 20px;
+  height: 20px;
+  top: 9px;
+}
+.irs--round .irs-line {
+  height: 2px;
+  top: 18px;
+  border-radius: 2px;
+  background: #9FA19D;
 }
 
 .irs--round {
@@ -3744,21 +3760,23 @@ input[type=number] {
   }
 }
 
+.irs--round {
+  height: 40px;
+}
 .irs--round .irs-handle {
-  background-color: #00C2C0;
-  border-color: #00C2C0;
-  box-shadow: 0px 0px 0px 5px rgba(0, 194, 192, 0.2);
+  background: $white;
+  box-sizing: border-box;
+  border: 2px solid #131413;
+  box-shadow: none;
+  cursor: pointer;
 }
 
 .irs--round .irs-handle.state_hover,
 .irs--round .irs-handle:hover {
-  background-color: #00C2C0;
+  background-color: $black;
 }
-
-.irs--round .irs-handle {
-  width: 16px;
-  height: 16px;
-  top: 29px
+.irs--round .irs-from, .irs--round .irs-to, .irs--round .irs-single {
+  display: none;
 }
 
 .irs--round .irs-from,

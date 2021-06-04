@@ -7,11 +7,46 @@ $("#button").click(function () {
         scrollTop: $("#elementtoScrollToID").offset().top
     }, 300);
 });
+let numberForDisableBtn = 0;
+let doesActiveFilters = 0;
+let filterClearBtn = document.querySelector('.clear-filters');
+let filterMobBtn = document.querySelector('.filter-btn');
+let filterMobCLose = document.querySelector('.close-filter');
+function changeClearButtonStatus(numb) {
+    doesActiveFilters += numb;
+    if (doesActiveFilters > 0 || numberForDisableBtn > 0) {
+        filterClearBtn.classList.remove('disabled');
+    } else {
+        filterClearBtn.classList.add('disabled');
+    }
+
+}
 
 function openFilterEl() {
     if (!filterElOpen.length) {
 
     } else {
+        filterMobBtn.addEventListener('click', () => {
+           document.body.classList.add('no-scroll');
+            modalFilter.classList.add('active');
+        });
+        filterMobCLose.addEventListener('click', () => {
+           document.body.classList.remove('no-scroll');
+            modalFilter.classList.remove('active');
+        });
+
+        filterClearBtn.addEventListener('click', () => {
+            let filterContainer = document.querySelector('.menu-filter__content');
+            let inputChecked = [...filterContainer.querySelectorAll('input:checked')];
+            inputChecked.forEach((inp) => {
+                inp.nextElementSibling.click();
+            });
+            // let priceRangeCont = document.querySelector('.filter-part__el--price');
+            clearRange();
+            updateValues();
+            changePlaceholderFilter(from, to, $range[0], max, min, $from[0], $to[0]);
+        });
+
         filterElOpen.forEach((btn, k) => {
             btn.addEventListener('click', () => {
                 btn.closest('.filter-part').classList.toggle('open');
@@ -22,10 +57,7 @@ function openFilterEl() {
             link.addEventListener('click', () => {
                 modalFilter.classList.add('active');
                 filterElOpen[j].closest('.filter-part').classList.add('open');
-                console.log(filterElOpen[j].getBoundingClientRect().top);
-                // $(['.menu-filter__content']).animate({
-                //     scrollTop: $(filterElOpen[j]).offset().top
-                // }, 300);
+                document.body.classList.add('no-scroll');
             })
         });
         modalFilter.addEventListener('click', () => {
@@ -33,7 +65,8 @@ function openFilterEl() {
             let openFilters = [...document.querySelectorAll('.filter-part.open')];
             openFilters.forEach((flt) => {
                 flt.classList.remove('open');
-            })
+            });
+            document.body.classList.remove('no-scroll');
 
         });
         modalFilter.querySelector('.menu-filter').addEventListener('click', (e) => {
@@ -44,7 +77,8 @@ function openFilterEl() {
             let openFilters = [...document.querySelectorAll('.filter-part.open')];
             openFilters.forEach((flt) => {
                 flt.classList.remove('open');
-            })
+            });
+            document.body.classList.remove('no-scroll');
         });
         filterPart.forEach((part, z) => {
             //create arrays for filter text, to append in btn head
@@ -84,6 +118,7 @@ function openFilterEl() {
                         jsFilterLinks[z].classList.add('filter-checked');
                         let smalls = [...closesSpanBtn.querySelectorAll('small')];
                         jsFilterLinks[z].querySelector('span').innerHTML = smalls.length;
+                        changeClearButtonStatus(1)
                     } else {
                         let smalls = [...closesSpanBtn.querySelectorAll('small')];
                         smalls.forEach((sml, b) => {
@@ -91,6 +126,7 @@ function openFilterEl() {
                                 sml.remove();
                             }
                         });
+                        changeClearButtonStatus(-1)
                         smalls = [...closesSpanBtn.querySelectorAll('small')];
                         jsFilterLinks[z].querySelector('span').innerHTML = smalls.length;
                         if (smalls.length === 0) {
@@ -126,7 +162,7 @@ function changeColorBgs() {
                     background: ${label} !important;
                     }
                 
-                `
+                `;
             li.appendChild(stylesheetLabel);
 
             // console.log(color);
@@ -135,14 +171,51 @@ function changeColorBgs() {
 }
 changeColorBgs();
 
-// $(".js-range-slider").ionRangeSlider({
-//     type: "double",
-//     min: 0,
-//     max: 1000,
-//     from: 200,
-//     to: 500,
-//     grid: true
-// });
+let rangeNumbersInput = [...document.querySelectorAll('.range-price__numbers input')];
+let filterLinkPrice = document.querySelector('.js-filter-link--price');
+let innerTextPrice = filterLinkPrice.innerHTML;
+
+
+function changePlaceholderFilter(from, to, range, max, min, from2, to2) {
+
+    let newStringText = `${from}₴ - ${to}₴`;
+    let newSmall = document.createElement('small');
+
+
+    newSmall.innerHTML = newStringText;
+
+    // console.log(range);
+    let rangeSpan = range.closest('.filter-part').querySelector('.filter-part__btn span');
+
+    let rangeSpanSmall = rangeSpan.querySelector('small');
+    if (from === min && to === max) {
+        if (!rangeSpanSmall) {
+            filterLinkPrice.innerHTML = innerTextPrice;
+
+        } else {
+            rangeSpanSmall.remove();
+            filterLinkPrice.innerHTML = innerTextPrice;
+        }
+        from2.value = '';
+        to2.value = '';
+        numberForDisableBtn = 0;
+    } else {
+        numberForDisableBtn = 1;
+        if (!rangeSpanSmall) {
+            rangeSpan.appendChild(newSmall);
+            //IF DATA FROM === DATA MIN AND DATA TO === DATA MAX;
+        } else {
+            rangeSpanSmall.remove();
+            rangeSpan.appendChild(newSmall);
+
+        }
+        filterLinkPrice.innerHTML = newStringText;
+    }
+    changeClearButtonStatus(0);
+
+
+}
+
 var $range = $(".js-range-slider"),
     $from = $(".from-range"),
     $to = $(".to-range"),
@@ -163,6 +236,7 @@ $range.ionRangeSlider({
         from = data.from;
         to = data.to;
         updateValues();
+        changePlaceholderFilter(from, to, $range[0], max, min, $from[0], $to[0]);
     }
 });
 
@@ -172,6 +246,14 @@ var updateRange = function () {
         from: from,
         to: to
     });
+};
+var clearRange = function() {
+    range.update({
+        from: min,
+        to: max
+    });
+    from = min;
+    to = max;
 };
 
 $from.on("input", function () {
@@ -184,6 +266,7 @@ $from.on("input", function () {
     }
     updateValues();
     updateRange();
+    changePlaceholderFilter(from, to, $range[0], max, min, $from[0], $to[0]);
 });
 
 $to.on("input", function () {
@@ -196,4 +279,5 @@ $to.on("input", function () {
     }
     updateValues();
     updateRange();
+    changePlaceholderFilter(from, to, $range[0], max, min, $from[0], $to[0]);
 });
