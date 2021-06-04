@@ -55,7 +55,7 @@ function openFilterEl() {
                 text.childNodes.forEach((nd) => {
                     if (nd.nodeType === 3) {
                         arrayOfFilters.push(nd.textContent);
-                        console.log(arrayOfFilters);
+                        // console.log(arrayOfFilters);
                         return arrayOfFilters;
 
                     }
@@ -67,11 +67,11 @@ function openFilterEl() {
                 let idSpan = lbl.querySelector('span');
 
                 idSpan.addEventListener('click', (e) => {
-                    console.log(e.target);
+                    // console.log(e.target);
                     let checkId = document.querySelector(`input#${id}`);
                     let chekOr = document.querySelector(`input#${id}:checked`);
                     let closesSpanBtn = checkId.closest('.filter-part').querySelector('.filter-part__btn span');
-                    console.log(chekOr);
+                    // console.log(chekOr);
                     if (!chekOr) {
                         let newSmall = document.createElement('small');
 
@@ -106,3 +106,93 @@ function openFilterEl() {
 }
 
 openFilterEl();
+
+let colorFilters = [...document.querySelectorAll('.filter-part--color .filter-part__el ul li')];
+
+function changeColorBgs() {
+    if (!colorFilters.length) {
+
+    } else {
+        colorFilters.forEach((li) => {
+            let label = li.querySelector('label').dataset.color;
+            let span = li.querySelector('span');
+
+            let styler = window.getComputedStyle(span, '::before');
+            let color = styler.getPropertyValue('background');
+            // console.log(styler);
+            let stylesheetLabel = document.createElement('style');
+            stylesheetLabel.innerHTML =
+                `[data-color='${label}'] span::before {
+                    background: ${label} !important;
+                    }
+                
+                `
+            li.appendChild(stylesheetLabel);
+
+            // console.log(color);
+        })
+    }
+}
+changeColorBgs();
+
+// $(".js-range-slider").ionRangeSlider({
+//     type: "double",
+//     min: 0,
+//     max: 1000,
+//     from: 200,
+//     to: 500,
+//     grid: true
+// });
+var $range = $(".js-range-slider"),
+    $from = $(".from-range"),
+    $to = $(".to-range"),
+    range,
+    min = $range.data('min'),
+    max = $range.data('max'),
+    from,
+    to;
+
+var updateValues = function () {
+    $from.prop("value", from);
+    $to.prop("value", to);
+};
+
+$range.ionRangeSlider({
+    onChange: function (data) {
+        from = data.from;
+        to = data.to;
+        updateValues();
+    }
+});
+
+range = $range.data("ionRangeSlider");
+var updateRange = function () {
+    range.update({
+        from: from,
+        to: to
+    });
+};
+
+$from.on("input", function () {
+    from = +$(this).prop("value");
+    if (from < min) {
+        from = min;
+    }
+    if (from > to) {
+        from = to;
+    }
+    updateValues();
+    updateRange();
+});
+
+$to.on("input", function () {
+    to = +$(this).prop("value");
+    if (to > max) {
+        to = max;
+    }
+    if (to < from) {
+        to = from;
+    }
+    updateValues();
+    updateRange();
+});
