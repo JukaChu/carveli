@@ -173,7 +173,7 @@ changeColorBgs();
 
 let rangeNumbersInput = [...document.querySelectorAll('.range-price__numbers input')];
 let filterLinkPrice = document.querySelector('.js-filter-link--price');
-let innerTextPrice = filterLinkPrice.innerHTML;
+let innerTextPrice = !filterLinkPrice ? 0 : filterLinkPrice.innerHTML;
 
 
 function changePlaceholderFilter(from, to, range, max, min, from2, to2) {
