@@ -14,6 +14,9 @@
 
 
 @media screen and (max-width: 1500px) {
+  .check-new__right {
+    height: 530px;
+  }
   .info-banner-container {
     padding: 50px 40px;
   }
@@ -72,6 +75,9 @@
 }
 
 @media screen and (max-width: 1400px) {
+  .hero-container {
+    padding: 60px;
+  }
   .global-info__list ul li {
     margin-bottom: 10px;
   }
@@ -112,6 +118,9 @@
   }
 }
 @media screen and (max-width: 1200px) {
+  .hero-container {
+    padding: 60px 40px;
+  }
   .info-banner-container {
     padding: 24px 40px;
   }
@@ -214,6 +223,11 @@
 }
 
 @media screen and (max-width: 1100px) {
+  body {
+    &.no-scroll {
+      padding-right: 0;
+    }
+  }
   .footer__top-right {
     width: 100%;
     align-items: center;
@@ -449,6 +463,77 @@
 }
 
 @media screen and (max-width: 992px) {
+  .check-new__right {
+    height: 320px;
+    margin-top: 20px;
+  }
+  .check-new {
+    padding: 40px 0;
+  }
+  .check-new__left {
+    margin-left: 15px;
+    margin-right: 30px;
+    padding-top: 20px;
+    width: 290px;
+    span {
+      font-size: 24px;
+      line-height: 28px;
+    }
+    p {
+      font-size: 14px;
+      line-height: 18px;
+    }
+    a {
+      font-size: 12px;
+      line-height: 16px;
+    }
+  }
+  .hero {
+    height: 620px;
+  }
+  .hero-container {
+    padding: 50px 15px;
+  }
+  .hero-bg {
+    &::after {
+      position: absolute;
+      width: 0;
+      padding-right: 120%;
+      flex-shrink: 0;
+      height: 0;
+      box-sizing: border-box;
+      padding-top: 120%;
+      display: inline-block;
+      background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+      content: '';
+      left: 0;
+      top: 0;
+      transform: translate(-50%, 0) rotate(-90deg);
+    }
+  }
+  .hero-text {
+    h2 {
+      color: #ffffff;
+      font-size: 32px;
+      line-height: 36px;
+    }
+    p {
+      font-size: 20px;
+      line-height: 30px;
+      color: #ffffff;
+    }
+    .hero-btn {
+      margin-top: 20px;
+    }
+  }
+  .hero-btn {
+    border-color: #ffffff;
+    color: #ffffff;
+    height: 45px;
+    width: 140px;
+    font-size: 16px;
+    line-height: 22px;
+  }
   .info-banner-container {
     padding: 19px 15px 32px;
   }
@@ -702,6 +787,30 @@
 }
 
 @media screen and (max-width: 650px) {
+  .check-new__right {
+    width: 100%;
+    height: 250px;
+    margin-top: 0;
+  }
+  .check-new {
+    padding: 25px 0;
+
+  }
+  .check-new__container {
+    flex-direction: column-reverse;
+  }
+  .check-new__left {
+    margin-left: 0;
+    margin-right: 0;
+    padding-top: 22px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-top: none;
+    width: 100%;
+  }
+  .hero {
+    height: 450px;
+  }
   .catalog__control {
     padding-bottom: 19px;
     position: relative;
