@@ -229,6 +229,14 @@
 }
 
 @media screen and (max-width: 1100px) {
+  .row-talk .row-slides__head {
+    width: 405px;
+    padding-right: 20px;
+  }
+  .row-talk {
+    padding-top: 55px;
+    padding-bottom: 53px;
+  }
   .room-interior .container h2 {
     font-size: 24px;
     line-height: 28px;
@@ -236,7 +244,9 @@
   .single-room-interior {
     height: 390px;
   }
-
+  .row-talk .row-slides__control {
+    top: 28px;
+  }
   body {
     &.no-scroll {
       padding-right: 0;
@@ -477,6 +487,20 @@
 }
 
 @media screen and (max-width: 992px) {
+  .row-slides__slide.row-slides__slide--idea .text span {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .row-talk .row-slides__head p {
+    margin-top: 0;
+  }
+  .row-slides__slide.row-slides__slide--idea {
+    width: 226px;
+
+    .img {
+      padding-top: 119.46%;
+    }
+  }
   .row-slides__head .look-more {
     right: 15px;
   }
@@ -827,6 +851,31 @@
   .look-more {
     font-size: 12px;
     line-height: 17px;
+  }
+  .row-talk {
+    flex-direction: column;
+    .row-slides__head {
+      width: 100%;
+      padding-right: 15px;
+    }
+    .row-slides__control{
+      top: 50px;
+    }
+  }
+  .comment-text{
+    margin-top: 16px;
+    p {
+      margin-top: 16px;
+    }
+  }
+  .row-slides__slide.row-slides__slide--comment {
+    width: 226px;
+    .img {
+      padding-top: 66.814%;
+    }
+  }
+  .row-talk .row-slides__container .row-slides__track{
+    padding-left: 15px;
   }
 }
 @media screen and (max-width: 650px) {

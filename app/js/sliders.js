@@ -62,43 +62,51 @@ function ifHaveSlidesRow() {
             let slideWidth = slidesContainer.querySelector('.row-slides__slide').offsetWidth;
             let style = slidesContainer.querySelector('.row-slides__slide').currentStyle || window.getComputedStyle(slidesContainer.querySelector('.row-slides__slide'));
             let lastSlide = [...row.querySelectorAll('.row-slides__slide')][amountOfSlides -1];
-            sliderControlBtns.forEach((btn) => {
-                btn.addEventListener('click',() => {
-                    if (btn.classList.contains('disabled')) {
 
-                    } else {
-                        if (btn.classList.contains('slides-btn--prev')) {
-                            let way = 1;
-                            sliderPos += way;
-                            let margin = 0;
-                            let dir = 1;
-                            if (window.innerWidth > 992) {
-                                margin = 30;
-                            } else if (window.innerWidth > 650 && window.innerWidth < 991) {
-                                margin = 20;
-                            } else {
-                                margin = 5;
-                            }
-                            useSliderRow(sliderPos, slidesContainer, slideWidth, margin, lastSlide, dir);
-                            return sliderPos;
+            sliderControlBtns.forEach((btn) => {
+                console.log(slidesContainer.offsetWidth);
+                if (lastSlide.getBoundingClientRect().right < slidesContainer.offsetWidth) {
+                    btn.classList.add('disabled');
+
+                } else {
+                    btn.addEventListener('click',() => {
+                        if (btn.classList.contains('disabled')) {
+
                         } else {
-                            let way = -1;
-                            let dir = -1;
-                            // console.log('click-next');
-                            sliderPos += way;
-                            let margin = 0;
-                            if (window.innerWidth > 992) {
-                                margin = 30;
-                            } else if (window.innerWidth > 650 && window.innerWidth < 991) {
-                                margin = 20;
+                            if (btn.classList.contains('slides-btn--prev')) {
+                                let way = 1;
+                                sliderPos += way;
+                                let margin = 0;
+                                let dir = 1;
+                                if (window.innerWidth > 992) {
+                                    margin = 30;
+                                } else if (window.innerWidth > 650 && window.innerWidth < 991) {
+                                    margin = 20;
+                                } else {
+                                    margin = 5;
+                                }
+                                useSliderRow(sliderPos, slidesContainer, slideWidth, margin, lastSlide, dir);
+                                return sliderPos;
                             } else {
-                                margin = 5;
+                                let way = -1;
+                                let dir = -1;
+                                // console.log('click-next');
+                                sliderPos += way;
+                                let margin = 0;
+                                if (window.innerWidth > 992) {
+                                    margin = 30;
+                                } else if (window.innerWidth > 650 && window.innerWidth < 991) {
+                                    margin = 20;
+                                } else {
+                                    margin = 5;
+                                }
+                                useSliderRow(sliderPos, slidesContainer, slideWidth, margin, lastSlide, dir);
+                                return sliderPos;
                             }
-                            useSliderRow(sliderPos, slidesContainer, slideWidth, margin, lastSlide, dir);
-                            return sliderPos;
                         }
-                    }
-                })
+                    })
+                }
+
             })
         })
     }
