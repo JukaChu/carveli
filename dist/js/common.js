@@ -162,3 +162,18 @@ function ifInfoBanner() {
     }
 }
 ifInfoBanner();
+
+let langBtn = [...document.querySelectorAll('.btn-lang > span')];
+
+function openLangMenu() {
+    if (!langBtn.length) {
+
+    } else {
+        langBtn.forEach((btn) => {
+            btn.addEventListener('click', ()=> {
+                btn.classList.toggle('active');
+            })
+        })
+    }
+}
+openLangMenu();
