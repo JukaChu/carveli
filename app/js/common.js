@@ -35,7 +35,7 @@ allLozadImg();
 
 //hover items menu
 
-let menuItems = [...document.querySelectorAll('.header__left li')];
+let menuItems = [...document.querySelectorAll('.header__left > ul > li')];
 
 let itemIndexActiveMenu = 2;
 document.addEventListener('DOMContentLoaded', () => {
@@ -46,6 +46,25 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
 
         }
+        let subMenusNext = [...item.querySelectorAll('.sub-menu__item')];
+
+        subMenusNext.forEach((men, k) => {
+            if (men.querySelector('.sub-next-menu')) {
+                men.addEventListener('mouseover', () => {
+                    men.querySelector('.sub-next-menu').classList.add('hov');
+                    men.children[0].classList.add('hov');
+                    // men.children[0];
+                })
+                men.addEventListener('mouseout', () => {
+                    men.querySelector('.sub-next-menu').classList.remove('hov');
+                   men.children[0].classList.remove('hov');
+
+                })
+            } else {
+
+            }
+
+        })
     })
 });
 
