@@ -66,7 +66,7 @@ gulp.task('det', async function() {
 		.pipe(browserSync.stream())
 });
 gulp.task('img', async function () {
-	gulp.src('app/img/**/*.*') // Выберем файлы по нужному пути
+	gulp.src('app/img/**/*.{gif,jpg,png,svg,mp4}') // Выберем файлы по нужному пути
 		.pipe(imagemin([
 			imagemin.gifsicle({interlaced: true}),
 			imagemin.mozjpeg({quality: 75, progressive: true}),
