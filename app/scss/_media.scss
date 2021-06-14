@@ -27,6 +27,28 @@
 
 
 @media screen and (max-width: 1500px) {
+  .about-article {
+    margin-bottom: 80px;
+
+    .img {
+      width: 549px;
+      height: 367px;
+    }
+
+    .text {
+      padding-left: 8%;
+
+      p {
+        max-width: 540px;
+      }
+    }
+  }
+  .about-title {
+    margin-bottom: 80px;
+  }
+  .about-content {
+    padding: 80px 0;
+  }
   .article-content h2 {
     margin-top: 60px;
     font-size: 52px;
@@ -211,6 +233,48 @@
 }
 
 @media screen and (max-width: 1200px) {
+  .about-banner {
+    height: calc(100vh - 150px);
+
+    .text {
+      span {
+        font-size: 64px;
+        line-height: 64px;
+      }
+
+      p {
+        font-size: 22px;
+        line-height: 32px;
+      }
+    }
+  }
+  .about-article {
+    .img {
+      width: 440px;
+      height: 294px;
+    }
+
+    .text {
+      span {
+        font-size: 24px;
+        line-height: 30px;
+      }
+
+      p, a{
+        font-size: 16px;
+        line-height: 24px;
+      }
+      p {
+        margin-bottom: 16px;
+      }
+    }
+  }
+  .about-title {
+    p {
+      font-size: 32px;
+      line-height: 44px;
+    }
+  }
   .header__top-menu {
     display: none;
   }
@@ -607,6 +671,44 @@
 }
 
 @media screen and (max-width: 992px) {
+  .about-content {
+    padding: 48px 0;
+  }
+  .about-title p {
+    font-size: 24px;
+    line-height: 30px;
+  }
+  .about-container {
+    padding: 0 15px;
+  }
+  .about-article {
+    margin-bottom: 64px;
+    .img {
+      width: 318px;
+      height: 213px;
+    }
+    .text {
+      padding-left: 15px;
+      span {
+font-size: 20px;
+        line-height: 28px;
+        margin-bottom: 10px;
+      }
+      p, a {
+        font-size: 12px;
+        line-height: 16px;
+      }
+    }
+  }
+  .about-title {
+    margin-bottom: 64px;
+  }
+  .about-banner {
+    height: auto;
+    .text {
+      padding: 80px 15px;
+    }
+  }
   .catalog__collection-banner {
     padding: 40px 0;
 
@@ -1141,12 +1243,15 @@
   .catalog__collection-banner {
     flex-direction: column;
     padding: 0 0 15px;
+
     .text {
       width: 100%;
+
       span {
         text-align: center;
         width: 100%;
       }
+
       p {
         max-width: none;
       }
@@ -1199,12 +1304,56 @@
 }
 
 @media screen and (max-width: 650px) {
+  .about-banner .text {
+    padding: 75px 15px;
+    span {
+      font-size: 48px;
+      line-height: 60px;
+      margin-bottom: 9px;
+    }
+    p {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+  .about-banner {
+
+  }
+  .about-article {
+    flex-direction: column;
+    .img {
+      width: 100%;
+      height: 0;
+      position: relative;
+      padding-top: 66.666%;
+      margin-bottom: 20px;
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+    .text {
+      padding-left: 0;
+      width: 100%;
+      span {
+        font-size: 24px;
+        line-height: 30px;
+        margin-bottom: 16px;
+      }
+      p, a {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+  }
   .catalog__collection-banner {
     .text {
       span {
         font-size: 40px;
         line-height: 40px;
       }
+
       p {
         font-size: 16px;
         line-height: 22px;
@@ -1646,6 +1795,41 @@
 }
 
 @media screen and (max-width: 361px) {
+  .about-banner .text {
+    padding: 45px 15px;
+    span {
+      font-size: 32px;
+      line-height: 42px;
+    }
+    p {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+  .about-content {
+    padding: 45px 0;
+  }
+  .about-article {
+    margin-bottom: 35px;
+    .text {
+      span {
+        font-size: 18px;
+        line-height: 26px;
+      }
+      p, a {
+        font-size: 12px;
+        line-height: 18px;
+      }
+    }
+  }
+  .about-title {
+    margin-bottom: 35px;
+    p {
+      font-size: 20px;
+      line-height: 26px;
+    }
+
+  }
   .catalog__collection-banner {
     .text {
       span {
@@ -1653,6 +1837,7 @@
         line-height: 24px;
         margin-bottom: 12px;
       }
+
       p {
         font-size: 12px;
         line-height: 18px;
