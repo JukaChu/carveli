@@ -281,3 +281,27 @@ $to.on("input", function () {
     updateRange();
     changePlaceholderFilter(from, to, $range[0], max, min, $from[0], $to[0]);
 });
+
+
+//showroom filter
+
+let showRoomFilters = [...document.querySelectorAll('.showroom-filter')];
+
+function changeActiveShowroomFilter() {
+    if (!showRoomFilters.length) {
+
+    } else {
+        showRoomFilters.forEach((btn) => {
+            btn.addEventListener('click', () => {
+                let active = document.querySelector('.showroom-filter.active');
+                if (!active) {
+
+                } else {
+                    active.classList.remove('active');
+                    btn.classList.add('active')
+                }
+            })
+        })
+    }
+}
+changeActiveShowroomFilter();
