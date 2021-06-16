@@ -253,6 +253,9 @@
 }
 
 @media screen and (max-width: 1200px) {
+  .shop-banner {
+    margin-top: 30px;
+  }
   .showrooms__banner {
     margin-top: 65px;
     margin-bottom: 30px;
@@ -260,6 +263,9 @@
   .showrooms__title {
     font-size: 40px;
     line-height: 40px;
+  }
+  .shop-info {
+    margin: 40px 0 60px;
   }
   .showrooms__banner .text span {
     font-size: 40px;
@@ -428,6 +434,14 @@
 }
 
 @media screen and (max-width: 1100px) {
+  .shop-info {
+    flex-direction: column;
+    .shop-map {
+      width: 100%;
+      margin-top: 50px;
+
+    }
+  }
   .catalog__collection-banner {
     .text {
 
@@ -711,6 +725,28 @@
 }
 
 @media screen and (max-width: 992px) {
+  .shop-title {
+    font-size: 30px;
+    line-height: 30px;
+    margin-bottom: 15px;
+  }
+  .shop-banner {
+    padding: 0 15px;
+    .img {
+      left: 0;
+      right: 0;
+    }
+  }
+  .shop-info .left .text {
+    span {
+      font-size: 18px;
+      line-height: 18px;
+    }
+    p, a {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
   .about-content {
     padding: 48px 0;
   }
@@ -1371,6 +1407,16 @@ font-size: 20px;
 }
 
 @media screen and (max-width: 650px) {
+  .sort-catalog select {
+    width: 15px;
+
+    border-bottom: none;
+
+  }
+  .shop-info .left {
+    width: 100%;
+
+  }
   .showrooms__title {
     width: 100%;
     text-align: center;
@@ -1897,6 +1943,22 @@ font-size: 20px;
 }
 
 @media screen and (max-width: 361px) {
+  .shop-title {
+    font-size: 24px;
+    line-height: 24px;
+  }
+  .shop-banner {
+    height: 280px;
+    .img {
+      padding-top: 280px;
+    }
+    .text {
+      span {
+        font-size: 36px;
+        line-height: 36px;
+      }
+    }
+  }
   .showrooms__title {
     font-size: 32px;
     line-height: 32px;
@@ -1908,6 +1970,7 @@ font-size: 20px;
   .showrooms__banner .left .img {
     margin: 60px auto;
   }
+
   .showrooms__banner .text {
     span {
       font-size: 32px;
@@ -2025,7 +2088,6 @@ font-size: 20px;
     padding-top: 100%;
   }
   .catalog__control {
-    flex-direction: column;
     align-items: flex-start;
   }
   .filter-btn {
