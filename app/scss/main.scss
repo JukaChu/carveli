@@ -423,7 +423,7 @@ main {
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
-  box-shadow: 0 6px 9px 1px rgba(0, 0, 0, 0.1);
+  //box-shadow: 0 6px 9px 1px rgba(0, 0, 0, 0.1);
   border-top: 1px solid rgba(0, 0, 0, .1);
 
   &__item {
@@ -681,6 +681,7 @@ main {
             padding-bottom: 0;
             height: 0;
             visibility: hidden;
+            box-shadow: 0 6px 9px 1px rgba(0, 0, 0, 0.1);
             transition: all 0.4s ease-in-out;
 
             &__item {
@@ -3353,6 +3354,107 @@ img.lazyload, video.lazyload {
     &:hover {
       background: rgba(34, 35, 33, 0.8);
     }
+  }
+
+  &--grey {
+    background: #EBEBEB;
+    height: 50px;
+    box-sizing: border-box;
+    color: #222321;
+    border: none;
+    transition: background-color 0.4s ease;
+
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    text-transform: uppercase;
+
+    &:hover {
+      background: #f5f5f5;
+      transition: background-color 0.4s ease;
+    }
+  }
+
+  &--yellow {
+    background: #FFEE60;
+    height: 42px;
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    border: none;
+
+    color: #222321;
+
+    &:hover {
+      background: #fff393;
+      transition: background-color 0.4s ease;
+
+    }
+  }
+
+  &--apple {
+    border: none;
+    background: #000000;
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    position: relative;
+
+    img {
+      width: 18px;
+      height: 18px;
+      position: absolute;
+      left: 11px;
+      top: 50%;
+      transform: translate(0, -50%);
+    }
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.7);
+    }
+  }
+
+  &--fb {
+    border: none;
+    background: #3B5998;
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    position: relative;
+
+    img {
+      width: 18px;
+      height: 18px;
+      position: absolute;
+      left: 11px;
+      top: 50%;
+      transform: translate(0, -50%);
+    }
+
+    &:hover {
+      background: rgba(59, 89, 152, 0.87);
+    }
+  }
+  &--disabled {
+    background: $white;
+    color: #BDBFBB;
+    height: 42px;
+    box-sizing: border-box;
+    border: 1px solid #BDBFBB;
+
   }
 }
 
@@ -6637,8 +6739,10 @@ input[type=number] {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
+
   .left {
     width: 50%;
+
     .text {
       width: 100%;
       max-width: 500px;
@@ -6646,6 +6750,7 @@ input[type=number] {
       flex-direction: column;
       align-items: flex-start;
       justify-content: flex-start;
+
       span {
         font-family: $second-font;
         font-style: normal;
@@ -6656,6 +6761,7 @@ input[type=number] {
         display: inline-block;
         margin-bottom: 4px;
       }
+
       p, a {
         font-family: $main-font;
         font-style: normal;
@@ -6668,6 +6774,7 @@ input[type=number] {
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
+
         strong {
           font-weight: normal;
           margin-left: 20px;
@@ -6682,6 +6789,7 @@ input[type=number] {
         align-items: flex-start;
         justify-content: flex-start;
         margin-bottom: 34px;
+
         &:last-child {
           margin-bottom: 0;
         }
@@ -6689,15 +6797,18 @@ input[type=number] {
       }
     }
   }
+
   .shop-map {
     width: 50%;
     height: 350px;
+
     & > * {
       width: 100%;
       height: 100%;
     }
   }
 }
+
 .shop-title {
   font-family: $second-font;
   font-style: normal;
@@ -6708,4 +6819,351 @@ input[type=number] {
   width: 100%;
   color: $black;
 }
+
+.account {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.account-container {
+  width: 100%;
+  max-width: 1135px;
+  margin: 0 auto;
+}
+
+.account-log {
+  width: 100%;
+  border-top: 2px solid #DCDEDE;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  padding-top: 41px;
+  box-sizing: border-box;
+  padding-bottom: 119px;
+}
+
+.account-log__login {
+  width: 50%;
+  box-sizing: border-box;
+  border-right: 1px solid #DCDEDE;
+
+  &:last-child {
+    border-right: none;
+  }
+  &--forgot {
+    width: 100%;
+    .account-log__column {
+      max-width: none;
+      padding-left: 156px;
+      .account-log__select-log {
+        max-width: 322px;
+
+      }
+    }
+  }
+}
+
+.account-log__register {
+  width: 50%;
+  box-sizing: border-box;
+}
+
+.account-log__column {
+  width: 100%;
+  max-width: 322px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  .doubled {
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 6px;
+    .btn {
+      width: calc(50% - 10px);
+      margin-right: 20px;
+      margin-top: 0;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+
+}
+
+.default-form {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+
+  label {
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 15px;
+    color: $black;
+    margin-bottom: 11px;
+
+  }
+
+  button {
+    margin-top: 40px;
+  }
+
+  > a {
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 15px;
+    color: $black;
+    border-bottom: 1px solid $black;
+    margin-left: auto;
+    text-decoration: none;
+  }
+
+  input {
+    background: #FFFFFF;
+    border: 1px solid #DCDEDE;
+    height: 40px;
+    margin-bottom: 22px;
+    width: 100%;
+    padding-left: 20px;
+    box-sizing: border-box;
+
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 15px;
+    color: $black;
+
+    &:focus, &:active {
+      outline: none;
+      border: 1px solid $black;
+    }
+
+    &:required {
+      background: #FFF8C5;
+      border-color: #FFE6B7;
+    }
+  }
+}
+.form-mailing {
+  width: 100%;
+  margin-top: 18px;
+
+  p {
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: $black;
+    margin-bottom: 15px;
+  }
+
+  div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    label {
+      width: auto;
+      margin: 0;
+      margin-right: 35px;
+
+      input {
+        display: none;
+
+        &:checked + span {
+          &::before {
+            background: url("../img/check-mailing.svg") no-repeat center, $black;
+            background-size: 12px;
+          }
+        }
+      }
+
+      span {
+        font-family: $main-font;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        color: $black;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        &::before {
+          width: 24px;
+          height: 24px;
+          border-radius: 50%;
+          border: 1px solid $black;
+          display: inline-block;
+          margin-right: 16px;
+          content: '';
+        }
+
+      }
+
+    }
+  }
+
+}
+
+.form-rules {
+  width: 100%;
+  margin: 40px 0 0;
+
+  label {
+    width: 100%;
+
+    input {
+      display: none;
+
+      &:checked {
+        & + span {
+          &::before {
+            background: url("../img/check-mailing.svg") no-repeat center, $black;
+            background-size: 12px;
+          }
+        }
+      }
+    }
+
+    span {
+      font-family: $main-font;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 24px;
+      color: $black;
+      display: inline-block;
+      padding-left: 36px;
+      position: relative;
+
+      &::before {
+        width: 22px;
+        height: 22px;
+        margin-right: 14px;
+        border: 1px solid $black;
+        box-sizing: border-box;
+        display: inline-block;
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+    }
+
+    a {
+      font-family: $main-font;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 24px;
+      color: $black;
+      text-decoration: none;
+      border-bottom: 1px solid $black;
+    }
+  }
+}
+
+.account-log__content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-top: 18px;
+  > p {
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 15px;
+    color: $black;
+    margin-bottom: 58px;
+  }
+}
+
+.account-log__title {
+  font-family: $second-font;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 30px;
+  color: $black;
+}
+
+.account-log__select-log {
+  width: 100%;
+}
+
+.account-log__reg-type {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  .btn {
+    margin-bottom: 19px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.select-log__or {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 20px 0;
+
+  font-family: $main-font;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 15px;
+  color: $black;
+
+  &::before, &::after {
+    height: 1px;
+    background: #DCDEDE;
+    display: inline-block;
+    content: '';
+    width: auto;
+    flex-grow: 1;
+  }
+
+  &::before {
+    margin-right: 15px;
+  }
+
+  &::after {
+    margin-left: 15px;
+  }
+
+}
+
 @import "media"; // Always at the end

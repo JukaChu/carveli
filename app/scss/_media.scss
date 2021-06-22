@@ -725,6 +725,15 @@
 }
 
 @media screen and (max-width: 992px) {
+  .account-log__column {
+    width: 100%;
+    max-width: none;
+    box-sizing: border-box;
+    padding: 0 25px;
+  }
+  .account-log__login--forgot .account-log__column {
+    padding-left: 25px;
+  }
   .shop-title {
     font-size: 30px;
     line-height: 30px;
@@ -1407,6 +1416,43 @@ font-size: 20px;
 }
 
 @media screen and (max-width: 650px) {
+  .account {
+    margin-top: 30px;
+  }
+  .account-log__login--forgot .account-log__column {
+    padding-left: 0;
+  }
+  .account-log__login--forgot .account-log__column .account-log__select-log {
+    max-width: none;
+  }
+  .account-log {
+    border: none;
+    padding-top: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-bottom: 92px;
+  }
+  .account-log__column {
+    padding: 0;
+  }
+  .account-log__login {
+    width: 100%;
+    border-bottom: 1px solid #DCDEDE;
+    padding-bottom: 25px;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+    border-right: none;
+    &:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+  }
+  .account-log__register {
+    width: 100%;
+  }
   .sort-catalog select {
     width: 15px;
 
