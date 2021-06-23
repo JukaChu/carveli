@@ -34,13 +34,15 @@
     font-size: 52px;
     line-height: 52px;
   }
-  .showrooms__banner  {
+  .showrooms__banner {
     .text {
       padding-left: 40px;
+
       span {
         font-size: 44px;
         line-height: 48px;
       }
+
       p, a {
         font-size: 14px;
         line-height: 20px;
@@ -306,10 +308,11 @@
         line-height: 30px;
       }
 
-      p, a{
+      p, a {
         font-size: 16px;
         line-height: 24px;
       }
+
       p {
         margin-bottom: 16px;
       }
@@ -436,6 +439,7 @@
 @media screen and (max-width: 1100px) {
   .shop-info {
     flex-direction: column;
+
     .shop-map {
       width: 100%;
       margin-top: 50px;
@@ -725,6 +729,161 @@
 }
 
 @media screen and (max-width: 992px) {
+
+  .account-block__left {
+    width: 224px;
+    padding-right: 15px;
+
+    ul {
+      margin-top: 20px;
+    }
+  }
+  .order-line__info {
+    &:last-child {
+      align-items: flex-end;
+
+      span {
+        text-align: right;
+      }
+
+      p {
+        text-align: right;
+
+      }
+    }
+  }
+  .order-footer__info {
+    margin-top: 34px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .order-footer__total {
+    max-width: none;
+  }
+  .account-order__footer {
+    margin-top: 12px;
+  }
+  .order-footer__single {
+    width: 100%;
+    margin-bottom: 18px;
+    margin-right: 0;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .account-order__line {
+    flex-wrap: wrap;
+  }
+  .order-line__name {
+    width: 100%;
+  }
+  .order-line__info {
+    width: calc(100% / 3);
+  }
+  .account-block__left ul li a .text span {
+    font-size: 14px;
+    line-height: 15px;
+  }
+  .account-block__left ul li a .img {
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+  }
+  .breadcrumbs__container {
+    & + .account {
+      margin-top: 6px;
+    }
+  }
+  .account-full {
+    margin-bottom: 87px;
+
+    > p {
+      margin-bottom: 20px;
+    }
+  }
+  .acc-full {
+    width: 100%;
+    padding-top: 11px;
+
+    > span {
+      font-size: 12px;
+      line-height: 27px;
+      font-weight: normal;
+      color: #767874;
+
+      strong {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 27px;
+        color: $black;
+      }
+    }
+
+    .btn {
+      font-family: $main-font;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 18px;
+      color: $black;
+      background: none;
+      border: none;
+      width: auto;
+      height: 30px;
+      padding: 0;
+      display: flex;
+      text-transform: none;
+      align-items: center;
+      justify-content: flex-start;
+
+      &::before {
+        background: url("../img/icon-btn-logout.svg") no-repeat center;
+        background-size: 100%;
+        width: 22px;
+        height: 22px;
+        margin-right: 4px;
+        display: inline-block;
+        content: '';
+      }
+    }
+
+    ul {
+      margin-top: 35px;
+      width: 100%;
+      margin-bottom: 29px;
+      padding-bottom: 20px;
+      border-bottom: 2px solid #DCDEDE;
+
+      li {
+        margin-bottom: 28px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        a {
+          align-items: center;
+
+          .img {
+            margin-right: 13px;
+          }
+
+          .text {
+            span {
+              font-weight: 500;
+              font-size: 16px;
+              line-height: 17px;
+            }
+
+            p {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
   .account-log__column {
     width: 100%;
     max-width: none;
@@ -741,6 +900,7 @@
   }
   .shop-banner {
     padding: 0 15px;
+
     .img {
       left: 0;
       right: 0;
@@ -751,6 +911,7 @@
       font-size: 18px;
       line-height: 18px;
     }
+
     p, a {
       font-size: 16px;
       line-height: 24px;
@@ -763,6 +924,7 @@
     margin-bottom: 40px;
     width: calc(50% - 5px);
     margin-right: 10px;
+
     .img {
       margin-bottom: 8px;
       padding-top: 66.08%;
@@ -773,10 +935,12 @@
   }
   .showrooms__banner {
     align-items: stretch;
+
     .text {
       padding-top: 30px;
       padding-bottom: 30px;
     }
+
     .left {
       .img {
         width: 270px;
@@ -795,17 +959,21 @@
   }
   .about-article {
     margin-bottom: 64px;
+
     .img {
       width: 318px;
       height: 213px;
     }
+
     .text {
       padding-left: 15px;
+
       span {
-font-size: 20px;
+        font-size: 20px;
         line-height: 28px;
         margin-bottom: 10px;
       }
+
       p, a {
         font-size: 12px;
         line-height: 16px;
@@ -817,6 +985,7 @@ font-size: 20px;
   }
   .about-banner {
     height: auto;
+
     .text {
       padding: 80px 15px;
     }
@@ -1416,6 +1585,58 @@ font-size: 20px;
 }
 
 @media screen and (max-width: 650px) {
+  .account-edit-log {
+    padding-top: 26px;
+    margin-top: 11px;
+    border-top: 1px solid #DCDEDE;
+    .default-form button {
+      width: 100%;
+    }
+  }
+  .account-block__head {
+    .btn--logout {
+      display: none;
+    }
+  }
+  .account-order__head::after {
+    top: 28px;
+    transform: translate(0);
+  }
+  .account-order__head {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    .total {
+      margin-left: 0;
+      margin-top: 20px;
+    }
+    .items {
+      margin-top: 20px;
+      align-self: flex-start;
+      margin-left: 0;
+    }
+  }
+  .account.account--side {
+    .account-title {
+      display: none;
+    }
+  }
+  .account-block__orders {
+    margin-top: 11px;
+    padding-top: 26px;
+    border-top: 1px solid #DCDEDE;
+  }
+  .account-block__left {
+    display: none;
+  }
+  .acc-full {
+    > span {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+  }
   .account {
     margin-top: 30px;
   }
@@ -1443,6 +1664,7 @@ font-size: 20px;
     margin-bottom: 30px;
     box-sizing: border-box;
     border-right: none;
+
     &:last-child {
       border-bottom: none;
       margin-bottom: 0;
@@ -1471,14 +1693,17 @@ font-size: 20px;
   }
   .showrooms__banner {
     flex-direction: column;
+
     .left {
       width: 100%;
       margin-right: 0;
       margin-bottom: 30px;
+
       .img {
         margin-top: 130px;
       }
     }
+
     .text {
       width: 100%;
       padding-top: 0;
@@ -1490,11 +1715,13 @@ font-size: 20px;
   }
   .about-banner .text {
     padding: 75px 15px;
+
     span {
       font-size: 48px;
       line-height: 60px;
       margin-bottom: 9px;
     }
+
     p {
       font-size: 20px;
       line-height: 30px;
@@ -1505,26 +1732,31 @@ font-size: 20px;
   }
   .about-article {
     flex-direction: column;
+
     .img {
       width: 100%;
       height: 0;
       position: relative;
       padding-top: 66.666%;
       margin-bottom: 20px;
+
       img {
         position: absolute;
         top: 0;
         left: 0;
       }
     }
+
     .text {
       padding-left: 0;
       width: 100%;
+
       span {
         font-size: 24px;
         line-height: 30px;
         margin-bottom: 16px;
       }
+
       p, a {
         font-size: 16px;
         line-height: 24px;
@@ -1945,6 +2177,7 @@ font-size: 20px;
   }
   .showrooms-filters {
     overflow-x: auto;
+
     &::-webkit-scrollbar {
       display: none;
     }
@@ -1995,9 +2228,11 @@ font-size: 20px;
   }
   .shop-banner {
     height: 280px;
+
     .img {
       padding-top: 280px;
     }
+
     .text {
       span {
         font-size: 36px;
@@ -2022,16 +2257,19 @@ font-size: 20px;
       font-size: 32px;
       line-height: 32px;
     }
+
     p, a {
-      line-height:  17px;
+      line-height: 17px;
     }
   }
   .about-banner .text {
     padding: 45px 15px;
+
     span {
       font-size: 32px;
       line-height: 42px;
     }
+
     p {
       font-size: 14px;
       line-height: 20px;
@@ -2042,11 +2280,13 @@ font-size: 20px;
   }
   .about-article {
     margin-bottom: 35px;
+
     .text {
       span {
         font-size: 18px;
         line-height: 26px;
       }
+
       p, a {
         font-size: 12px;
         line-height: 18px;
@@ -2055,6 +2295,7 @@ font-size: 20px;
   }
   .about-title {
     margin-bottom: 35px;
+
     p {
       font-size: 20px;
       line-height: 26px;

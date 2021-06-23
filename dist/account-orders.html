@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" media="all" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.0/css/ion.rangeSlider.min.css">
+    <link rel="stylesheet" media="all"
+          href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.0/css/ion.rangeSlider.min.css">
 
     <link rel="stylesheet" media="all" href="./css/main.min.css">
     <link rel="stylesheet" media="all" href="./libs/slick.css">
@@ -1100,112 +1101,436 @@
             <div class="breadcrumbs">
                 <ul>
                     <li><a href="#">Главная</a></li>
-                    <li><span>Блог</span></li>
+                    <li><span>Профиль</span></li>
                 </ul>
             </div>
         </div>
 
     </div>
-    <section class="blog">
+    <section class="account account--side">
         <div class="container">
-            <div class="blog-container">
-                <div class="blog-head">
-                    <h2>Блог, советы</h2>
-                    <p>Наши руководства по покупке и уходу расскажут вам все, что вам нужно знать.</p>
-                    <div class="blog-filters">
-                        <button>Блог</button>
-                        <button>Новость</button>
-                        <button>Совет</button>
-                    </div>
-                </div>
-                <div class="blog-content">
-                    <div class="blog-list">
-                        <a href="#" class="blog-link">
-                            <div class="img">
-                                <img src="./img/blog-img-1.jpg" alt="">
+            <div class="account-container">
+                <p class="account-title">Личный кабинет</p>
+                <div class="account-log">
+                    <div class="account-block">
+                        <div class="account-block__left">
+                            <span>Здравствуйте
+                                <strong>Максим</strong>
+                            </span>
+                            <ul>
+                                <li><a href="#" class="active">
+                                    <div class="img">
+                                        <svg width="35" height="35" viewBox="0 0 35 35" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M15.0999 32.9C16.8999 32.9 18.2999 31.5 18.2999 29.7C18.2999 27.9 16.8999 26.5 15.0999 26.5C13.2999 26.5 11.8999 27.9 11.8999 29.7C11.8999 31.4 13.2999 32.9 15.0999 32.9Z"
+                                                  stroke-width="1.5" stroke-miterlimit="10"/>
+                                            <path d="M14 26.6L6.6 6.4L1 3M34.7 22.5L18.1 28.5L34.7 22.5Z"
+                                                  stroke-width="1.5"
+                                                  stroke-miterlimit="10"/>
+                                            <path d="M12.8003 8.59999L27.5003 3.29999L32.9003 18L18.1003 23.4L12.8003 8.59999Z"
+                                                  stroke-width="1.5" stroke-miterlimit="10"/>
+                                            <path d="M20.1001 5.89996L21.8001 10.6" stroke-width="1.5"
+                                                  stroke-miterlimit="10"/>
+                                        </svg>
+                                    </div>
+                                    <div class="text">
+                                        <span>Мои заказы</span>
+                                    </div>
+                                </a></li>
+                                <li><a href="#">
+                                    <div class="img">
+                                        <svg width="35" height="35" viewBox="0 0 35 35" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6 32.8H28.1V8.3L22.7 3H6V32.8Z" stroke-width="1.5"
+                                                  stroke-miterlimit="10"/>
+                                            <path d="M28.1002 8.3H22.7002V3" stroke-width="1.5" stroke-miterlimit="10"/>
+                                            <path d="M10.5 15H24.1" stroke-width="1.5" stroke-miterlimit="10"/>
+                                            <path d="M10.5 19.3H24.1" stroke-width="1.5" stroke-miterlimit="10"/>
+                                            <path d="M10.5 23.7H24.1" stroke-width="1.5" stroke-miterlimit="10"/>
+                                            <path d="M10.5 28H24.1" stroke-width="1.5" stroke-miterlimit="10"/>
+                                        </svg>
+                                    </div>
+                                    <div class="text">
+                                        <span>Мои профиль</span>
+                                    </div>
+                                </a></li>
+                                <li><a href="#">
+                                    <div class="img">
+                                        <svg width="35" height="35" viewBox="0 0 35 35" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5.51953 14.3163V30.6198H13.535V19.5783H21.4653V30.6198H29.4808V14.3163"
+                                                  stroke-width="1.5" stroke-miterlimit="10"/>
+                                            <path d="M1 17.508L17.5426 5L34 17.508" stroke-width="1.5"
+                                                  stroke-miterlimit="10"/>
+                                        </svg>
+                                    </div>
+                                    <div class="text">
+                                        <span>Мои Адреса</span>
+                                    </div>
+                                </a></li>
+                                <li><a href="#">
+                                    <div class="img">
+                                        <svg width="35" height="35" viewBox="0 0 35 35" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M17.9 30.5C17.5 30.5 17.1 30.4 16.7 30.1C11.7 25.7 3 19.8 3 12.9C3 10.5 3.8 8.2 5.4 6.6C7 4.9 9.1 4 11.4 4C13.1 4 14.7 4.5 16.1 5.6C16.8 6.1 17.4 6.8 18 7.6C18.6 6.8 19.2 6.2 19.9 5.6C21.3 4.5 22.9 4 24.6 4C26.9 4 29 4.9 30.6 6.6C32.2 8.3 33 10.5 33 12.9C33 19.8 24.2 25.8 19.3 30.1C18.7 30.4 18.3 30.5 17.9 30.5Z"
+                                                  stroke-width="1.5" stroke-miterlimit="10"/>
+                                        </svg>
+                                    </div>
+                                    <div class="text">
+                                        <span>Список желаний</span>
+                                    </div>
+                                </a></li>
+                                <li><a href="#">
+                                    <div class="img">
+                                        <svg width="35" height="35" viewBox="0 0 35 35" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M32.9 5H3V29.1H32.9V5Z" stroke-width="1.5" stroke-miterlimit="10"/>
+                                            <path d="M32.8 5L17.9 17.7L3 5" stroke-width="1.5" stroke-miterlimit="10"/>
+                                        </svg>
+                                    </div>
+                                    <div class="text">
+                                        <span>Рассылка</span>
+                                    </div>
+                                </a></li>
+
+
+                            </ul>
+                        </div>
+                        <div class="account-block__right">
+                            <div class="account-block__head">
+                                <span>Мои заказы</span>
+                                <button class="btn btn--logout">Выйти</button>
+
                             </div>
-                            <div class="tag"><p>Новость</p></div>
-                            <div class="text">
-                                <p>Тренды 2021 - цвета, которые понравятся вам в этом году</p>
+
+                            <div class="account-block__orders">
+                                <div class="account-order order-status order-status--good">
+                                    <div class="account-order__head">
+                                        <div class="info">
+                                            <p>№ 633 946 478 от 03.03.21</p>
+                                            <p>Выполнен</p>
+                                        </div>
+                                        <div class="total">
+                                            <span>Сумма</span>
+                                            <p>60 000 ₴</p>
+                                        </div>
+                                        <div class="items">
+                                            <div class="item"><img src="./img/ord-i-1.png" alt=""></div>
+                                            <div class="item"><img src="./img/ord-i-2.png" alt=""></div>
+                                        </div>
+
+                                    </div>
+                                    <div class="account-order__content">
+                                        <div class="account-order__orders">
+                                            <div class="account-order__line">
+                                                <div class="order-line__name">
+                                                    <p class="order-line__title">Товар</p>
+                                                    <a href="#">
+                                                        <div class="img">
+                                                            <img src="./img/ord-i-1.png" alt="">
+                                                        </div>
+                                                        <div class="text">
+                                                            <p>LEILAH Кровать с подьемным механизмом 160*200 Rose
+                                                                Velvet </p>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="order-line__info">
+                                                    <p class="order-line__title">Цвет</p>
+                                                    <span>Серый</span>
+                                                </div>
+                                                <div class="order-line__info">
+                                                    <p class="order-line__title">Кол-во</p>
+                                                    <span>1</span>
+                                                </div>
+                                                <div class="order-line__info">
+                                                    <p class="order-line__title">Сумма</p>
+                                                    <span>29 999 ₴</span>
+                                                </div>
+
+                                            </div>
+                                            <div class="account-order__line">
+                                                <div class="order-line__name">
+                                                    <p class="order-line__title">Товар</p>
+                                                    <a href="#">
+                                                        <div class="img">
+                                                            <img src="./img/ord-i-2.png" alt="">
+                                                        </div>
+                                                        <div class="text">
+                                                            <p>LEILAH Кровать с подьемным механизмом 160*200 Rose
+                                                                Velvet </p>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="order-line__info">
+                                                    <p class="order-line__title">Цвет</p>
+                                                    <span>Серый</span>
+                                                </div>
+                                                <div class="order-line__info">
+                                                    <p class="order-line__title">Кол-во</p>
+                                                    <span>1</span>
+                                                </div>
+                                                <div class="order-line__info">
+                                                    <p class="order-line__title">Сумма</p>
+                                                    <span>29 999 ₴</span>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="account-order__footer">
+                                            <div class="order-footer__total">
+                                                <div class="order-footer__total-line">
+                                                    <span>Сумма товаров:</span>
+                                                    <p>60 000 ₴</p>
+                                                </div>
+                                                <div class="order-footer__total-line">
+                                                    <span>Доставка:</span>
+                                                    <p>250 ₴</p>
+                                                </div>
+                                                <div class="order-footer__total-line order-footer__total-line--total">
+                                                    <span>Итого: </span>
+                                                    <p>60 250 ₴</p>
+                                                </div>
+
+                                            </div>
+                                            <div class="order-footer__info">
+                                                <div class="order-footer__single">
+                                                    <span>Вид доставки</span>
+                                                    <div class="text">
+                                                        <p>Новая Почта</p>
+                                                        <p>ТТН 778-106037971</p>
+                                                    </div>
+
+                                                </div>
+                                                <div class="order-footer__single">
+                                                    <span>Адрес доставки <a href="#">Изменить</a></span>
+                                                    <div class="text">
+                                                        <p>Киев, ТЦ Аракс ул.Кольцевая дорога 110</p>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="account-order order-status order-status--decline">
+                                    <div class="account-order__head">
+                                        <div class="info">
+                                            <p>№ 633 946 478 от 03.03.21</p>
+                                            <p>Откленен пользователем</p>
+                                        </div>
+                                        <div class="total">
+                                            <span>Сумма</span>
+                                            <p>60 000 ₴</p>
+                                        </div>
+                                        <div class="items">
+                                            <div class="item"><img src="./img/ord-i-1.png" alt=""></div>
+                                        </div>
+
+                                    </div>
+                                    <div class="account-order__content">
+                                        <div class="account-order__orders">
+                                            <div class="account-order__line">
+                                                <div class="order-line__name">
+                                                    <p class="order-line__title">Товар</p>
+                                                    <a href="#">
+                                                        <div class="img">
+                                                            <img src="./img/ord-i-1.png" alt="">
+                                                        </div>
+                                                        <div class="text">
+                                                            <p>LEILAH Кровать с подьемным механизмом 160*200 Rose
+                                                                Velvet </p>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="order-line__info">
+                                                    <p class="order-line__title">Цвет</p>
+                                                    <span>Серый</span>
+                                                </div>
+                                                <div class="order-line__info">
+                                                    <p class="order-line__title">Кол-во</p>
+                                                    <span>1</span>
+                                                </div>
+                                                <div class="order-line__info">
+                                                    <p class="order-line__title">Сумма</p>
+                                                    <span>29 999 ₴</span>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="account-order__footer">
+                                            <div class="order-footer__total">
+                                                <div class="order-footer__total-line">
+                                                    <span>Сумма товаров:</span>
+                                                    <p>60 000 ₴</p>
+                                                </div>
+                                                <div class="order-footer__total-line">
+                                                    <span>Доставка:</span>
+                                                    <p>250 ₴</p>
+                                                </div>
+                                                <div class="order-footer__total-line order-footer__total-line--total">
+                                                    <span>Итого: </span>
+                                                    <p>60 250 ₴</p>
+                                                </div>
+
+                                            </div>
+                                            <div class="order-footer__info">
+                                                <div class="order-footer__single">
+                                                    <span>Вид доставки</span>
+                                                    <div class="text">
+                                                        <p>Новая Почта</p>
+                                                        <p>ТТН 778-106037971</p>
+                                                    </div>
+
+                                                </div>
+                                                <div class="order-footer__single">
+                                                    <span>Адрес доставки <a href="#">Изменить</a></span>
+                                                    <div class="text">
+                                                        <p>Киев, ТЦ Аракс ул.Кольцевая дорога 110</p>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="account-order order-status order-status--good">
+                                    <div class="account-order__head">
+                                        <div class="info">
+                                            <p>№ 633 946 478 от 03.03.21</p>
+                                            <p>Выполнен</p>
+                                        </div>
+                                        <div class="total">
+                                            <span>Сумма</span>
+                                            <p>60 000 ₴</p>
+                                        </div>
+                                        <div class="items">
+                                            <div class="item"><img src="./img/ord-i-1.png" alt=""></div>
+                                            <div class="item"><img src="./img/ord-i-2.png" alt=""></div>
+                                        </div>
+
+                                    </div>
+                                    <div class="account-order__content">
+                                        <div class="account-order__orders">
+                                            <div class="account-order__line">
+                                                <div class="order-line__name">
+                                                    <p class="order-line__title">Товар</p>
+                                                    <a href="#">
+                                                        <div class="img">
+                                                            <img src="./img/ord-i-1.png" alt="">
+                                                        </div>
+                                                        <div class="text">
+                                                            <p>LEILAH Кровать с подьемным механизмом 160*200 Rose
+                                                                Velvet </p>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="order-line__info">
+                                                    <p class="order-line__title">Цвет</p>
+                                                    <span>Серый</span>
+                                                </div>
+                                                <div class="order-line__info">
+                                                    <p class="order-line__title">Кол-во</p>
+                                                    <span>1</span>
+                                                </div>
+                                                <div class="order-line__info">
+                                                    <p class="order-line__title">Сумма</p>
+                                                    <span>29 999 ₴</span>
+                                                </div>
+
+                                            </div>
+                                            <div class="account-order__line">
+                                                <div class="order-line__name">
+                                                    <p class="order-line__title">Товар</p>
+                                                    <a href="#">
+                                                        <div class="img">
+                                                            <img src="./img/ord-i-2.png" alt="">
+                                                        </div>
+                                                        <div class="text">
+                                                            <p>LEILAH Кровать с подьемным механизмом 160*200 Rose
+                                                                Velvet </p>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="order-line__info">
+                                                    <p class="order-line__title">Цвет</p>
+                                                    <span>Серый</span>
+                                                </div>
+                                                <div class="order-line__info">
+                                                    <p class="order-line__title">Кол-во</p>
+                                                    <span>1</span>
+                                                </div>
+                                                <div class="order-line__info">
+                                                    <p class="order-line__title">Сумма</p>
+                                                    <span>29 999 ₴</span>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="account-order__footer">
+                                            <div class="order-footer__total">
+                                                <div class="order-footer__total-line">
+                                                    <span>Сумма товаров:</span>
+                                                    <p>60 000 ₴</p>
+                                                </div>
+                                                <div class="order-footer__total-line">
+                                                    <span>Доставка:</span>
+                                                    <p>250 ₴</p>
+                                                </div>
+                                                <div class="order-footer__total-line order-footer__total-line--total">
+                                                    <span>Итого: </span>
+                                                    <p>60 250 ₴</p>
+                                                </div>
+
+                                            </div>
+                                            <div class="order-footer__info">
+                                                <div class="order-footer__single">
+                                                    <span>Вид доставки</span>
+                                                    <div class="text">
+                                                        <p>Новая Почта</p>
+                                                        <p>ТТН 778-106037971</p>
+                                                    </div>
+
+                                                </div>
+                                                <div class="order-footer__single">
+                                                    <span>Адрес доставки <a href="#">Изменить</a></span>
+                                                    <div class="text">
+                                                        <p>Киев, ТЦ Аракс ул.Кольцевая дорога 110</p>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
                             </div>
-                        </a>
-                        <a href="#" class="blog-link">
-                            <div class="img">
-                                <img src="./img/blog-img-2.jpg" alt="">
-                            </div>
-                            <div class="tag"><p>Совет</p></div>
-                            <div class="text">
-                                <p>Тренды 2021 - цвета, которые понравятся вам в этом году</p>
-                            </div>
-                        </a>
-                        <a href="#" class="blog-link">
-                            <div class="img">
-                                <img src="./img/blog-img-3.jpg" alt="">
-                            </div>
-                            <div class="tag"><p>Совет</p></div>
-                            <div class="text">
-                                <p>Тренды 2021 - цвета, которые понравятся вам в этом году</p>
-                            </div>
-                        </a>
-                        <a href="#" class="blog-link">
-                            <div class="img">
-                                <img src="./img/blog-img-4.jpg" alt="">
-                            </div>
-                            <div class="tag"><p>Блог</p></div>
-                            <div class="text">
-                                <p>Тренды 2021 - цвета, которые понравятся вам в этом году</p>
-                            </div>
-                        </a>
-                        <a href="#" class="blog-link">
-                            <div class="img">
-                                <img src="./img/blog-img-5.jpg" alt="">
-                            </div>
-                            <div class="tag"><p>Новость</p></div>
-                            <div class="text">
-                                <p>Тренды 2021 - цвета, которые понравятся вам в этом году</p>
-                            </div>
-                        </a>
-                        <a href="#" class="blog-link">
-                            <div class="img">
-                                <img src="./img/blog-img-6.jpg" alt="">
-                            </div>
-                            <div class="tag"><p>Совет</p></div>
-                            <div class="text">
-                                <p>Тренды 2021 - цвета, которые понравятся вам в этом году</p>
-                            </div>
-                        </a>
-                        <a href="#" class="blog-link">
-                            <div class="img">
-                                <img src="./img/blog-img-7.jpg" alt="">
-                            </div>
-                            <div class="tag"><p>Совет</p></div>
-                            <div class="text">
-                                <p>Тренды 2021 - цвета, которые понравятся вам в этом году</p>
-                            </div>
-                        </a>
-                        <a href="#" class="blog-link">
-                            <div class="img">
-                                <img src="./img/blog-img-7.jpg" alt="">
-                            </div>
-                            <div class="tag"><p>Блог</p></div>
-                            <div class="text">
-                                <p>Тренды 2021 - цвета, которые понравятся вам в этом году</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="pagination">
-                        <div class="more-items">
-                            <a href="#" class="btn btn--white">Показать еще</a>
-                            <p>Страница 1 из 10</p>
+
                         </div>
                     </div>
+
+
                 </div>
+
             </div>
         </div>
+
     </section>
 </main>
-
-
 
 
 
