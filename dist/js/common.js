@@ -15,7 +15,27 @@ document.onload = () => {
     scrollFunction();
 };
 
+document.addEventListener('wheel', function (e) {
+    //direction scroll
+    // console.log(e.deltaY + ' daltaY');
 
+
+        if (e.deltaY < 0 && e.deltaY > -500) {
+            // scdir = 'down';
+            document.body.querySelector(".header").classList.remove('scroll-down');
+
+        }
+        if (e.deltaY > 0 && e.deltaY < 500) {
+            // scdir = 'up';
+            document.body.querySelector(".header").classList.add('scroll-down');
+
+        }
+
+
+
+
+    e.stopPropagation();
+});
 let allLazyLoad = [...document.querySelectorAll('.lazyload')];
 
 function allLozadImg() {
@@ -110,6 +130,8 @@ function headerMenus() {
         })
     }
 }
+
+
 
 headerMenus();
 

@@ -77,8 +77,23 @@ function btnDetailOpenFnc() {
         btnDetailOpen.forEach((btn, k) => {
             btn.addEventListener('click', () => {
                 // btn.closest('.product-card__single-detail').querySelector('.menu-info').classList.add('active');
-                let itm = btn.closest('.product-card__single-detail').querySelector('.menu-info').cloneNode(true);
-                openModalProdDet(itm);
+                let btnFather = btn.closest('.product-card__single-detail');
+                if (btnFather.classList.contains('single-detail--char')) {
+                    if (window.innerWidth > 922) {
+
+                            $([document.documentElement, document.body]).animate({
+                                scrollTop: $(".global-info__list").offset().top - 140
+                            }, 600);
+
+                    } else {
+                        let itm = btn.closest('.product-card__single-detail').querySelector('.menu-info').cloneNode(true);
+                        openModalProdDet(itm);
+                    }
+                } else {
+                    let itm = btn.closest('.product-card__single-detail').querySelector('.menu-info').cloneNode(true);
+                    openModalProdDet(itm);
+                }
+
 
 
                 // document.body.classList.add('no-scroll');

@@ -322,6 +322,7 @@ function ifProdListContains2() {
     } else {
 
         prodLineScroll.forEach((line,k) => {
+
             let prodBlocksScreenLine = [...line.querySelectorAll('.row-slides__slide')].length;
             let prevBtn = line.closest('.row-slides').querySelector('.slides-btn--prev');
             let nextBtn = line.closest('.row-slides').querySelector('.slides-btn--next');

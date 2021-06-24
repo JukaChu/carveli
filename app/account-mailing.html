@@ -57,7 +57,7 @@
                                         <span>Мои заказы</span>
                                     </div>
                                 </a></li>
-                                <li><a href="#" >
+                                <li><a href="#">
                                     <div class="img">
                                         <svg width="35" height="35" viewBox="0 0 35 35" fill="none"
                                              xmlns="http://www.w3.org/2000/svg">
@@ -74,7 +74,7 @@
                                         <span>Мои профиль</span>
                                     </div>
                                 </a></li>
-                                <li><a href="#" class="active">
+                                <li><a href="#">
                                     <div class="img">
                                         <svg width="35" height="35" viewBox="0 0 35 35" fill="none"
                                              xmlns="http://www.w3.org/2000/svg">
@@ -100,7 +100,7 @@
                                         <span>Список желаний</span>
                                     </div>
                                 </a></li>
-                                <li><a href="#">
+                                <li><a href="#" class="active">
                                     <div class="img">
                                         <svg width="35" height="35" viewBox="0 0 35 35" fill="none"
                                              xmlns="http://www.w3.org/2000/svg">
@@ -118,97 +118,54 @@
                         </div>
                         <div class="account-block__right">
                             <div class="account-block__head">
-                                <span>Мои адреса</span>
+                                <span>Рассылка</span>
                                 <button class="btn btn--logout">Выйти</button>
 
                             </div>
-                            <div class="account-address">
-                                <div class="account-address__head">
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                        Ipsum has been the industry's standard dummy text ever since the </p>
-                                    <button class="btn btn--yellow">Добавить адрес</button>
-                                </div>
-                                <div class="address-inner">
+                            <div class="account-edit-log">
+                                <form action="" class="default-form">
+                                    <label for="reg-name">Имя</label>
+                                    <input type="text" id="reg-name" value="John">
+                                    <label for="reg-email">Электронная почта</label>
+                                    <input type="email" id="reg-email" value="johndoe@mail.com">
+                                    <label for="reg-day">День рождения</label>
+                                    <input type="text" id="reg-day" value="johnDoe123">
 
-                                </div>
-                                <div class="address-create" data-edit="Изменить">
-                                    <div class="address-create__head">
-                                        <p>Адрес по умолчанию</p>
-
+                                    <div class="form-rules">
+                                        <p>Виды рассылок </p>
+                                        <label for="accept-rules">
+                                            <input type="radio" id="accept-rules" name="type-of">
+                                            <span>Email-письма </span>
+                                        </label>
+                                        <label for="accept-rules2">
+                                            <input type="radio" id="accept-rules2" name="type-of">
+                                            <span>Новости, акции компании </span>
+                                        </label>
+                                        <label for="accept-rules3">
+                                            <input type="radio" id="accept-rules3" name="type-of">
+                                            <span>Персональные рекомендации </span>
+                                        </label>
+                                        <label for="accept-rules4">
+                                            <input type="radio" id="accept-rules4" name="type-of">
+                                            <span>Информация об акциях, промокодах и скидках </span>
+                                        </label>
                                     </div>
-                                    <div class="address-create__content">
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting
-                                            industry. </p>
-                                        <form action="">
-                                            <div>
-                                                <label for="__name">Имя*</label>
-                                                <input type="text" id="__name" class="address-name">
-                                            </div>
-                                            <div>
-                                                <label for="__surname">Фамилия*</label>
-                                                <input type="text" id="__surname" class="address-surname">
-                                            </div>
-                                            <div class="input-full">
-                                                <label for="__street">Улица*</label>
-                                                <input type="text" id="__street" class="address-street">
-                                            </div>
-                                            <div>
-                                                <label for="__build">№ дома*</label>
-                                                <input type="text" id="__build" class="address-build">
-                                            </div>
-                                            <div>
-                                                <label for="__room">№ квартиры*</label>
-                                                <input type="text" id="__room" class="address-room">
-                                            </div>
-                                            <div>
-                                                <label for="__country">Область*</label>
-                                                <input type="text" id="__country" class="address-country">
-                                            </div>
-                                            <div>
-                                                <label for="__city">Город*</label>
-                                                <input type="text" id="__city" class="address-city">
-                                            </div>
-                                            <div>
-                                                <label for="__phone">Телефон*</label>
-                                                <input type="text" id="__phone" class="address-phone">
-                                            </div>
-                                            <div>
-                                                <label for="__email">Электронная почта*</label>
-                                                <input type="text" id="__email" class="address-email">
-                                            </div>
-                                            <div class="checkbox">
-                                                <label for="__default">
-                                                    <input type="checkbox" id="__default" class="address-default" data-true="Адрес по умолчанию" data-false="Адрес">
-                                                    <span>Сделать это моим адресом по умолчанию </span>
-                                                </label>
-
-
-                                            </div>
-                                            <button class="btn btn--yellow save-address" type="button">Сохранить</button>
-                                        </form>
-                                    </div>
-
-                                </div>
-
-                                <template class="address-template">
-                                    <div class="single-address">
-                                        <div class="single-address__head">
-                                            <p>Адрес</p>
-                                            <p class="default">Адрес по умолчанию</p>
-                                            <div class="remove-add">
-
-                                            </div>
-                                        </div>
-                                        <div class="single-address__content">
-
-
-                                        </div>
-                                        <button class="btn btn--grey">Изменить</button>
+                                    <div class="form-rules">
+                                        <p>Каналы связи </p>
+                                        <label for="accept-rules">
+                                            <input type="checkbox" id="accept-rules5" >
+                                            <span>Email-письма </span>
+                                        </label>
 
                                     </div>
 
-                                </template>
-
+                                    <button class="btn btn--yellow">
+                                        Сохранить
+                                    </button>
+                                    <button class="btn btn--grey">
+                                        отписаться от рассылки
+                                    </button>
+                                </form>
                             </div>
 
 
