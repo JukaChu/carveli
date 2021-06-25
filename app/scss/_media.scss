@@ -736,6 +736,14 @@
 }
 
 @media screen and (max-width: 992px) {
+  .product-info {
+    > .img {
+      display: none;
+    }
+    .product-video {
+      display: block;
+    }
+  }
   .address-create__content div {
     margin-bottom: 23px;
     width: 100%;

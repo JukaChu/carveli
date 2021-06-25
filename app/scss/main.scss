@@ -1626,7 +1626,9 @@ main.open-modal {
   //grid-gap: 8px;
   //position: relative;
   //grid-template-columns: 1fr 1fr;
-
+  .product-video {
+    margin-bottom: 8px;
+  }
   .img {
     width: calc(50% - 4px);
     height: 0;
@@ -1703,6 +1705,33 @@ img.lazyload, video.lazyload {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
+  .img {
+    width: calc(50% - 4px);
+    height: 0;
+    position: relative;
+    padding-top: 62.42%;
+    margin-bottom: 8px;
+
+    &.img--big {
+      //grid-column-start: 1;
+      //grid-column-end: 3;
+      height: 0;
+      width: 100%;
+      padding-top: 66.66%;
+    }
+
+    img {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+
+    }
+  }
+  .product-video {
+    display: none;
+  }
 }
 
 .product-info__head {
