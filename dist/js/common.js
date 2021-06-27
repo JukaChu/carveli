@@ -319,4 +319,41 @@ function slideMobMenu() {
 }
 slideMobMenu();
 
+//cart
+
+let quanChange = [...document.querySelectorAll('.quan')];
+
+function changeQuantity() {
+    if (!quanChange.length) {
+
+    } else {
+        quanChange.forEach((q) => {
+            q.addEventListener('click', () => {
+                if (q.classList.contains('quan-minus')) {
+                    q.nextElementSibling.value = Number(q.nextElementSibling.value) - 1;
+                } else {
+                    q.previousElementSibling.value = Number(q.previousElementSibling.value) + 1;
+                }
+            })
+        })
+    }
+
+}
+
+changeQuantity();
+
+let actCouponP = document.querySelector('.activate-coupon');
+
+function openCoupon() {
+    if (!actCouponP) {
+
+    } else {
+        actCouponP.addEventListener('click', () => {
+            actCouponP.closest('.cart-info__coupon').classList.add('active');
+        })
+    }
+}
+
+openCoupon()
+
 
