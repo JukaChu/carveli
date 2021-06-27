@@ -168,3 +168,46 @@ function addToCartF() {
     }
 }
 addToCartF();
+
+
+
+//open login
+
+let openLoginBtn = document.querySelector('.modal-login__login .btn');
+
+function loginCheckoutBtn() {
+    if (!openLoginBtn) {
+
+    } else {
+        let modalLogin = document.querySelector('.modal-login');
+        modalLogin.addEventListener('click', () => {
+           modalLogin.classList.remove('active');
+
+        });
+
+        let modalLoginBlock = document.querySelector('.modal-login-block');
+        modalLoginBlock.addEventListener('click', (e) => {
+            e.stopPropagation();
+        });
+
+        let guestModalLogin = document.querySelector('.modal-login__guest');
+        guestModalLogin.addEventListener('click', () => {
+           modalLogin.classList.remove('active');
+        });
+
+        let closeModalLogin = document.querySelector('.close-modal');
+        closeModalLogin.addEventListener('click',() => {
+           modalLogin.classList.remove('active');
+
+        });
+        openLoginBtn.addEventListener('click', () => {
+            openLoginBtn.closest('.modal-login__have-acc').classList.add('active');
+        });
+
+
+    }
+
+}
+
+loginCheckoutBtn();
+

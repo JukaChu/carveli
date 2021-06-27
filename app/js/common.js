@@ -5,9 +5,15 @@ window.onscroll = function () {
 
 function scrollFunction() {
     if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-        document.body.querySelector(".header").classList.add('scrolled');
+        if (document.body.querySelector(".header")) {
+            document.body.querySelector(".header").classList.add('scrolled');
+        }
+
     } else {
-        document.body.querySelector(".header").classList.remove('scrolled');
+        if (document.body.querySelector(".header")) {
+            document.body.querySelector(".header").classList.remove('scrolled');
+        }
+
     }
 }
 
@@ -22,12 +28,18 @@ document.addEventListener('wheel', function (e) {
 
         if (e.deltaY < 0 && e.deltaY > -500) {
             // scdir = 'down';
-            document.body.querySelector(".header").classList.remove('scroll-down');
+            if (document.body.querySelector(".header")) {
+                document.body.querySelector(".header").classList.remove('scroll-down');
+            }
+
 
         }
         if (e.deltaY > 0 && e.deltaY < 500) {
             // scdir = 'up';
-            document.body.querySelector(".header").classList.add('scroll-down');
+            if (document.body.querySelector(".header")) {
+                document.body.querySelector(".header").classList.add('scroll-down');
+            }
+
 
         }
 
@@ -154,13 +166,13 @@ openMobMenu();
 
 
 let footerChangeCity = document.querySelector('.footer-selector');
-let footerChangeOptions = [...footerChangeCity.querySelectorAll('select option')];
-let footerTabs = [...footerChangeCity.closest('.footer-menu').querySelectorAll('.footer-tab')];
+let footerChangeOptions = [...document.querySelectorAll('.footer-selector select option')];
 
 function ifSelectFooter() {
     if(!footerChangeCity) {
 
     } else {
+        let footerTabs = [...footerChangeCity.closest('.footer-menu').querySelectorAll('.footer-tab')];
         footerChangeCity.querySelector('select').addEventListener('change', () => {
             let value = footerChangeCity.querySelector('select').value;
             footerChangeOptions.forEach((optio, k) => {
@@ -354,6 +366,55 @@ function openCoupon() {
     }
 }
 
-openCoupon()
+openCoupon();
+
+//open help checkout
+
+let btnCheckOutOpen = [...document.querySelectorAll('.checkout-help__single')];
+
+function controlCheckoutHelp() {
+    if (!btnCheckOutOpen.length) {
+
+    } else {
+        btnCheckOutOpen.forEach((btn) => {
+            if (btn.querySelector('.more')) {
+                let btn2 = btn.querySelector('.more');
+                btn2.addEventListener('click', () => {
+                    btn.classList.toggle('open');
+                })
+            } else {
+
+            }
+
+        })
+    }
+}
+controlCheckoutHelp();
+
+//checkout next
+
+
+let checkoutNextBtn = [...document.querySelectorAll('.checkout-next')];
+
+function checkoutNextChange() {
+
+    if (!checkoutNextBtn.length) {
+
+    } else {
+        checkoutNextBtn.forEach((btn, k) => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                btn.closest('.checkout-step').classList.add('hidden');
+                btn.closest('.checkout-step').nextElementSibling.classList.remove('hidden');
+                [...document.querySelectorAll('.checkout-progress ul li')][k].classList.add('done');
+                [...document.querySelectorAll('.checkout-progress ul li')][k].nextElementSibling.classList.add('active');
+            })
+        })
+    }
+
+}
+
+checkoutNextChange();
+
 
 
