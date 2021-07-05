@@ -1,53 +1,45 @@
 window.onscroll = function () {
     scrollFunction();
+
 };
+function checkScrollDir() {
+    newValue = window.pageYOffset;
+    if (oldValue < newValue) {
 
+        if (document.body.querySelector(".header")) {
+            document.body.querySelector(".header").classList.add('scroll-down');
+        }
+    } else if (oldValue > newValue) {
+        if (document.body.querySelector(".header")) {
+            document.body.querySelector(".header").classList.remove('scroll-down');
+        }
+    }
+    oldValue = newValue;
+}
 
+let oldValue = 0;
+let newValue = 0;
 function scrollFunction() {
     if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
         if (document.body.querySelector(".header")) {
             document.body.querySelector(".header").classList.add('scrolled');
         }
-
+        checkScrollDir()
     } else {
         if (document.body.querySelector(".header")) {
             document.body.querySelector(".header").classList.remove('scrolled');
+            document.body.querySelector(".header").classList.remove('scroll-down');
         }
 
     }
+
 }
 
 document.onload = () => {
     scrollFunction();
 };
 
-document.addEventListener('scroll', function (e) {
-    //direction scroll
-    // console.log(e.deltaY + ' daltaY');
 
-
-        if (e.deltaY < 0 && e.deltaY > -500) {
-            // scdir = 'down';
-            if (document.body.querySelector(".header")) {
-                document.body.querySelector(".header").classList.remove('scroll-down');
-            }
-
-
-        }
-        if (e.deltaY > 0 && e.deltaY < 500) {
-            // scdir = 'up';
-            if (document.body.querySelector(".header")) {
-                document.body.querySelector(".header").classList.add('scroll-down');
-            }
-
-
-        }
-
-
-
-
-    e.stopPropagation();
-});
 let allLazyLoad = [...document.querySelectorAll('.lazyload')];
 
 function allLozadImg() {
