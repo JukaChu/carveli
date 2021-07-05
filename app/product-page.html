@@ -30,7 +30,10 @@
     <div class="product">
         <div class="product-left">
             <div class="product-gallery">
-                <!--                <div class="out-of-stock">Out of stock</div>-->
+                <div class="product-gallery__tags">
+                    <div class="product-gallery__tag product-gallery__tag--sale">Скидка</div>
+                </div>
+
                 <div class="img img--big"><img class="lazyload" data-src="./img/bed-img-1.jpg" alt=""></div>
                 <div class="product-video">
                     <div class="video wistia_embed wistia_async_jkpbjyg4sx seo=false videoFoam=true muted=false volume=1 popover=false playButton=true controlsVisibleOnLoad=false playerColor=E1E3DE endVideoBehavior=reset fullscreenButton=true wmode=transparent wistia_embed_initialized">
@@ -45,6 +48,9 @@
                 <div class="img img--big"><img class="lazyload" data-src="./img/bed-img-2.jpg" alt=""></div>
                 <div class="img"><img class="lazyload" data-src="./img/bed-img-3.jpg" alt=""></div>
                 <div class="img"><img class="lazyload" data-src="./img/bed-img-4.jpg" alt=""></div>
+                <div class="img img--big"><img class="lazyload" data-src="./img/bed-img-11.jpg" alt=""></div>
+                <div class="img"><img class="lazyload" data-src="./img/bed-img-12.jpg" alt=""></div>
+                <div class="img"><img class="lazyload" data-src="./img/bed-img-13.jpg" alt=""></div>
             </div>
             <div class="product-info">
                 <div class="product-info__head">
@@ -54,7 +60,7 @@
                         of type and scrambled it to make a type specimen book. It has survived not only five centuries,
                         but also</p>
                     <a href="#">Посмотреть все кровати</a>
-                    <a href="#">Посмотреть КОЛЛЕКЦИЮ</a>
+                    <a href="#">Посмотреть всю коллекцию</a>
                 </div>
                 <div class="product-video">
                     <div class="video wistia_embed wistia_async_jkpbjyg4sx seo=false videoFoam=true muted=false volume=1 popover=false playButton=true controlsVisibleOnLoad=false playerColor=E1E3DE endVideoBehavior=reset fullscreenButton=true wmode=transparent wistia_embed_initialized">
@@ -92,25 +98,32 @@
                     </div>
 
                     <div class="global-info__list">
-                        <h3>Характеристики</h3>
-                        <ul>
-                            <li><p>Длина (см)</p><span>234</span></li>
-                            <li><p>Ширина (см)</p><span>232</span></li>
-                            <li><p>Высота (см)</p><span>142</span></li>
-                            <li><p>Материал каркаса</p><span>Массив дерева</span></li>
-                            <li><p>Материал ног</p><span>Массив дерева</span></li>
-                            <li><p>Материал наполнения</p><span>Пенополиуретан</span></li>
-                            <li><p>Характеристика обивки</p><span>100% Полиестер</span></li>
-                        </ul>
-                        <ul>
-                            <li><p>Тест Мартиндейла</p><span>80000</span></li>
-                            <li><p>Наличие основания под матрас</p><span>С основанием под матрас</span></li>
-                            <li><p>Подъемный механизм</p><span>С подьемным механизмом</span></li>
-                            <li><p>Место для хранения</p><span>С местом для хранения</span></li>
-                            <li><p>Гарантия (мес)</p><span>18</span></li>
-                            <li><p>Страна производства</p><span>Украина</span></li>
-                            <li><p>Стиль</p><span>Современный</span></li>
-                        </ul>
+                        <div class="side">
+                            <h3>Размеры</h3>
+                            <ul>
+                                <li><p>Длина (см)</p><span>234</span></li>
+                                <li><p>Ширина (см)</p><span>232</span></li>
+                                <li><p>Высота (см)</p><span>142</span></li>
+                                <li><p>Материал каркаса</p><span>Массив дерева</span></li>
+                                <li><p>Материал ног</p><span>Массив дерева</span></li>
+                                <li><p>Материал наполнения</p><span>Пенополиуретан</span></li>
+                                <li><p>Характеристика обивки</p><span>100% Полиестер</span></li>
+                            </ul>
+                        </div>
+                        <div class="side">
+                            <h3>Детали</h3>
+                            <ul>
+                                <li><p>Тест Мартиндейла</p><span>80000</span></li>
+                                <li><p>Наличие основания под матрас</p><span>С основанием под матрас</span></li>
+                                <li><p>Подъемный механизм</p><span>С подьемным механизмом</span></li>
+                                <li><p>Место для хранения</p><span><a href="#">Узнать больше</a></span></li>
+                                <li><p>Гарантия (мес)</p><span>18</span></li>
+                                <li><p>Страна производства</p><span>Украина</span></li>
+                                <li><p>Стиль</p><span>Современный</span></li>
+                            </ul>
+                        </div>
+
+
                     </div>
                 </div>
 
@@ -119,11 +132,11 @@
 
         </div>
         <div class="product-gallery-mob">
-            <div class="gallery-mob__track">
-                <div class="img img--big"><img src="./img/bed-img-1.jpg" alt=""></div>
-                <div class="img img--big"><img src="./img/bed-img-2.jpg" alt=""></div>
-                <div class="img"><img src="./img/bed-img-3.jpg" alt=""></div>
-                <div class="img"><img src="./img/bed-img-4.jpg" alt=""></div>
+            <div class="gallery-mob__track swiper-wrapper">
+                <div class="img img--big swiper-slide" ><img src="./img/bed-img-1.jpg" alt=""></div>
+                <div class="img img--big swiper-slide"><img src="./img/bed-img-2.jpg" alt=""></div>
+                <div class="img swiper-slide"><img src="./img/bed-img-3.jpg" alt=""></div>
+                <div class="img swiper-slide"><img src="./img/bed-img-4.jpg" alt=""></div>
 
             </div>
             <div class="gallery-mob__dots">
@@ -161,12 +174,12 @@
                         </svg>
 
                     </button>
+
+                    <p>Кровать с подьемным механизмом 180*200 см Бархат Cappucino</p>
                     <div class="product__rating">
                         <div class="rating-stars" data-score="4.5"></div>
                         <a href="#">69 отзывов</a>
                     </div>
-                    <p>Кровать с подьемным механизмом 180*200 см Бархат Cappucino</p>
-
                 </div>
                 <div class="product-card__price">
                     <div class="price__current">
@@ -377,7 +390,7 @@
                             </div>
                         </div>
                         <div class="product-size__single">
-                            <div class="product-size__btn">
+                            <div class="product-size__btn product-size__btn--disabled">
                                 <p>Размер спального места </p>
                                 <span>180х200</span>
 
@@ -443,6 +456,12 @@
                     <div class="product-card__buy">
                         <p>3шт есть в наличии</p>
                         <button class="buy-btn">Купить</button>
+
+                    </div>
+
+                    <div class="product-card__one-click">
+                        <input type="text" placeholder="(0XX) XXX-XX-XX">
+                        <button class="buy-btn">Купить в один клик</button>
 
                     </div>
                     <div class="product-card__details">
@@ -598,41 +617,41 @@
             </div>
         </div>
         <div class="row-slides__container">
-            <div class="row-slides__track">
+            <div class="row-slides__track swiper-wrapper">
 
-                <a href="#" target="_blank" class="row-slides__slide">
+                <a href="#" target="_blank" class="row-slides__slide swiper-slide">
                     <div class="img">
                         <img class="lazyload" data-src="./img/sld-inst-1.jpg" alt="">
                     </div>
 
                 </a>
-                <a href="#" target="_blank" class="row-slides__slide">
+                <a href="#" target="_blank" class="row-slides__slide swiper-slide">
                     <div class="img">
                         <img class="lazyload" data-src="./img/sld-inst-2.jpg" alt="">
                     </div>
 
                 </a>
-                <a href="#" target="_blank" class="row-slides__slide">
+                <a href="#" target="_blank" class="row-slides__slide swiper-slide">
                     <div class="img">
                         <img class="lazyload" data-src="./img/sld-inst-3.jpg" alt="">
                     </div>
 
                 </a>
 
-                <a href="#" target="_blank" class="row-slides__slide">
+                <a href="#" target="_blank" class="row-slides__slide swiper-slide">
                     <div class="img">
                         <img class="lazyload" data-src="./img/sld-inst-4.jpg" alt="">
                     </div>
 
                 </a>
-                <a href="#" target="_blank" class="row-slides__slide">
+                <a href="#" target="_blank" class="row-slides__slide swiper-slide">
                     <div class="img">
                         <img class="lazyload" data-src="./img/sld-inst-1.jpg" alt="">
                     </div>
 
                 </a>
 
-                <a href="#" target="_blank" class="row-slides__slide">
+                <a href="#" target="_blank" class="row-slides__slide swiper-slide">
                     <div class="img">
                         <img class="lazyload" data-src="./img/sld-inst-2.jpg" alt="">
                     </div>
@@ -645,6 +664,7 @@
 
 
     </section>
+
     <section class="row-slides">
         <div class="row-slides__head">
             <h2>Рекомендуемые товары </h2>
@@ -655,14 +675,14 @@
         </div>
 
         <div class="row-slides__container">
-            <div class="row-slides__track">
+            <div class="row-slides__track swiper-wrapper">
 
-                <a href="#" target="_blank" class="row-slides__slide row-slides__slide--link">
+                <a href="#" target="_blank" class="row-slides__slide row-slides__slide--link swiper-slide">
                     <div class="img">
                         <img class="lazyload" data-src="./img/rec-img-1.jpg" alt="">
                     </div>
                     <div class="slide__tags">
-                        <div class="slide__discount">4000₴ скидка на матрас и кровать</div>
+                        <div class="slide__discount">Новинка</div>
                         <button class="fav-btn">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32"
                                  preserveAspectRatio="xMidYMid meet"
@@ -693,17 +713,16 @@
                         </button>
                     </div>
                     <div class="text">
-                        <span>LEILAH Кровать с подьемным механизмом 160*200 Rose Velvet</span>
-                        <p>18 799 ₴ <strong>22 799 ₴</strong></p>
+                        <span><strong>LEILAH</strong> Кровать с подьемным механизмом 160*200 Rose Velvet</span>
+                        <p>18 799 ₴</p>
                     </div>
 
                 </a>
-                <a href="#" target="_blank" class="row-slides__slide row-slides__slide--link">
+                <a href="#" target="_blank" class="row-slides__slide row-slides__slide--link swiper-slide">
                     <div class="img">
                         <img class="lazyload" data-src="./img/rec-img-2.jpg" alt="">
                     </div>
                     <div class="slide__tags">
-                        <div class="slide__discount">4000₴ скидка на матрас и кровать</div>
                         <button class="fav-btn">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32"
                                  preserveAspectRatio="xMidYMid meet"
@@ -734,17 +753,17 @@
                         </button>
                     </div>
                     <div class="text">
-                        <span>LEILAH Кровать с подьемным механизмом 160*200 Rose Velvet</span>
-                        <p>18 799 ₴ <strong>22 799 ₴</strong></p>
+                        <span><strong>LEILAH</strong> Кровать с подьемным механизмом 160*200 Rose Velvet</span>
+                        <p >18 799 ₴ </p>
                     </div>
 
                 </a>
-                <a href="#" target="_blank" class="row-slides__slide row-slides__slide--link">
+                <a href="#" target="_blank" class="row-slides__slide row-slides__slide--link swiper-slide">
                     <div class="img">
                         <img class="lazyload" data-src="./img/rec-img-3.jpg" alt="">
                     </div>
                     <div class="slide__tags">
-                        <div class="slide__discount">4000₴ скидка на матрас и кровать</div>
+                        <div class="slide__discount slide__discount--sale">Скидка</div>
                         <button class="fav-btn">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32"
                                  preserveAspectRatio="xMidYMid meet"
@@ -775,17 +794,18 @@
                         </button>
                     </div>
                     <div class="text">
-                        <span>LEILAH Кровать с подьемным механизмом 160*200 Rose Velvet</span>
-                        <p>18 799 ₴ <strong>22 799 ₴</strong></p>
+                        <span><strong>LEILAH</strong> Кровать с подьемным механизмом 160*200 Rose Velvet</span>
+                        <p class="sale">18 799 ₴ <strong>22 799 ₴</strong></p>
                     </div>
 
                 </a>
-                <a href="#" target="_blank" class="row-slides__slide row-slides__slide--link">
+
+                <a href="#" target="_blank" class="row-slides__slide row-slides__slide--link swiper-slide">
                     <div class="img">
                         <img class="lazyload" data-src="./img/rec-img-4.jpg" alt="">
                     </div>
                     <div class="slide__tags">
-                        <div class="slide__discount">4000₴ скидка на матрас и кровать</div>
+
                         <button class="fav-btn">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32"
                                  preserveAspectRatio="xMidYMid meet"
@@ -816,17 +836,17 @@
                         </button>
                     </div>
                     <div class="text">
-                        <span>LEILAH Кровать с подьемным механизмом 160*200 Rose Velvet</span>
-                        <p>18 799 ₴ <strong>22 799 ₴</strong></p>
+                        <span><strong>LEILAH</strong> Кровать с подьемным механизмом 160*200 Rose Velvet</span>
+                        <p>18 799 ₴</p>
                     </div>
 
                 </a>
-                <a href="#" target="_blank" class="row-slides__slide row-slides__slide--link">
+                <a href="#" target="_blank" class="row-slides__slide row-slides__slide--link swiper-slide">
                     <div class="img">
                         <img class="lazyload" data-src="./img/rec-img-2.jpg" alt="">
                     </div>
                     <div class="slide__tags">
-                        <div class="slide__discount">4000₴ скидка на матрас и кровать</div>
+                        <div class="slide__discount">Новинка</div>
                         <button class="fav-btn">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32"
                                  preserveAspectRatio="xMidYMid meet"
@@ -857,17 +877,17 @@
                         </button>
                     </div>
                     <div class="text">
-                        <span>LEILAH Кровать с подьемным механизмом 160*200 Rose Velvet</span>
-                        <p>18 799 ₴ <strong>22 799 ₴</strong></p>
+                        <span><strong>LEILAH</strong> Кровать с подьемным механизмом 160*200 Rose Velvet</span>
+                        <p>18 799 ₴</p>
                     </div>
 
                 </a>
-                <a href="#" target="_blank" class="row-slides__slide row-slides__slide--link">
+                <a href="#" target="_blank" class="row-slides__slide row-slides__slide--link swiper-slide">
                     <div class="img">
                         <img class="lazyload" data-src="./img/rec-img-3.jpg" alt="">
                     </div>
                     <div class="slide__tags">
-                        <div class="slide__discount">4000₴ скидка на матрас и кровать</div>
+                        <div class="slide__discount slide__discount--sale">Скидка</div>
                         <button class="fav-btn">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32"
                                  preserveAspectRatio="xMidYMid meet"
@@ -898,17 +918,16 @@
                         </button>
                     </div>
                     <div class="text">
-                        <span>LEILAH Кровать с подьемным механизмом 160*200 Rose Velvet</span>
-                        <p>18 799 ₴ <strong>22 799 ₴</strong></p>
+                        <span><strong>LEILAH</strong> Кровать с подьемным механизмом 160*200 Rose Velvet</span>
+                        <p class="sale">18 799 ₴ <strong>22 799 ₴</strong></p>
                     </div>
 
                 </a>
-                <a href="#" target="_blank" class="row-slides__slide row-slides__slide--link">
+                <a href="#" target="_blank" class="row-slides__slide row-slides__slide--link swiper-slide">
                     <div class="img">
                         <img class="lazyload" data-src="./img/rec-img-1.jpg" alt="">
                     </div>
                     <div class="slide__tags">
-                        <div class="slide__discount">4000₴ скидка на матрас и кровать</div>
                         <button class="fav-btn">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32"
                                  preserveAspectRatio="xMidYMid meet"
@@ -939,8 +958,8 @@
                         </button>
                     </div>
                     <div class="text">
-                        <span>LEILAH Кровать с подьемным механизмом 160*200 Rose Velvet</span>
-                        <p>18 799 ₴ <strong>22 799 ₴</strong></p>
+                        <span><strong>LEILAH</strong> Кровать с подьемным механизмом 160*200 Rose Velvet</span>
+                        <p>18 799 ₴ </p>
                     </div>
 
                 </a>
@@ -951,6 +970,7 @@
 
 
     </section>
+
     <section class="row-slides">
         <div class="row-slides__head">
             <h2>Просмотренные товары </h2>
@@ -960,178 +980,13 @@
             </div>
         </div>
         <div class="row-slides__container">
-            <div class="row-slides__track">
-
-                <a href="#" target="_blank" class="row-slides__slide row-slides__slide--link">
-                    <div class="img">
-                        <img class="lazyload" data-src="./img/rec-img-3.jpg" alt="">
-                    </div>
-                    <div class="slide__tags">
-                        <div class="slide__discount">4000₴ скидка на матрас и кровать</div>
-                        <button class="fav-btn">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32"
-                                 preserveAspectRatio="xMidYMid meet"
-                            >
-                                <defs>
-                                    <clipPath id="__lottie_element_2">
-                                        <rect width="32" height="32" x="0" y="0"></rect>
-                                    </clipPath>
-                                </defs>
-                                <g clip-path="url(#__lottie_element_2)">
-                                    <g transform="matrix(1,0,0,1,4.322999954223633,6)" opacity="1"
-                                       style="display: block;">
-                                        <g opacity="1" transform="matrix(1,0,0,1,11.673999786376953,10.5649995803833)">
-                                            <path fill="rgb(33,34,32)" fill-opacity="1"
-                                                  d=" M5.4039998054504395,-10.5649995803833 C5.383999824523926,-10.5649995803833 5.368000030517578,-10.5649995803833 5.3480000495910645,-10.562999725341797 C3.375999927520752,-10.545000076293945 1.5099999904632568,-9.593000411987305 -0.0010000000474974513,-7.849999904632568 C-1.5110000371932983,-9.593000411987305 -3.377000093460083,-10.545000076293945 -5.348999977111816,-10.562999725341797 C-5.36899995803833,-10.5649995803833 -5.386000156402588,-10.5649995803833 -5.40500020980835,-10.5649995803833 C-7.425000190734863,-10.5649995803833 -9.291000366210938,-9.553000450134277 -10.53499984741211,-7.784999847412109 C-15.135000228881836,-1.2369999885559082 -4.573999881744385,6.998000144958496 -0.6000000238418579,10.098999977111816 C-0.6000000238418579,10.098999977111816 -0.0010000000474974513,10.565999984741211 -0.0010000000474974513,10.565999984741211 C-0.0010000000474974513,10.565999984741211 0.5989999771118164,10.098999977111816 0.5989999771118164,10.098999977111816 C4.572999954223633,6.998000144958496 15.133999824523926,-1.2369999885559082 10.534000396728516,-7.784999847412109 C9.291000366210938,-9.553000450134277 7.423999786376953,-10.5649995803833 5.4039998054504395,-10.5649995803833z M-0.0010000000474974513,8.093000411987305 C-5.500999927520752,3.740000009536743 -11.99899959564209,-2.312999963760376 -8.942000389099121,-6.663000106811523 C-8.069000244140625,-7.9070000648498535 -6.781000137329102,-8.616999626159668 -5.4039998054504395,-8.616999626159668 C-5.392000198364258,-8.616999626159668 -5.380000114440918,-8.616999626159668 -5.36899995803833,-8.616000175476074 C-3.686000108718872,-8.600000381469727 -2.065000057220459,-7.567999839782715 -0.8080000281333923,-5.704999923706055 C-0.8080000281333923,-5.704999923706055 -0.0010000000474974513,-4.511000156402588 -0.0010000000474974513,-4.511000156402588 C-0.0010000000474974513,-4.511000156402588 0.8059999942779541,-5.704999923706055 0.8059999942779541,-5.704999923706055 C2.065000057220459,-7.567999839782715 3.684999942779541,-8.600000381469727 5.368000030517578,-8.616000175476074 C5.379000186920166,-8.616999626159668 5.390999794006348,-8.616999626159668 5.4029998779296875,-8.616999626159668 C6.781000137329102,-8.616999626159668 8.067999839782715,-7.906000137329102 8.940999984741211,-6.663000106811523 C11.998000144958496,-2.312999963760376 5.5,3.740000009536743 -0.0010000000474974513,8.093000411987305z"></path>
-                                        </g>
-                                    </g>
-                                    <g transform="matrix(1,0,0,1,4.322999954223633,6)" opacity="1"
-                                       style="display: block;">
-                                        <g opacity="1" transform="matrix(1,0,0,1,11.673999786376953,10.5649995803833)">
-                                            <path class="liked" fill="rgb(241,88,86)"
-                                                  d=" M5.4039998054504395,-10.5649995803833 C5.383999824523926,-10.5649995803833 5.368000030517578,-10.5649995803833 5.3480000495910645,-10.562999725341797 C3.375999927520752,-10.545000076293945 1.5099999904632568,-9.593000411987305 -0.0010000000474974513,-7.849999904632568 C-1.5110000371932983,-9.593000411987305 -3.377000093460083,-10.545000076293945 -5.348999977111816,-10.562999725341797 C-5.36899995803833,-10.5649995803833 -5.386000156402588,-10.5649995803833 -5.40500020980835,-10.5649995803833 C-7.425000190734863,-10.5649995803833 -9.291000366210938,-9.553000450134277 -10.53499984741211,-7.784999847412109 C-15.135000228881836,-1.2369999885559082 -4.573999881744385,6.998000144958496 -0.6000000238418579,10.098999977111816 C-0.6000000238418579,10.098999977111816 -0.0010000000474974513,10.565999984741211 -0.0010000000474974513,10.565999984741211 C-0.0010000000474974513,10.565999984741211 0.5989999771118164,10.098999977111816 0.5989999771118164,10.098999977111816 C4.572999954223633,6.998000144958496 15.133999824523926,-1.2369999885559082 10.534000396728516,-7.784999847412109 C9.291000366210938,-9.553000450134277 7.423999786376953,-10.5649995803833 5.4039998054504395,-10.5649995803833z"></path>
-                                        </g>
-                                    </g>
-                                </g>
-                            </svg>
-
-                        </button>
-                    </div>
-                    <div class="text">
-                        <span>LEILAH Кровать с подьемным механизмом 160*200 Rose Velvet</span>
-                        <p>18 799 ₴ <strong>22 799 ₴</strong></p>
-                    </div>
-
-                </a>
-                <a href="#" target="_blank" class="row-slides__slide row-slides__slide--link">
-                    <div class="img">
-                        <img class="lazyload" data-src="./img/rec-img-4.jpg" alt="">
-                    </div>
-                    <div class="slide__tags">
-                        <div class="slide__discount">4000₴ скидка на матрас и кровать</div>
-                        <button class="fav-btn">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32"
-                                 preserveAspectRatio="xMidYMid meet"
-                            >
-                                <defs>
-                                    <clipPath id="__lottie_element_2">
-                                        <rect width="32" height="32" x="0" y="0"></rect>
-                                    </clipPath>
-                                </defs>
-                                <g clip-path="url(#__lottie_element_2)">
-                                    <g transform="matrix(1,0,0,1,4.322999954223633,6)" opacity="1"
-                                       style="display: block;">
-                                        <g opacity="1" transform="matrix(1,0,0,1,11.673999786376953,10.5649995803833)">
-                                            <path fill="rgb(33,34,32)" fill-opacity="1"
-                                                  d=" M5.4039998054504395,-10.5649995803833 C5.383999824523926,-10.5649995803833 5.368000030517578,-10.5649995803833 5.3480000495910645,-10.562999725341797 C3.375999927520752,-10.545000076293945 1.5099999904632568,-9.593000411987305 -0.0010000000474974513,-7.849999904632568 C-1.5110000371932983,-9.593000411987305 -3.377000093460083,-10.545000076293945 -5.348999977111816,-10.562999725341797 C-5.36899995803833,-10.5649995803833 -5.386000156402588,-10.5649995803833 -5.40500020980835,-10.5649995803833 C-7.425000190734863,-10.5649995803833 -9.291000366210938,-9.553000450134277 -10.53499984741211,-7.784999847412109 C-15.135000228881836,-1.2369999885559082 -4.573999881744385,6.998000144958496 -0.6000000238418579,10.098999977111816 C-0.6000000238418579,10.098999977111816 -0.0010000000474974513,10.565999984741211 -0.0010000000474974513,10.565999984741211 C-0.0010000000474974513,10.565999984741211 0.5989999771118164,10.098999977111816 0.5989999771118164,10.098999977111816 C4.572999954223633,6.998000144958496 15.133999824523926,-1.2369999885559082 10.534000396728516,-7.784999847412109 C9.291000366210938,-9.553000450134277 7.423999786376953,-10.5649995803833 5.4039998054504395,-10.5649995803833z M-0.0010000000474974513,8.093000411987305 C-5.500999927520752,3.740000009536743 -11.99899959564209,-2.312999963760376 -8.942000389099121,-6.663000106811523 C-8.069000244140625,-7.9070000648498535 -6.781000137329102,-8.616999626159668 -5.4039998054504395,-8.616999626159668 C-5.392000198364258,-8.616999626159668 -5.380000114440918,-8.616999626159668 -5.36899995803833,-8.616000175476074 C-3.686000108718872,-8.600000381469727 -2.065000057220459,-7.567999839782715 -0.8080000281333923,-5.704999923706055 C-0.8080000281333923,-5.704999923706055 -0.0010000000474974513,-4.511000156402588 -0.0010000000474974513,-4.511000156402588 C-0.0010000000474974513,-4.511000156402588 0.8059999942779541,-5.704999923706055 0.8059999942779541,-5.704999923706055 C2.065000057220459,-7.567999839782715 3.684999942779541,-8.600000381469727 5.368000030517578,-8.616000175476074 C5.379000186920166,-8.616999626159668 5.390999794006348,-8.616999626159668 5.4029998779296875,-8.616999626159668 C6.781000137329102,-8.616999626159668 8.067999839782715,-7.906000137329102 8.940999984741211,-6.663000106811523 C11.998000144958496,-2.312999963760376 5.5,3.740000009536743 -0.0010000000474974513,8.093000411987305z"></path>
-                                        </g>
-                                    </g>
-                                    <g transform="matrix(1,0,0,1,4.322999954223633,6)" opacity="1"
-                                       style="display: block;">
-                                        <g opacity="1" transform="matrix(1,0,0,1,11.673999786376953,10.5649995803833)">
-                                            <path class="liked" fill="rgb(241,88,86)"
-                                                  d=" M5.4039998054504395,-10.5649995803833 C5.383999824523926,-10.5649995803833 5.368000030517578,-10.5649995803833 5.3480000495910645,-10.562999725341797 C3.375999927520752,-10.545000076293945 1.5099999904632568,-9.593000411987305 -0.0010000000474974513,-7.849999904632568 C-1.5110000371932983,-9.593000411987305 -3.377000093460083,-10.545000076293945 -5.348999977111816,-10.562999725341797 C-5.36899995803833,-10.5649995803833 -5.386000156402588,-10.5649995803833 -5.40500020980835,-10.5649995803833 C-7.425000190734863,-10.5649995803833 -9.291000366210938,-9.553000450134277 -10.53499984741211,-7.784999847412109 C-15.135000228881836,-1.2369999885559082 -4.573999881744385,6.998000144958496 -0.6000000238418579,10.098999977111816 C-0.6000000238418579,10.098999977111816 -0.0010000000474974513,10.565999984741211 -0.0010000000474974513,10.565999984741211 C-0.0010000000474974513,10.565999984741211 0.5989999771118164,10.098999977111816 0.5989999771118164,10.098999977111816 C4.572999954223633,6.998000144958496 15.133999824523926,-1.2369999885559082 10.534000396728516,-7.784999847412109 C9.291000366210938,-9.553000450134277 7.423999786376953,-10.5649995803833 5.4039998054504395,-10.5649995803833z"></path>
-                                        </g>
-                                    </g>
-                                </g>
-                            </svg>
-
-                        </button>
-                    </div>
-                    <div class="text">
-                        <span>LEILAH Кровать с подьемным механизмом 160*200 Rose Velvet</span>
-                        <p>18 799 ₴ <strong>22 799 ₴</strong></p>
-                    </div>
-
-                </a>
-                <a href="#" target="_blank" class="row-slides__slide row-slides__slide--link">
-                    <div class="img">
-                        <img class="lazyload" data-src="./img/rec-img-2.jpg" alt="">
-                    </div>
-                    <div class="slide__tags">
-                        <div class="slide__discount">4000₴ скидка на матрас и кровать</div>
-                        <button class="fav-btn">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32"
-                                 preserveAspectRatio="xMidYMid meet"
-                            >
-                                <defs>
-                                    <clipPath id="__lottie_element_2">
-                                        <rect width="32" height="32" x="0" y="0"></rect>
-                                    </clipPath>
-                                </defs>
-                                <g clip-path="url(#__lottie_element_2)">
-                                    <g transform="matrix(1,0,0,1,4.322999954223633,6)" opacity="1"
-                                       style="display: block;">
-                                        <g opacity="1" transform="matrix(1,0,0,1,11.673999786376953,10.5649995803833)">
-                                            <path fill="rgb(33,34,32)" fill-opacity="1"
-                                                  d=" M5.4039998054504395,-10.5649995803833 C5.383999824523926,-10.5649995803833 5.368000030517578,-10.5649995803833 5.3480000495910645,-10.562999725341797 C3.375999927520752,-10.545000076293945 1.5099999904632568,-9.593000411987305 -0.0010000000474974513,-7.849999904632568 C-1.5110000371932983,-9.593000411987305 -3.377000093460083,-10.545000076293945 -5.348999977111816,-10.562999725341797 C-5.36899995803833,-10.5649995803833 -5.386000156402588,-10.5649995803833 -5.40500020980835,-10.5649995803833 C-7.425000190734863,-10.5649995803833 -9.291000366210938,-9.553000450134277 -10.53499984741211,-7.784999847412109 C-15.135000228881836,-1.2369999885559082 -4.573999881744385,6.998000144958496 -0.6000000238418579,10.098999977111816 C-0.6000000238418579,10.098999977111816 -0.0010000000474974513,10.565999984741211 -0.0010000000474974513,10.565999984741211 C-0.0010000000474974513,10.565999984741211 0.5989999771118164,10.098999977111816 0.5989999771118164,10.098999977111816 C4.572999954223633,6.998000144958496 15.133999824523926,-1.2369999885559082 10.534000396728516,-7.784999847412109 C9.291000366210938,-9.553000450134277 7.423999786376953,-10.5649995803833 5.4039998054504395,-10.5649995803833z M-0.0010000000474974513,8.093000411987305 C-5.500999927520752,3.740000009536743 -11.99899959564209,-2.312999963760376 -8.942000389099121,-6.663000106811523 C-8.069000244140625,-7.9070000648498535 -6.781000137329102,-8.616999626159668 -5.4039998054504395,-8.616999626159668 C-5.392000198364258,-8.616999626159668 -5.380000114440918,-8.616999626159668 -5.36899995803833,-8.616000175476074 C-3.686000108718872,-8.600000381469727 -2.065000057220459,-7.567999839782715 -0.8080000281333923,-5.704999923706055 C-0.8080000281333923,-5.704999923706055 -0.0010000000474974513,-4.511000156402588 -0.0010000000474974513,-4.511000156402588 C-0.0010000000474974513,-4.511000156402588 0.8059999942779541,-5.704999923706055 0.8059999942779541,-5.704999923706055 C2.065000057220459,-7.567999839782715 3.684999942779541,-8.600000381469727 5.368000030517578,-8.616000175476074 C5.379000186920166,-8.616999626159668 5.390999794006348,-8.616999626159668 5.4029998779296875,-8.616999626159668 C6.781000137329102,-8.616999626159668 8.067999839782715,-7.906000137329102 8.940999984741211,-6.663000106811523 C11.998000144958496,-2.312999963760376 5.5,3.740000009536743 -0.0010000000474974513,8.093000411987305z"></path>
-                                        </g>
-                                    </g>
-                                    <g transform="matrix(1,0,0,1,4.322999954223633,6)" opacity="1"
-                                       style="display: block;">
-                                        <g opacity="1" transform="matrix(1,0,0,1,11.673999786376953,10.5649995803833)">
-                                            <path class="liked" fill="rgb(241,88,86)"
-                                                  d=" M5.4039998054504395,-10.5649995803833 C5.383999824523926,-10.5649995803833 5.368000030517578,-10.5649995803833 5.3480000495910645,-10.562999725341797 C3.375999927520752,-10.545000076293945 1.5099999904632568,-9.593000411987305 -0.0010000000474974513,-7.849999904632568 C-1.5110000371932983,-9.593000411987305 -3.377000093460083,-10.545000076293945 -5.348999977111816,-10.562999725341797 C-5.36899995803833,-10.5649995803833 -5.386000156402588,-10.5649995803833 -5.40500020980835,-10.5649995803833 C-7.425000190734863,-10.5649995803833 -9.291000366210938,-9.553000450134277 -10.53499984741211,-7.784999847412109 C-15.135000228881836,-1.2369999885559082 -4.573999881744385,6.998000144958496 -0.6000000238418579,10.098999977111816 C-0.6000000238418579,10.098999977111816 -0.0010000000474974513,10.565999984741211 -0.0010000000474974513,10.565999984741211 C-0.0010000000474974513,10.565999984741211 0.5989999771118164,10.098999977111816 0.5989999771118164,10.098999977111816 C4.572999954223633,6.998000144958496 15.133999824523926,-1.2369999885559082 10.534000396728516,-7.784999847412109 C9.291000366210938,-9.553000450134277 7.423999786376953,-10.5649995803833 5.4039998054504395,-10.5649995803833z"></path>
-                                        </g>
-                                    </g>
-                                </g>
-                            </svg>
-
-                        </button>
-                    </div>
-                    <div class="text">
-                        <span>LEILAH Кровать с подьемным механизмом 160*200 Rose Velvet</span>
-                        <p>18 799 ₴ <strong>22 799 ₴</strong></p>
-                    </div>
-
-                </a>
-                <a href="#" target="_blank" class="row-slides__slide row-slides__slide--link">
-                    <div class="img">
-                        <img class="lazyload" data-src="./img/rec-img-3.jpg" alt="">
-                    </div>
-                    <div class="slide__tags">
-                        <div class="slide__discount">4000₴ скидка на матрас и кровать</div>
-                        <button class="fav-btn">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32"
-                                 preserveAspectRatio="xMidYMid meet"
-                            >
-                                <defs>
-                                    <clipPath id="__lottie_element_2">
-                                        <rect width="32" height="32" x="0" y="0"></rect>
-                                    </clipPath>
-                                </defs>
-                                <g clip-path="url(#__lottie_element_2)">
-                                    <g transform="matrix(1,0,0,1,4.322999954223633,6)" opacity="1"
-                                       style="display: block;">
-                                        <g opacity="1" transform="matrix(1,0,0,1,11.673999786376953,10.5649995803833)">
-                                            <path fill="rgb(33,34,32)" fill-opacity="1"
-                                                  d=" M5.4039998054504395,-10.5649995803833 C5.383999824523926,-10.5649995803833 5.368000030517578,-10.5649995803833 5.3480000495910645,-10.562999725341797 C3.375999927520752,-10.545000076293945 1.5099999904632568,-9.593000411987305 -0.0010000000474974513,-7.849999904632568 C-1.5110000371932983,-9.593000411987305 -3.377000093460083,-10.545000076293945 -5.348999977111816,-10.562999725341797 C-5.36899995803833,-10.5649995803833 -5.386000156402588,-10.5649995803833 -5.40500020980835,-10.5649995803833 C-7.425000190734863,-10.5649995803833 -9.291000366210938,-9.553000450134277 -10.53499984741211,-7.784999847412109 C-15.135000228881836,-1.2369999885559082 -4.573999881744385,6.998000144958496 -0.6000000238418579,10.098999977111816 C-0.6000000238418579,10.098999977111816 -0.0010000000474974513,10.565999984741211 -0.0010000000474974513,10.565999984741211 C-0.0010000000474974513,10.565999984741211 0.5989999771118164,10.098999977111816 0.5989999771118164,10.098999977111816 C4.572999954223633,6.998000144958496 15.133999824523926,-1.2369999885559082 10.534000396728516,-7.784999847412109 C9.291000366210938,-9.553000450134277 7.423999786376953,-10.5649995803833 5.4039998054504395,-10.5649995803833z M-0.0010000000474974513,8.093000411987305 C-5.500999927520752,3.740000009536743 -11.99899959564209,-2.312999963760376 -8.942000389099121,-6.663000106811523 C-8.069000244140625,-7.9070000648498535 -6.781000137329102,-8.616999626159668 -5.4039998054504395,-8.616999626159668 C-5.392000198364258,-8.616999626159668 -5.380000114440918,-8.616999626159668 -5.36899995803833,-8.616000175476074 C-3.686000108718872,-8.600000381469727 -2.065000057220459,-7.567999839782715 -0.8080000281333923,-5.704999923706055 C-0.8080000281333923,-5.704999923706055 -0.0010000000474974513,-4.511000156402588 -0.0010000000474974513,-4.511000156402588 C-0.0010000000474974513,-4.511000156402588 0.8059999942779541,-5.704999923706055 0.8059999942779541,-5.704999923706055 C2.065000057220459,-7.567999839782715 3.684999942779541,-8.600000381469727 5.368000030517578,-8.616000175476074 C5.379000186920166,-8.616999626159668 5.390999794006348,-8.616999626159668 5.4029998779296875,-8.616999626159668 C6.781000137329102,-8.616999626159668 8.067999839782715,-7.906000137329102 8.940999984741211,-6.663000106811523 C11.998000144958496,-2.312999963760376 5.5,3.740000009536743 -0.0010000000474974513,8.093000411987305z"></path>
-                                        </g>
-                                    </g>
-                                    <g transform="matrix(1,0,0,1,4.322999954223633,6)" opacity="1"
-                                       style="display: block;">
-                                        <g opacity="1" transform="matrix(1,0,0,1,11.673999786376953,10.5649995803833)">
-                                            <path class="liked" fill="rgb(241,88,86)"
-                                                  d=" M5.4039998054504395,-10.5649995803833 C5.383999824523926,-10.5649995803833 5.368000030517578,-10.5649995803833 5.3480000495910645,-10.562999725341797 C3.375999927520752,-10.545000076293945 1.5099999904632568,-9.593000411987305 -0.0010000000474974513,-7.849999904632568 C-1.5110000371932983,-9.593000411987305 -3.377000093460083,-10.545000076293945 -5.348999977111816,-10.562999725341797 C-5.36899995803833,-10.5649995803833 -5.386000156402588,-10.5649995803833 -5.40500020980835,-10.5649995803833 C-7.425000190734863,-10.5649995803833 -9.291000366210938,-9.553000450134277 -10.53499984741211,-7.784999847412109 C-15.135000228881836,-1.2369999885559082 -4.573999881744385,6.998000144958496 -0.6000000238418579,10.098999977111816 C-0.6000000238418579,10.098999977111816 -0.0010000000474974513,10.565999984741211 -0.0010000000474974513,10.565999984741211 C-0.0010000000474974513,10.565999984741211 0.5989999771118164,10.098999977111816 0.5989999771118164,10.098999977111816 C4.572999954223633,6.998000144958496 15.133999824523926,-1.2369999885559082 10.534000396728516,-7.784999847412109 C9.291000366210938,-9.553000450134277 7.423999786376953,-10.5649995803833 5.4039998054504395,-10.5649995803833z"></path>
-                                        </g>
-                                    </g>
-                                </g>
-                            </svg>
-
-                        </button>
-                    </div>
-                    <div class="text">
-                        <span>LEILAH Кровать с подьемным механизмом 160*200 Rose Velvet</span>
-                        <p>18 799 ₴ <strong>22 799 ₴</strong></p>
-                    </div>
-
-                </a>
-                <a href="#" target="_blank" class="row-slides__slide row-slides__slide--link">
+            <div class="row-slides__track swiper-wrapper">
+                <a href="#" target="_blank" class="row-slides__slide row-slides__slide--link swiper-slide">
                     <div class="img">
                         <img class="lazyload" data-src="./img/rec-img-1.jpg" alt="">
                     </div>
                     <div class="slide__tags">
-                        <div class="slide__discount">4000₴ скидка на матрас и кровать</div>
+                        <div class="slide__discount">Новинка</div>
                         <button class="fav-btn">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32"
                                  preserveAspectRatio="xMidYMid meet"
@@ -1162,8 +1017,253 @@
                         </button>
                     </div>
                     <div class="text">
-                        <span>LEILAH Кровать с подьемным механизмом 160*200 Rose Velvet</span>
-                        <p>18 799 ₴ <strong>22 799 ₴</strong></p>
+                        <span><strong>LEILAH</strong> Кровать с подьемным механизмом 160*200 Rose Velvet</span>
+                        <p>18 799 ₴</p>
+                    </div>
+
+                </a>
+                <a href="#" target="_blank" class="row-slides__slide row-slides__slide--link swiper-slide">
+                    <div class="img">
+                        <img class="lazyload" data-src="./img/rec-img-2.jpg" alt="">
+                    </div>
+                    <div class="slide__tags">
+                        <button class="fav-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32"
+                                 preserveAspectRatio="xMidYMid meet"
+                            >
+                                <defs>
+                                    <clipPath id="__lottie_element_2">
+                                        <rect width="32" height="32" x="0" y="0"></rect>
+                                    </clipPath>
+                                </defs>
+                                <g clip-path="url(#__lottie_element_2)">
+                                    <g transform="matrix(1,0,0,1,4.322999954223633,6)" opacity="1"
+                                       style="display: block;">
+                                        <g opacity="1" transform="matrix(1,0,0,1,11.673999786376953,10.5649995803833)">
+                                            <path fill="rgb(33,34,32)" fill-opacity="1"
+                                                  d=" M5.4039998054504395,-10.5649995803833 C5.383999824523926,-10.5649995803833 5.368000030517578,-10.5649995803833 5.3480000495910645,-10.562999725341797 C3.375999927520752,-10.545000076293945 1.5099999904632568,-9.593000411987305 -0.0010000000474974513,-7.849999904632568 C-1.5110000371932983,-9.593000411987305 -3.377000093460083,-10.545000076293945 -5.348999977111816,-10.562999725341797 C-5.36899995803833,-10.5649995803833 -5.386000156402588,-10.5649995803833 -5.40500020980835,-10.5649995803833 C-7.425000190734863,-10.5649995803833 -9.291000366210938,-9.553000450134277 -10.53499984741211,-7.784999847412109 C-15.135000228881836,-1.2369999885559082 -4.573999881744385,6.998000144958496 -0.6000000238418579,10.098999977111816 C-0.6000000238418579,10.098999977111816 -0.0010000000474974513,10.565999984741211 -0.0010000000474974513,10.565999984741211 C-0.0010000000474974513,10.565999984741211 0.5989999771118164,10.098999977111816 0.5989999771118164,10.098999977111816 C4.572999954223633,6.998000144958496 15.133999824523926,-1.2369999885559082 10.534000396728516,-7.784999847412109 C9.291000366210938,-9.553000450134277 7.423999786376953,-10.5649995803833 5.4039998054504395,-10.5649995803833z M-0.0010000000474974513,8.093000411987305 C-5.500999927520752,3.740000009536743 -11.99899959564209,-2.312999963760376 -8.942000389099121,-6.663000106811523 C-8.069000244140625,-7.9070000648498535 -6.781000137329102,-8.616999626159668 -5.4039998054504395,-8.616999626159668 C-5.392000198364258,-8.616999626159668 -5.380000114440918,-8.616999626159668 -5.36899995803833,-8.616000175476074 C-3.686000108718872,-8.600000381469727 -2.065000057220459,-7.567999839782715 -0.8080000281333923,-5.704999923706055 C-0.8080000281333923,-5.704999923706055 -0.0010000000474974513,-4.511000156402588 -0.0010000000474974513,-4.511000156402588 C-0.0010000000474974513,-4.511000156402588 0.8059999942779541,-5.704999923706055 0.8059999942779541,-5.704999923706055 C2.065000057220459,-7.567999839782715 3.684999942779541,-8.600000381469727 5.368000030517578,-8.616000175476074 C5.379000186920166,-8.616999626159668 5.390999794006348,-8.616999626159668 5.4029998779296875,-8.616999626159668 C6.781000137329102,-8.616999626159668 8.067999839782715,-7.906000137329102 8.940999984741211,-6.663000106811523 C11.998000144958496,-2.312999963760376 5.5,3.740000009536743 -0.0010000000474974513,8.093000411987305z"></path>
+                                        </g>
+                                    </g>
+                                    <g transform="matrix(1,0,0,1,4.322999954223633,6)" opacity="1"
+                                       style="display: block;">
+                                        <g opacity="1" transform="matrix(1,0,0,1,11.673999786376953,10.5649995803833)">
+                                            <path class="liked" fill="rgb(241,88,86)"
+                                                  d=" M5.4039998054504395,-10.5649995803833 C5.383999824523926,-10.5649995803833 5.368000030517578,-10.5649995803833 5.3480000495910645,-10.562999725341797 C3.375999927520752,-10.545000076293945 1.5099999904632568,-9.593000411987305 -0.0010000000474974513,-7.849999904632568 C-1.5110000371932983,-9.593000411987305 -3.377000093460083,-10.545000076293945 -5.348999977111816,-10.562999725341797 C-5.36899995803833,-10.5649995803833 -5.386000156402588,-10.5649995803833 -5.40500020980835,-10.5649995803833 C-7.425000190734863,-10.5649995803833 -9.291000366210938,-9.553000450134277 -10.53499984741211,-7.784999847412109 C-15.135000228881836,-1.2369999885559082 -4.573999881744385,6.998000144958496 -0.6000000238418579,10.098999977111816 C-0.6000000238418579,10.098999977111816 -0.0010000000474974513,10.565999984741211 -0.0010000000474974513,10.565999984741211 C-0.0010000000474974513,10.565999984741211 0.5989999771118164,10.098999977111816 0.5989999771118164,10.098999977111816 C4.572999954223633,6.998000144958496 15.133999824523926,-1.2369999885559082 10.534000396728516,-7.784999847412109 C9.291000366210938,-9.553000450134277 7.423999786376953,-10.5649995803833 5.4039998054504395,-10.5649995803833z"></path>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+
+                        </button>
+                    </div>
+                    <div class="text">
+                        <span><strong>LEILAH</strong> Кровать с подьемным механизмом 160*200 Rose Velvet</span>
+                        <p >18 799 ₴ </p>
+                    </div>
+
+                </a>
+                <a href="#" target="_blank" class="row-slides__slide row-slides__slide--link swiper-slide">
+                    <div class="img">
+                        <img class="lazyload" data-src="./img/rec-img-3.jpg" alt="">
+                    </div>
+                    <div class="slide__tags">
+                        <div class="slide__discount slide__discount--sale">Скидка</div>
+                        <button class="fav-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32"
+                                 preserveAspectRatio="xMidYMid meet"
+                            >
+                                <defs>
+                                    <clipPath id="__lottie_element_2">
+                                        <rect width="32" height="32" x="0" y="0"></rect>
+                                    </clipPath>
+                                </defs>
+                                <g clip-path="url(#__lottie_element_2)">
+                                    <g transform="matrix(1,0,0,1,4.322999954223633,6)" opacity="1"
+                                       style="display: block;">
+                                        <g opacity="1" transform="matrix(1,0,0,1,11.673999786376953,10.5649995803833)">
+                                            <path fill="rgb(33,34,32)" fill-opacity="1"
+                                                  d=" M5.4039998054504395,-10.5649995803833 C5.383999824523926,-10.5649995803833 5.368000030517578,-10.5649995803833 5.3480000495910645,-10.562999725341797 C3.375999927520752,-10.545000076293945 1.5099999904632568,-9.593000411987305 -0.0010000000474974513,-7.849999904632568 C-1.5110000371932983,-9.593000411987305 -3.377000093460083,-10.545000076293945 -5.348999977111816,-10.562999725341797 C-5.36899995803833,-10.5649995803833 -5.386000156402588,-10.5649995803833 -5.40500020980835,-10.5649995803833 C-7.425000190734863,-10.5649995803833 -9.291000366210938,-9.553000450134277 -10.53499984741211,-7.784999847412109 C-15.135000228881836,-1.2369999885559082 -4.573999881744385,6.998000144958496 -0.6000000238418579,10.098999977111816 C-0.6000000238418579,10.098999977111816 -0.0010000000474974513,10.565999984741211 -0.0010000000474974513,10.565999984741211 C-0.0010000000474974513,10.565999984741211 0.5989999771118164,10.098999977111816 0.5989999771118164,10.098999977111816 C4.572999954223633,6.998000144958496 15.133999824523926,-1.2369999885559082 10.534000396728516,-7.784999847412109 C9.291000366210938,-9.553000450134277 7.423999786376953,-10.5649995803833 5.4039998054504395,-10.5649995803833z M-0.0010000000474974513,8.093000411987305 C-5.500999927520752,3.740000009536743 -11.99899959564209,-2.312999963760376 -8.942000389099121,-6.663000106811523 C-8.069000244140625,-7.9070000648498535 -6.781000137329102,-8.616999626159668 -5.4039998054504395,-8.616999626159668 C-5.392000198364258,-8.616999626159668 -5.380000114440918,-8.616999626159668 -5.36899995803833,-8.616000175476074 C-3.686000108718872,-8.600000381469727 -2.065000057220459,-7.567999839782715 -0.8080000281333923,-5.704999923706055 C-0.8080000281333923,-5.704999923706055 -0.0010000000474974513,-4.511000156402588 -0.0010000000474974513,-4.511000156402588 C-0.0010000000474974513,-4.511000156402588 0.8059999942779541,-5.704999923706055 0.8059999942779541,-5.704999923706055 C2.065000057220459,-7.567999839782715 3.684999942779541,-8.600000381469727 5.368000030517578,-8.616000175476074 C5.379000186920166,-8.616999626159668 5.390999794006348,-8.616999626159668 5.4029998779296875,-8.616999626159668 C6.781000137329102,-8.616999626159668 8.067999839782715,-7.906000137329102 8.940999984741211,-6.663000106811523 C11.998000144958496,-2.312999963760376 5.5,3.740000009536743 -0.0010000000474974513,8.093000411987305z"></path>
+                                        </g>
+                                    </g>
+                                    <g transform="matrix(1,0,0,1,4.322999954223633,6)" opacity="1"
+                                       style="display: block;">
+                                        <g opacity="1" transform="matrix(1,0,0,1,11.673999786376953,10.5649995803833)">
+                                            <path class="liked" fill="rgb(241,88,86)"
+                                                  d=" M5.4039998054504395,-10.5649995803833 C5.383999824523926,-10.5649995803833 5.368000030517578,-10.5649995803833 5.3480000495910645,-10.562999725341797 C3.375999927520752,-10.545000076293945 1.5099999904632568,-9.593000411987305 -0.0010000000474974513,-7.849999904632568 C-1.5110000371932983,-9.593000411987305 -3.377000093460083,-10.545000076293945 -5.348999977111816,-10.562999725341797 C-5.36899995803833,-10.5649995803833 -5.386000156402588,-10.5649995803833 -5.40500020980835,-10.5649995803833 C-7.425000190734863,-10.5649995803833 -9.291000366210938,-9.553000450134277 -10.53499984741211,-7.784999847412109 C-15.135000228881836,-1.2369999885559082 -4.573999881744385,6.998000144958496 -0.6000000238418579,10.098999977111816 C-0.6000000238418579,10.098999977111816 -0.0010000000474974513,10.565999984741211 -0.0010000000474974513,10.565999984741211 C-0.0010000000474974513,10.565999984741211 0.5989999771118164,10.098999977111816 0.5989999771118164,10.098999977111816 C4.572999954223633,6.998000144958496 15.133999824523926,-1.2369999885559082 10.534000396728516,-7.784999847412109 C9.291000366210938,-9.553000450134277 7.423999786376953,-10.5649995803833 5.4039998054504395,-10.5649995803833z"></path>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+
+                        </button>
+                    </div>
+                    <div class="text">
+                        <span><strong>LEILAH</strong> Кровать с подьемным механизмом 160*200 Rose Velvet</span>
+                        <p class="sale">18 799 ₴ <strong>22 799 ₴</strong></p>
+                    </div>
+
+                </a>
+
+                <a href="#" target="_blank" class="row-slides__slide row-slides__slide--link swiper-slide">
+                    <div class="img">
+                        <img class="lazyload" data-src="./img/rec-img-4.jpg" alt="">
+                    </div>
+                    <div class="slide__tags">
+
+                        <button class="fav-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32"
+                                 preserveAspectRatio="xMidYMid meet"
+                            >
+                                <defs>
+                                    <clipPath id="__lottie_element_2">
+                                        <rect width="32" height="32" x="0" y="0"></rect>
+                                    </clipPath>
+                                </defs>
+                                <g clip-path="url(#__lottie_element_2)">
+                                    <g transform="matrix(1,0,0,1,4.322999954223633,6)" opacity="1"
+                                       style="display: block;">
+                                        <g opacity="1" transform="matrix(1,0,0,1,11.673999786376953,10.5649995803833)">
+                                            <path fill="rgb(33,34,32)" fill-opacity="1"
+                                                  d=" M5.4039998054504395,-10.5649995803833 C5.383999824523926,-10.5649995803833 5.368000030517578,-10.5649995803833 5.3480000495910645,-10.562999725341797 C3.375999927520752,-10.545000076293945 1.5099999904632568,-9.593000411987305 -0.0010000000474974513,-7.849999904632568 C-1.5110000371932983,-9.593000411987305 -3.377000093460083,-10.545000076293945 -5.348999977111816,-10.562999725341797 C-5.36899995803833,-10.5649995803833 -5.386000156402588,-10.5649995803833 -5.40500020980835,-10.5649995803833 C-7.425000190734863,-10.5649995803833 -9.291000366210938,-9.553000450134277 -10.53499984741211,-7.784999847412109 C-15.135000228881836,-1.2369999885559082 -4.573999881744385,6.998000144958496 -0.6000000238418579,10.098999977111816 C-0.6000000238418579,10.098999977111816 -0.0010000000474974513,10.565999984741211 -0.0010000000474974513,10.565999984741211 C-0.0010000000474974513,10.565999984741211 0.5989999771118164,10.098999977111816 0.5989999771118164,10.098999977111816 C4.572999954223633,6.998000144958496 15.133999824523926,-1.2369999885559082 10.534000396728516,-7.784999847412109 C9.291000366210938,-9.553000450134277 7.423999786376953,-10.5649995803833 5.4039998054504395,-10.5649995803833z M-0.0010000000474974513,8.093000411987305 C-5.500999927520752,3.740000009536743 -11.99899959564209,-2.312999963760376 -8.942000389099121,-6.663000106811523 C-8.069000244140625,-7.9070000648498535 -6.781000137329102,-8.616999626159668 -5.4039998054504395,-8.616999626159668 C-5.392000198364258,-8.616999626159668 -5.380000114440918,-8.616999626159668 -5.36899995803833,-8.616000175476074 C-3.686000108718872,-8.600000381469727 -2.065000057220459,-7.567999839782715 -0.8080000281333923,-5.704999923706055 C-0.8080000281333923,-5.704999923706055 -0.0010000000474974513,-4.511000156402588 -0.0010000000474974513,-4.511000156402588 C-0.0010000000474974513,-4.511000156402588 0.8059999942779541,-5.704999923706055 0.8059999942779541,-5.704999923706055 C2.065000057220459,-7.567999839782715 3.684999942779541,-8.600000381469727 5.368000030517578,-8.616000175476074 C5.379000186920166,-8.616999626159668 5.390999794006348,-8.616999626159668 5.4029998779296875,-8.616999626159668 C6.781000137329102,-8.616999626159668 8.067999839782715,-7.906000137329102 8.940999984741211,-6.663000106811523 C11.998000144958496,-2.312999963760376 5.5,3.740000009536743 -0.0010000000474974513,8.093000411987305z"></path>
+                                        </g>
+                                    </g>
+                                    <g transform="matrix(1,0,0,1,4.322999954223633,6)" opacity="1"
+                                       style="display: block;">
+                                        <g opacity="1" transform="matrix(1,0,0,1,11.673999786376953,10.5649995803833)">
+                                            <path class="liked" fill="rgb(241,88,86)"
+                                                  d=" M5.4039998054504395,-10.5649995803833 C5.383999824523926,-10.5649995803833 5.368000030517578,-10.5649995803833 5.3480000495910645,-10.562999725341797 C3.375999927520752,-10.545000076293945 1.5099999904632568,-9.593000411987305 -0.0010000000474974513,-7.849999904632568 C-1.5110000371932983,-9.593000411987305 -3.377000093460083,-10.545000076293945 -5.348999977111816,-10.562999725341797 C-5.36899995803833,-10.5649995803833 -5.386000156402588,-10.5649995803833 -5.40500020980835,-10.5649995803833 C-7.425000190734863,-10.5649995803833 -9.291000366210938,-9.553000450134277 -10.53499984741211,-7.784999847412109 C-15.135000228881836,-1.2369999885559082 -4.573999881744385,6.998000144958496 -0.6000000238418579,10.098999977111816 C-0.6000000238418579,10.098999977111816 -0.0010000000474974513,10.565999984741211 -0.0010000000474974513,10.565999984741211 C-0.0010000000474974513,10.565999984741211 0.5989999771118164,10.098999977111816 0.5989999771118164,10.098999977111816 C4.572999954223633,6.998000144958496 15.133999824523926,-1.2369999885559082 10.534000396728516,-7.784999847412109 C9.291000366210938,-9.553000450134277 7.423999786376953,-10.5649995803833 5.4039998054504395,-10.5649995803833z"></path>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+
+                        </button>
+                    </div>
+                    <div class="text">
+                        <span><strong>LEILAH</strong> Кровать с подьемным механизмом 160*200 Rose Velvet</span>
+                        <p>18 799 ₴</p>
+                    </div>
+
+                </a>
+                <a href="#" target="_blank" class="row-slides__slide row-slides__slide--link swiper-slide">
+                    <div class="img">
+                        <img class="lazyload" data-src="./img/rec-img-2.jpg" alt="">
+                    </div>
+                    <div class="slide__tags">
+                        <div class="slide__discount">Новинка</div>
+                        <button class="fav-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32"
+                                 preserveAspectRatio="xMidYMid meet"
+                            >
+                                <defs>
+                                    <clipPath id="__lottie_element_2">
+                                        <rect width="32" height="32" x="0" y="0"></rect>
+                                    </clipPath>
+                                </defs>
+                                <g clip-path="url(#__lottie_element_2)">
+                                    <g transform="matrix(1,0,0,1,4.322999954223633,6)" opacity="1"
+                                       style="display: block;">
+                                        <g opacity="1" transform="matrix(1,0,0,1,11.673999786376953,10.5649995803833)">
+                                            <path fill="rgb(33,34,32)" fill-opacity="1"
+                                                  d=" M5.4039998054504395,-10.5649995803833 C5.383999824523926,-10.5649995803833 5.368000030517578,-10.5649995803833 5.3480000495910645,-10.562999725341797 C3.375999927520752,-10.545000076293945 1.5099999904632568,-9.593000411987305 -0.0010000000474974513,-7.849999904632568 C-1.5110000371932983,-9.593000411987305 -3.377000093460083,-10.545000076293945 -5.348999977111816,-10.562999725341797 C-5.36899995803833,-10.5649995803833 -5.386000156402588,-10.5649995803833 -5.40500020980835,-10.5649995803833 C-7.425000190734863,-10.5649995803833 -9.291000366210938,-9.553000450134277 -10.53499984741211,-7.784999847412109 C-15.135000228881836,-1.2369999885559082 -4.573999881744385,6.998000144958496 -0.6000000238418579,10.098999977111816 C-0.6000000238418579,10.098999977111816 -0.0010000000474974513,10.565999984741211 -0.0010000000474974513,10.565999984741211 C-0.0010000000474974513,10.565999984741211 0.5989999771118164,10.098999977111816 0.5989999771118164,10.098999977111816 C4.572999954223633,6.998000144958496 15.133999824523926,-1.2369999885559082 10.534000396728516,-7.784999847412109 C9.291000366210938,-9.553000450134277 7.423999786376953,-10.5649995803833 5.4039998054504395,-10.5649995803833z M-0.0010000000474974513,8.093000411987305 C-5.500999927520752,3.740000009536743 -11.99899959564209,-2.312999963760376 -8.942000389099121,-6.663000106811523 C-8.069000244140625,-7.9070000648498535 -6.781000137329102,-8.616999626159668 -5.4039998054504395,-8.616999626159668 C-5.392000198364258,-8.616999626159668 -5.380000114440918,-8.616999626159668 -5.36899995803833,-8.616000175476074 C-3.686000108718872,-8.600000381469727 -2.065000057220459,-7.567999839782715 -0.8080000281333923,-5.704999923706055 C-0.8080000281333923,-5.704999923706055 -0.0010000000474974513,-4.511000156402588 -0.0010000000474974513,-4.511000156402588 C-0.0010000000474974513,-4.511000156402588 0.8059999942779541,-5.704999923706055 0.8059999942779541,-5.704999923706055 C2.065000057220459,-7.567999839782715 3.684999942779541,-8.600000381469727 5.368000030517578,-8.616000175476074 C5.379000186920166,-8.616999626159668 5.390999794006348,-8.616999626159668 5.4029998779296875,-8.616999626159668 C6.781000137329102,-8.616999626159668 8.067999839782715,-7.906000137329102 8.940999984741211,-6.663000106811523 C11.998000144958496,-2.312999963760376 5.5,3.740000009536743 -0.0010000000474974513,8.093000411987305z"></path>
+                                        </g>
+                                    </g>
+                                    <g transform="matrix(1,0,0,1,4.322999954223633,6)" opacity="1"
+                                       style="display: block;">
+                                        <g opacity="1" transform="matrix(1,0,0,1,11.673999786376953,10.5649995803833)">
+                                            <path class="liked" fill="rgb(241,88,86)"
+                                                  d=" M5.4039998054504395,-10.5649995803833 C5.383999824523926,-10.5649995803833 5.368000030517578,-10.5649995803833 5.3480000495910645,-10.562999725341797 C3.375999927520752,-10.545000076293945 1.5099999904632568,-9.593000411987305 -0.0010000000474974513,-7.849999904632568 C-1.5110000371932983,-9.593000411987305 -3.377000093460083,-10.545000076293945 -5.348999977111816,-10.562999725341797 C-5.36899995803833,-10.5649995803833 -5.386000156402588,-10.5649995803833 -5.40500020980835,-10.5649995803833 C-7.425000190734863,-10.5649995803833 -9.291000366210938,-9.553000450134277 -10.53499984741211,-7.784999847412109 C-15.135000228881836,-1.2369999885559082 -4.573999881744385,6.998000144958496 -0.6000000238418579,10.098999977111816 C-0.6000000238418579,10.098999977111816 -0.0010000000474974513,10.565999984741211 -0.0010000000474974513,10.565999984741211 C-0.0010000000474974513,10.565999984741211 0.5989999771118164,10.098999977111816 0.5989999771118164,10.098999977111816 C4.572999954223633,6.998000144958496 15.133999824523926,-1.2369999885559082 10.534000396728516,-7.784999847412109 C9.291000366210938,-9.553000450134277 7.423999786376953,-10.5649995803833 5.4039998054504395,-10.5649995803833z"></path>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+
+                        </button>
+                    </div>
+                    <div class="text">
+                        <span><strong>LEILAH</strong> Кровать с подьемным механизмом 160*200 Rose Velvet</span>
+                        <p>18 799 ₴</p>
+                    </div>
+
+                </a>
+                <a href="#" target="_blank" class="row-slides__slide row-slides__slide--link swiper-slide">
+                    <div class="img">
+                        <img class="lazyload" data-src="./img/rec-img-3.jpg" alt="">
+                    </div>
+                    <div class="slide__tags">
+                        <div class="slide__discount slide__discount--sale">Скидка</div>
+                        <button class="fav-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32"
+                                 preserveAspectRatio="xMidYMid meet"
+                            >
+                                <defs>
+                                    <clipPath id="__lottie_element_2">
+                                        <rect width="32" height="32" x="0" y="0"></rect>
+                                    </clipPath>
+                                </defs>
+                                <g clip-path="url(#__lottie_element_2)">
+                                    <g transform="matrix(1,0,0,1,4.322999954223633,6)" opacity="1"
+                                       style="display: block;">
+                                        <g opacity="1" transform="matrix(1,0,0,1,11.673999786376953,10.5649995803833)">
+                                            <path fill="rgb(33,34,32)" fill-opacity="1"
+                                                  d=" M5.4039998054504395,-10.5649995803833 C5.383999824523926,-10.5649995803833 5.368000030517578,-10.5649995803833 5.3480000495910645,-10.562999725341797 C3.375999927520752,-10.545000076293945 1.5099999904632568,-9.593000411987305 -0.0010000000474974513,-7.849999904632568 C-1.5110000371932983,-9.593000411987305 -3.377000093460083,-10.545000076293945 -5.348999977111816,-10.562999725341797 C-5.36899995803833,-10.5649995803833 -5.386000156402588,-10.5649995803833 -5.40500020980835,-10.5649995803833 C-7.425000190734863,-10.5649995803833 -9.291000366210938,-9.553000450134277 -10.53499984741211,-7.784999847412109 C-15.135000228881836,-1.2369999885559082 -4.573999881744385,6.998000144958496 -0.6000000238418579,10.098999977111816 C-0.6000000238418579,10.098999977111816 -0.0010000000474974513,10.565999984741211 -0.0010000000474974513,10.565999984741211 C-0.0010000000474974513,10.565999984741211 0.5989999771118164,10.098999977111816 0.5989999771118164,10.098999977111816 C4.572999954223633,6.998000144958496 15.133999824523926,-1.2369999885559082 10.534000396728516,-7.784999847412109 C9.291000366210938,-9.553000450134277 7.423999786376953,-10.5649995803833 5.4039998054504395,-10.5649995803833z M-0.0010000000474974513,8.093000411987305 C-5.500999927520752,3.740000009536743 -11.99899959564209,-2.312999963760376 -8.942000389099121,-6.663000106811523 C-8.069000244140625,-7.9070000648498535 -6.781000137329102,-8.616999626159668 -5.4039998054504395,-8.616999626159668 C-5.392000198364258,-8.616999626159668 -5.380000114440918,-8.616999626159668 -5.36899995803833,-8.616000175476074 C-3.686000108718872,-8.600000381469727 -2.065000057220459,-7.567999839782715 -0.8080000281333923,-5.704999923706055 C-0.8080000281333923,-5.704999923706055 -0.0010000000474974513,-4.511000156402588 -0.0010000000474974513,-4.511000156402588 C-0.0010000000474974513,-4.511000156402588 0.8059999942779541,-5.704999923706055 0.8059999942779541,-5.704999923706055 C2.065000057220459,-7.567999839782715 3.684999942779541,-8.600000381469727 5.368000030517578,-8.616000175476074 C5.379000186920166,-8.616999626159668 5.390999794006348,-8.616999626159668 5.4029998779296875,-8.616999626159668 C6.781000137329102,-8.616999626159668 8.067999839782715,-7.906000137329102 8.940999984741211,-6.663000106811523 C11.998000144958496,-2.312999963760376 5.5,3.740000009536743 -0.0010000000474974513,8.093000411987305z"></path>
+                                        </g>
+                                    </g>
+                                    <g transform="matrix(1,0,0,1,4.322999954223633,6)" opacity="1"
+                                       style="display: block;">
+                                        <g opacity="1" transform="matrix(1,0,0,1,11.673999786376953,10.5649995803833)">
+                                            <path class="liked" fill="rgb(241,88,86)"
+                                                  d=" M5.4039998054504395,-10.5649995803833 C5.383999824523926,-10.5649995803833 5.368000030517578,-10.5649995803833 5.3480000495910645,-10.562999725341797 C3.375999927520752,-10.545000076293945 1.5099999904632568,-9.593000411987305 -0.0010000000474974513,-7.849999904632568 C-1.5110000371932983,-9.593000411987305 -3.377000093460083,-10.545000076293945 -5.348999977111816,-10.562999725341797 C-5.36899995803833,-10.5649995803833 -5.386000156402588,-10.5649995803833 -5.40500020980835,-10.5649995803833 C-7.425000190734863,-10.5649995803833 -9.291000366210938,-9.553000450134277 -10.53499984741211,-7.784999847412109 C-15.135000228881836,-1.2369999885559082 -4.573999881744385,6.998000144958496 -0.6000000238418579,10.098999977111816 C-0.6000000238418579,10.098999977111816 -0.0010000000474974513,10.565999984741211 -0.0010000000474974513,10.565999984741211 C-0.0010000000474974513,10.565999984741211 0.5989999771118164,10.098999977111816 0.5989999771118164,10.098999977111816 C4.572999954223633,6.998000144958496 15.133999824523926,-1.2369999885559082 10.534000396728516,-7.784999847412109 C9.291000366210938,-9.553000450134277 7.423999786376953,-10.5649995803833 5.4039998054504395,-10.5649995803833z"></path>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+
+                        </button>
+                    </div>
+                    <div class="text">
+                        <span><strong>LEILAH</strong> Кровать с подьемным механизмом 160*200 Rose Velvet</span>
+                        <p class="sale">18 799 ₴ <strong>22 799 ₴</strong></p>
+                    </div>
+
+                </a>
+                <a href="#" target="_blank" class="row-slides__slide row-slides__slide--link swiper-slide">
+                    <div class="img">
+                        <img class="lazyload" data-src="./img/rec-img-1.jpg" alt="">
+                    </div>
+                    <div class="slide__tags">
+                        <button class="fav-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32"
+                                 preserveAspectRatio="xMidYMid meet"
+                            >
+                                <defs>
+                                    <clipPath id="__lottie_element_2">
+                                        <rect width="32" height="32" x="0" y="0"></rect>
+                                    </clipPath>
+                                </defs>
+                                <g clip-path="url(#__lottie_element_2)">
+                                    <g transform="matrix(1,0,0,1,4.322999954223633,6)" opacity="1"
+                                       style="display: block;">
+                                        <g opacity="1" transform="matrix(1,0,0,1,11.673999786376953,10.5649995803833)">
+                                            <path fill="rgb(33,34,32)" fill-opacity="1"
+                                                  d=" M5.4039998054504395,-10.5649995803833 C5.383999824523926,-10.5649995803833 5.368000030517578,-10.5649995803833 5.3480000495910645,-10.562999725341797 C3.375999927520752,-10.545000076293945 1.5099999904632568,-9.593000411987305 -0.0010000000474974513,-7.849999904632568 C-1.5110000371932983,-9.593000411987305 -3.377000093460083,-10.545000076293945 -5.348999977111816,-10.562999725341797 C-5.36899995803833,-10.5649995803833 -5.386000156402588,-10.5649995803833 -5.40500020980835,-10.5649995803833 C-7.425000190734863,-10.5649995803833 -9.291000366210938,-9.553000450134277 -10.53499984741211,-7.784999847412109 C-15.135000228881836,-1.2369999885559082 -4.573999881744385,6.998000144958496 -0.6000000238418579,10.098999977111816 C-0.6000000238418579,10.098999977111816 -0.0010000000474974513,10.565999984741211 -0.0010000000474974513,10.565999984741211 C-0.0010000000474974513,10.565999984741211 0.5989999771118164,10.098999977111816 0.5989999771118164,10.098999977111816 C4.572999954223633,6.998000144958496 15.133999824523926,-1.2369999885559082 10.534000396728516,-7.784999847412109 C9.291000366210938,-9.553000450134277 7.423999786376953,-10.5649995803833 5.4039998054504395,-10.5649995803833z M-0.0010000000474974513,8.093000411987305 C-5.500999927520752,3.740000009536743 -11.99899959564209,-2.312999963760376 -8.942000389099121,-6.663000106811523 C-8.069000244140625,-7.9070000648498535 -6.781000137329102,-8.616999626159668 -5.4039998054504395,-8.616999626159668 C-5.392000198364258,-8.616999626159668 -5.380000114440918,-8.616999626159668 -5.36899995803833,-8.616000175476074 C-3.686000108718872,-8.600000381469727 -2.065000057220459,-7.567999839782715 -0.8080000281333923,-5.704999923706055 C-0.8080000281333923,-5.704999923706055 -0.0010000000474974513,-4.511000156402588 -0.0010000000474974513,-4.511000156402588 C-0.0010000000474974513,-4.511000156402588 0.8059999942779541,-5.704999923706055 0.8059999942779541,-5.704999923706055 C2.065000057220459,-7.567999839782715 3.684999942779541,-8.600000381469727 5.368000030517578,-8.616000175476074 C5.379000186920166,-8.616999626159668 5.390999794006348,-8.616999626159668 5.4029998779296875,-8.616999626159668 C6.781000137329102,-8.616999626159668 8.067999839782715,-7.906000137329102 8.940999984741211,-6.663000106811523 C11.998000144958496,-2.312999963760376 5.5,3.740000009536743 -0.0010000000474974513,8.093000411987305z"></path>
+                                        </g>
+                                    </g>
+                                    <g transform="matrix(1,0,0,1,4.322999954223633,6)" opacity="1"
+                                       style="display: block;">
+                                        <g opacity="1" transform="matrix(1,0,0,1,11.673999786376953,10.5649995803833)">
+                                            <path class="liked" fill="rgb(241,88,86)"
+                                                  d=" M5.4039998054504395,-10.5649995803833 C5.383999824523926,-10.5649995803833 5.368000030517578,-10.5649995803833 5.3480000495910645,-10.562999725341797 C3.375999927520752,-10.545000076293945 1.5099999904632568,-9.593000411987305 -0.0010000000474974513,-7.849999904632568 C-1.5110000371932983,-9.593000411987305 -3.377000093460083,-10.545000076293945 -5.348999977111816,-10.562999725341797 C-5.36899995803833,-10.5649995803833 -5.386000156402588,-10.5649995803833 -5.40500020980835,-10.5649995803833 C-7.425000190734863,-10.5649995803833 -9.291000366210938,-9.553000450134277 -10.53499984741211,-7.784999847412109 C-15.135000228881836,-1.2369999885559082 -4.573999881744385,6.998000144958496 -0.6000000238418579,10.098999977111816 C-0.6000000238418579,10.098999977111816 -0.0010000000474974513,10.565999984741211 -0.0010000000474974513,10.565999984741211 C-0.0010000000474974513,10.565999984741211 0.5989999771118164,10.098999977111816 0.5989999771118164,10.098999977111816 C4.572999954223633,6.998000144958496 15.133999824523926,-1.2369999885559082 10.534000396728516,-7.784999847412109 C9.291000366210938,-9.553000450134277 7.423999786376953,-10.5649995803833 5.4039998054504395,-10.5649995803833z"></path>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+
+                        </button>
+                    </div>
+                    <div class="text">
+                        <span><strong>LEILAH</strong> Кровать с подьемным механизмом 160*200 Rose Velvet</span>
+                        <p>18 799 ₴ </p>
                     </div>
 
                 </a>
@@ -1174,6 +1274,7 @@
 
 
     </section>
+
     <section class="reviews">
         <div class="mini-container">
             <div class="reviews-container">
@@ -1234,6 +1335,35 @@
                                 <p>Максим В.</p>
                                 <div class="stars" data-score="4.9"></div>
                             </div>
+                            <div class="reviews-stats">
+                                <div class="single-stat">
+                                    <p>Качество</p>
+                                    <div class="stat-line">
+                                        <div class="fuel" style="width: 20%">
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="single-stat">
+                                    <p>Стоимость</p>
+                                    <div class="stat-line">
+                                        <div class="fuel" style="width: 36%">
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="single-stat">
+                                    <p>Сборка</p>
+                                    <div class="stat-line">
+                                        <div class="fuel" style="width: 100%">
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
 
                         </div>
                         <div class="single-review__content">
@@ -1271,6 +1401,144 @@
                                 </div>
                                 <div class="img">
                                     <img src="./img/rev-img.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="reviews-stats">
+                                <div class="single-stat">
+                                    <p>Качество</p>
+                                    <div class="stat-line">
+                                        <div class="fuel" style="width: 20%">
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="single-stat">
+                                    <p>Стоимость</p>
+                                    <div class="stat-line">
+                                        <div class="fuel" style="width: 36%">
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="single-stat">
+                                    <p>Сборка</p>
+                                    <div class="stat-line">
+                                        <div class="fuel" style="width: 100%">
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="single-review">
+                        <div class="single-review__left">
+                            <div class="review-avatar">
+                                <p>М</p>
+                            </div>
+                            <div class="review-name">
+                                <p>Максим В.</p>
+                                <div class="stars" data-score="4.9"></div>
+                            </div>
+                            <div class="reviews-stats">
+                                <div class="single-stat">
+                                    <p>Качество</p>
+                                    <div class="stat-line">
+                                        <div class="fuel" style="width: 20%">
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="single-stat">
+                                    <p>Стоимость</p>
+                                    <div class="stat-line">
+                                        <div class="fuel" style="width: 36%">
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="single-stat">
+                                    <p>Сборка</p>
+                                    <div class="stat-line">
+                                        <div class="fuel" style="width: 100%">
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="single-review__content">
+                            <div class="single-review__head">
+                                <p>Прекрасная кровать</p>
+                                <span>14/05/2021</span>
+                            </div>
+                            <div class="stars mob-only" data-score="4.9"></div>
+                            <div class="single-review__text">
+                                <p>Кровать выглядит лучше, чем на фото. Хорошо, мне было легко собрать. </p>
+                            </div>
+                            <div class="reviewer-mob">
+                                <div class="review-avatar">
+                                    <p>М</p>
+                                </div>
+                                <div class="review-name">
+                                    <p>Максим В.</p>
+                                </div>
+                            </div>
+                            <div class="single-review__item">
+                                <span>товар</span>
+                                <a href="#" target="_blank">Кровать с подьемным механизмом 180*200 см Бархат
+                                    Cappucino</a>
+
+                            </div>
+                            <div class="single-review__photos">
+                                <div class="img">
+                                    <img src="./img/rev-img.jpg" alt="">
+                                </div>
+                                <div class="img">
+                                    <img src="./img/rev-img.jpg" alt="">
+                                </div>
+                                <div class="img">
+                                    <img src="./img/rev-img.jpg" alt="">
+                                </div>
+                                <div class="img">
+                                    <img src="./img/rev-img.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="reviews-stats">
+                                <div class="single-stat">
+                                    <p>Качество</p>
+                                    <div class="stat-line">
+                                        <div class="fuel" style="width: 20%">
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="single-stat">
+                                    <p>Стоимость</p>
+                                    <div class="stat-line">
+                                        <div class="fuel" style="width: 36%">
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="single-stat">
+                                    <p>Сборка</p>
+                                    <div class="stat-line">
+                                        <div class="fuel" style="width: 100%">
+
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
@@ -1286,6 +1554,35 @@
                                 <p>Максим В.</p>
                                 <div class="stars" data-score="4.9"></div>
                             </div>
+                            <div class="reviews-stats">
+                                <div class="single-stat">
+                                    <p>Качество</p>
+                                    <div class="stat-line">
+                                        <div class="fuel" style="width: 20%">
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="single-stat">
+                                    <p>Стоимость</p>
+                                    <div class="stat-line">
+                                        <div class="fuel" style="width: 36%">
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="single-stat">
+                                    <p>Сборка</p>
+                                    <div class="stat-line">
+                                        <div class="fuel" style="width: 100%">
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
 
                         </div>
                         <div class="single-review__content">
@@ -1325,113 +1622,148 @@
                                     <img src="./img/rev-img.jpg" alt="">
                                 </div>
                             </div>
+                            <div class="reviews-stats">
+                                <div class="single-stat">
+                                    <p>Качество</p>
+                                    <div class="stat-line">
+                                        <div class="fuel" style="width: 20%">
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="single-stat">
+                                    <p>Стоимость</p>
+                                    <div class="stat-line">
+                                        <div class="fuel" style="width: 36%">
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="single-stat">
+                                    <p>Сборка</p>
+                                    <div class="stat-line">
+                                        <div class="fuel" style="width: 100%">
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
                         </div>
 
                     </div>
-
                     <div class="single-review">
-                        <div class="single-review__left">
+                    <div class="single-review__left">
+                        <div class="review-avatar">
+                            <p>М</p>
+                        </div>
+                        <div class="review-name">
+                            <p>Максим В.</p>
+                            <div class="stars" data-score="4.9"></div>
+                        </div>
+                        <div class="reviews-stats">
+                            <div class="single-stat">
+                                <p>Качество</p>
+                                <div class="stat-line">
+                                    <div class="fuel" style="width: 20%">
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="single-stat">
+                                <p>Стоимость</p>
+                                <div class="stat-line">
+                                    <div class="fuel" style="width: 36%">
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="single-stat">
+                                <p>Сборка</p>
+                                <div class="stat-line">
+                                    <div class="fuel" style="width: 100%">
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="single-review__content">
+                        <div class="single-review__head">
+                            <p>Прекрасная кровать</p>
+                            <span>14/05/2021</span>
+                        </div>
+                        <div class="stars mob-only" data-score="4.9"></div>
+                        <div class="single-review__text">
+                            <p>Кровать выглядит лучше, чем на фото. Хорошо, мне было легко собрать. </p>
+                        </div>
+                        <div class="reviewer-mob">
                             <div class="review-avatar">
                                 <p>М</p>
                             </div>
                             <div class="review-name">
                                 <p>Максим В.</p>
-                                <div class="stars" data-score="4.9"></div>
-                            </div>
-
-                        </div>
-                        <div class="single-review__content">
-                            <div class="single-review__head">
-                                <p>Прекрасная кровать</p>
-                                <span>14/05/2021</span>
-                            </div>
-                            <div class="stars mob-only" data-score="4.9"></div>
-                            <div class="single-review__text">
-                                <p>Кровать выглядит лучше, чем на фото. Хорошо, мне было легко собрать. </p>
-                            </div>
-                            <div class="reviewer-mob">
-                                <div class="review-avatar">
-                                    <p>М</p>
-                                </div>
-                                <div class="review-name">
-                                    <p>Максим В.</p>
-                                </div>
-                            </div>
-                            <div class="single-review__item">
-                                <span>товар</span>
-                                <a href="#" target="_blank">Кровать с подьемным механизмом 180*200 см Бархат
-                                    Cappucino</a>
-
-                            </div>
-                            <div class="single-review__photos">
-                                <div class="img">
-                                    <img src="./img/rev-img.jpg" alt="">
-                                </div>
-                                <div class="img">
-                                    <img src="./img/rev-img.jpg" alt="">
-                                </div>
-                                <div class="img">
-                                    <img src="./img/rev-img.jpg" alt="">
-                                </div>
-                                <div class="img">
-                                    <img src="./img/rev-img.jpg" alt="">
-                                </div>
                             </div>
                         </div>
+                        <div class="single-review__item">
+                            <span>товар</span>
+                            <a href="#" target="_blank">Кровать с подьемным механизмом 180*200 см Бархат
+                                Cappucino</a>
 
+                        </div>
+                        <div class="single-review__photos">
+                            <div class="img">
+                                <img src="./img/rev-img.jpg" alt="">
+                            </div>
+                            <div class="img">
+                                <img src="./img/rev-img.jpg" alt="">
+                            </div>
+                            <div class="img">
+                                <img src="./img/rev-img.jpg" alt="">
+                            </div>
+                            <div class="img">
+                                <img src="./img/rev-img.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="reviews-stats">
+                            <div class="single-stat">
+                                <p>Качество</p>
+                                <div class="stat-line">
+                                    <div class="fuel" style="width: 20%">
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="single-stat">
+                                <p>Стоимость</p>
+                                <div class="stat-line">
+                                    <div class="fuel" style="width: 36%">
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="single-stat">
+                                <p>Сборка</p>
+                                <div class="stat-line">
+                                    <div class="fuel" style="width: 100%">
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="single-review">
-                        <div class="single-review__left">
-                            <div class="review-avatar">
-                                <p>М</p>
-                            </div>
-                            <div class="review-name">
-                                <p>Максим В.</p>
-                                <div class="stars" data-score="4.9"></div>
-                            </div>
+                </div>
 
-                        </div>
-                        <div class="single-review__content">
-                            <div class="single-review__head">
-                                <p>Прекрасная кровать</p>
-                                <span>14/05/2021</span>
-                            </div>
-                            <div class="stars mob-only" data-score="4.9"></div>
-                            <div class="single-review__text">
-                                <p>Кровать выглядит лучше, чем на фото. Хорошо, мне было легко собрать. </p>
-                            </div>
-                            <div class="reviewer-mob">
-                                <div class="review-avatar">
-                                    <p>М</p>
-                                </div>
-                                <div class="review-name">
-                                    <p>Максим В.</p>
-                                </div>
-                            </div>
-                            <div class="single-review__item">
-                                <span>товар</span>
-                                <a href="#" target="_blank">Кровать с подьемным механизмом 180*200 см Бархат
-                                    Cappucino</a>
-
-                            </div>
-                            <div class="single-review__photos">
-                                <div class="img">
-                                    <img src="./img/rev-img.jpg" alt="">
-                                </div>
-                                <div class="img">
-                                    <img src="./img/rev-img.jpg" alt="">
-                                </div>
-                                <div class="img">
-                                    <img src="./img/rev-img.jpg" alt="">
-                                </div>
-                                <div class="img">
-                                    <img src="./img/rev-img.jpg" alt="">
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
 
                 </div>
             </div>

@@ -21,7 +21,7 @@ document.onload = () => {
     scrollFunction();
 };
 
-document.addEventListener('wheel', function (e) {
+document.addEventListener('scroll', function (e) {
     //direction scroll
     // console.log(e.deltaY + ' daltaY');
 
