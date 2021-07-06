@@ -421,9 +421,13 @@ function startCarousel() {
                     },
                     650: {
                         draggable: true,
-                        spaceBetween: 20,
+                        spaceBetween: 8,
                     },
                     992: {
+                        draggable: false,
+                        spaceBetween: 16,
+                    },
+                    1201: {
                         draggable: false,
                         spaceBetween: 30,
                     },
