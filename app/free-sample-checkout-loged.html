@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" media="all"
+          href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.0/css/ion.rangeSlider.min.css">
+
+    <link rel="stylesheet" media="all" href="./css/main.min.css">
+    <link rel="stylesheet" media="all" href="./libs/slick.css">
+    <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
+</head>
+<body>
+
+
+<main>
+    <div class="checkout">
+        <div class="checkout-header">
+            <a href="#" class="home-logo">
+                <img src="./img/logo-home.png" alt="">
+            </a>
+
+        </div>
+        <div class="checkout-content">
+            <div class="checkout__container">
+                <div class="sample-order__container sample-order__container--logged">
+                    <div class="sample-order">
+                        <p>Выбрать адрес</p>
+
+                        <div class="sample-order__address">
+
+                        </div>
+
+                        <div class="checkout-form__container">
+                            <form action="" class="default-form">
+                                <div class="form-mailing form-mailing--address">
+                                    <div class="checkout-pay">
+                                        <label for="accept-pay">
+                                            <input type="radio" name="pay" id="accept-pay" checked="">
+                                            <span></span>
+                                            <div class="text">
+                                                <p>Max Cooper</p>
+                                                <p>+447400654325</p>
+                                                <p>Unit 11, Angel Gate, 326 City Road</p>
+                                                <p>London EC1V 2SD</p>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="checkout-pay">
+                                        <label for="decline-pay">
+                                            <input type="radio" name="pay" id="decline-pay">
+                                            <span></span>
+                                            <div class="text">
+                                                <p>Max Cooper</p>
+                                                <p>+447400654325</p>
+                                                <p>Unit 11, Angel Gate, 326 City Road</p>
+                                                <p>London EC1V 2SD</p>
+                                            </div>
+
+                                        </label>
+                                    </div>
+                                    <span>Добавить адрес</span>
+                                </div>
+
+
+                                <div>
+                                    <label for="reg-name">Имя</label>
+                                    <input type="text" id="reg-name">
+                                </div>
+                                <div>
+                                    <label for="reg-name">Фамилия</label>
+                                    <input type="text" id="reg-surname">
+                                </div>
+                                <div class="input-full">
+                                    <label for="reg-name">Улица*</label>
+                                    <input type="text" id="reg-street" required>
+                                </div>
+                                <div>
+                                    <label for="reg-name">№ дома*</label>
+                                    <input type="text" id="reg-house" required>
+                                </div>
+                                <div>
+                                    <label for="reg-name">№ квартиры*</label>
+                                    <input type="text" id="reg-room" required>
+                                </div>
+                                <div>
+                                    <label for="reg-name">Область*</label>
+                                    <input type="text" id="reg-country" required>
+                                </div>
+                                <div>
+                                    <label for="reg-name">Город*</label>
+                                    <input type="text" id="reg-city" required>
+                                </div>
+                                <div>
+                                    <label for="reg-surname">Телефон*</label>
+                                    <input type="text" id="reg-number" required>
+                                </div>
+
+                                <div>
+                                    <label for="reg-email2">Электронная почта*</label>
+                                    <input type="email" id="reg-email2" required>
+                                </div>
+
+
+                                <div class="form-mailing">
+                                    <p>Я бы хотел, чтобы Made.com присылал мне эксклюзивные рекламные акции,
+                                        скидки и тенденции, а также согласие на регистрацию моего взаимодействия
+                                        с таким контентом. Я могу отказаться от получения этих сообщений в любое
+                                        время </p>
+                                    <div>
+                                        <label for="accept-mailing">
+                                            <input type="radio" name="mailing" id="accept-mailing" checked="">
+                                            <span>Да</span>
+                                        </label>
+                                        <label for="decline-mailing">
+                                            <input type="radio" name="mailing" id="decline-mailing">
+                                            <span>Нет</span>
+                                        </label>
+
+                                    </div>
+                                </div>
+                                <button class="btn btn--default" type="button">Закзать образцы</button>
+                            </form>
+
+                        </div>
+                    </div>
+                    <div class="sample-order__total">
+                        <p>Заказ</p>
+                        <div class="sample-order__table">
+                            <div class="sample-order__line">
+                                <p>Сумма товаров:</p>
+                                <span>Бесплатно</span>
+                            </div>
+                            <div class="sample-order__line">
+                                <p>Доставка:</p>
+                                <span>Бесплатно</span>
+                            </div>
+                            <div class="sample-order__line sample-order__line--total">
+                                <p>Итого: </p>
+                                <span>Бесплатно</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</main>
+
+<div class="modal-login">
+    <div class="modal-login__container">
+        <div class="modal-login-block">
+            <div class="modal-title">Войти</div>
+            <div class="close-modal">
+                <img src="./img/xmark-black.svg" alt="">
+            </div>
+            <div class="modal-login__content">
+                <div class="modal-login__have-acc">
+                    <div class="modal-login__login">
+                        <p>У меня есть учетная запись</p>
+                        <div class="btn btn--default">Войти</div>
+                        <p>Первый раз на carveli.ua ?</p>
+                    </div>
+                    <div class="account-log__select-log">
+                        <div class="account-log__reg-type">
+                            <a href="#" class="btn btn--apple"><img src="./img/apple-svg.svg" alt="">Войти с
+                                помощью Apple ID</a>
+                            <a href="#" class="btn btn--fb"><img src="./img/fb-svg-.svg" alt="">Войти с
+                                помощью Facebook</a>
+                        </div>
+                        <p class="select-log__or">или</p>
+
+                        <form action="" class="default-form">
+
+                            <label for="reg-email">Электронная почта</label>
+                            <input type="email" id="reg-email">
+                            <label for="reg-pass">Пароль</label>
+                            <input type="password" id="reg-pass">
+
+                            <a href="#" target="_blank">Забыли пароль?</a>
+                            <button class="btn btn--yellow">
+                                войти
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="modal-login__guest">
+                    <button class="btn btn--grey">продолжить как гость</button>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+</div>
+
+//= details/footer.html
+
+//= details/scripts.html
+</body>
+</html>
