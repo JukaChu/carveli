@@ -211,3 +211,45 @@ function loginCheckoutBtn() {
 
 loginCheckoutBtn();
 
+let searchInputs = [...document.querySelectorAll('input[type="search"]')];
+let bigSerchResult = document.querySelector('.search-big');
+
+function openBigSearchWindow() {
+    if (!searchInputs.length) {
+
+    } else {
+        searchInputs.forEach((inp) => {
+            inp.addEventListener('focus', () => {
+                bigSerchResult.classList.add('search-big--foc');
+            });
+            inp.addEventListener('focusout', () => {
+                bigSerchResult.classList.remove('search-big--foc');
+            });
+            inp.addEventListener('input', () => {
+                let inpVal = inp.value;
+                if (inpVal === '') {
+                    bigSerchResult.classList.remove('search-big--val');
+                } else {
+                    bigSerchResult.classList.add('search-big--val');
+                }
+            });
+            document.addEventListener('click', (e) => {
+                if (e.target.closest('.search-big')) {
+
+                    bigSerchResult.classList.add('search-big--foc');
+                } else {
+                    if (e.target.closest(inp)) {
+
+                    } else {
+                        bigSerchResult.classList.remove('search-big--foc');
+                    }
+
+                }
+            })
+
+        })
+    }
+
+}
+openBigSearchWindow();
+
