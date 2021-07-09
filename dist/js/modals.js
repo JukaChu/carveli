@@ -5,9 +5,18 @@ function openModalProdDet(item) {
     modalForProd.appendChild(item);
     modalForProd.classList.add('active');
     document.body.classList.add('no-scroll');
-    setTimeout(() => {
-        modalForProd.querySelector('.menu-info').classList.add('active');
-    }, 300);
+    if (window.innerWidth > 922) {
+        setTimeout(() => {
+            modalForProd.querySelector('.menu-info').classList.add('active');
+        }, 300);
+    } else {
+        setTimeout(() => {
+            modalForProd.querySelector('.menu-info').classList.add('active');
+        }, 100);
+    }
+
+
+
     let menuInfoBg = [...document.querySelectorAll('.menu-info')];
     let menuCloseBtn = [...document.querySelectorAll('.close-modal')];
 
@@ -87,11 +96,13 @@ function btnDetailOpenFnc() {
 
                     } else {
                         let itm = btn.closest('.product-card__single-detail').querySelector('.menu-info').cloneNode(true);
-                        openModalProdDet(itm);
+
+
+                        openModalProdDet(itm, btn);
                     }
                 } else {
                     let itm = btn.closest('.product-card__single-detail').querySelector('.menu-info').cloneNode(true);
-                    openModalProdDet(itm);
+                    openModalProdDet(itm, btn);
                 }
 
 

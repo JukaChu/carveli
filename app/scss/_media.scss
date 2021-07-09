@@ -2162,6 +2162,7 @@
   }
 }
 @media screen and (max-width: 650px) {
+
   .search-left.search-big__val {
     flex-direction: column;
   }
@@ -3083,6 +3084,23 @@
   }
   .row-slides__head p {
     margin-top: 14px;
+  }
+
+  .menu-info {
+    overflow-y: auto;
+    display: flex;
+    align-items: flex-start;
+    padding-top: 170px;
+
+  }
+  .menu-info__content {
+    max-height: none;
+
+    margin-top: auto;
+    transition: transform 0.22s linear;
+    position: static;
+    width: 100%;
+
   }
 }
 
