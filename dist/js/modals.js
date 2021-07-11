@@ -27,7 +27,7 @@ function openModalProdDet(item) {
             menuInfoBg.forEach((bg) => {
                 bg.querySelector('.menu-info__content').addEventListener('click', (e) => {
                     e.stopPropagation();
-                })
+                });
                 bg.addEventListener('click', () => {
                     bg.classList.remove('active');
                     document.body.classList.remove('no-scroll');
@@ -43,13 +43,16 @@ function openModalProdDet(item) {
             });
             menuCloseBtn.forEach((btn) => {
                 btn.addEventListener('click', () => {
-                    btn.closest('.menu-info').classList.remove('active');
-                    setTimeout(() => {
-                        modalForProd.classList.remove('active');
-                        modalForProd.innerHTML = '';
-                    }, 600)
-                    document.body.classList.remove('no-scroll');
-                    // document.querySelector('main').classList.remove('open-modal');
+                    if (btn.closest('.menu-info')) {
+                        btn.closest('.menu-info').classList.remove('active');
+                        setTimeout(() => {
+                            modalForProd.classList.remove('active');
+                            modalForProd.innerHTML = '';
+                        }, 600)
+                        document.body.classList.remove('no-scroll');
+                        // document.querySelector('main').classList.remove('open-modal');
+                    }
+
 
                 })
             })
@@ -139,13 +142,16 @@ function closeModalWindow() {
         });
         menuCloseBtn.forEach((btn) => {
             btn.addEventListener('click', () => {
-                btn.closest('.menu-info').classList.remove('active');
-                setTimeout(() => {
-                    modalForProd.classList.remove('active');
-                    modalForProd.innerHTML = '';
-                }, 600)
-                document.body.classList.remove('no-scroll');
-                // document.querySelector('main').classList.remove('open-modal');
+                if (btn.closest('.menu-info')) {
+                    btn.closest('.menu-info').classList.remove('active');
+                    setTimeout(() => {
+                        modalForProd.classList.remove('active');
+                        modalForProd.innerHTML = '';
+                    }, 600);
+                    document.body.classList.remove('no-scroll');
+                    // document.querySelector('main').classList.remove('open-modal');
+                }
+
 
             })
         })
@@ -249,7 +255,7 @@ function openBigSearchWindow() {
 
                     bigSerchResult.classList.add('search-big--foc');
                 } else {
-                    if (e.target.closest(inp)) {
+                    if (e.target.closest('input[type="search"')) {
 
                     } else {
                         bigSerchResult.classList.remove('search-big--foc');
@@ -264,3 +270,102 @@ function openBigSearchWindow() {
 }
 openBigSearchWindow();
 
+
+
+//insta modals
+
+let instaItem = [...document.querySelectorAll('.row-slides--insta .row-slides__slide')];
+let modalInsta = document.querySelector('.modal-insta');
+let instaLength = instaItem.length - 1;
+
+let instaActiveSlide = 0;
+function ifHaveInstaItem() {
+        if (!instaItem.length) {
+
+        } else {
+            instaItem.forEach((item, k) => {
+                item.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    instaActiveSlide = k;
+
+                    modalInsta.classList.add('open');
+                    document.body.classList.add('no-scroll');
+
+                    let img = item.querySelector('.img img').dataset.src;
+
+                    let modalInstaImage = modalInsta.querySelector('.left .img img');
+                    modalInstaImage.src = '';
+                    modalInstaImage.src = img;
+                    if (instaActiveSlide === 0) {
+                        [...modalInsta.querySelectorAll('.control-btn')].forEach((btn) => {
+                            btn.classList.remove('disabled');
+                            if (btn.classList.contains('left-btn')) {
+                                btn.classList.add('disabled');
+                            }
+                        })
+                    } else {
+                        [...modalInsta.querySelectorAll('.control-btn')].forEach((btn) => {
+                            btn.classList.remove('disabled');
+                        });
+                        if (instaActiveSlide === instaLength) {
+                            [...modalInsta.querySelectorAll('.control-btn')].forEach((btn) => {
+                                btn.classList.remove('disabled');
+                                if (btn.classList.contains('right-btn')) {
+                                    btn.classList.add('disabled');
+                                }
+                            })
+                        }
+                    }
+                });
+
+            });
+            modalInsta.addEventListener('click', () => {
+                modalInsta.classList.remove('open');
+                document.body.classList.remove('no-scroll');
+
+            });
+            modalInsta.querySelector('.modal-insta__block').addEventListener('click', (e)=>{
+                e.stopPropagation();
+            });
+            modalInsta.querySelector('.close-modal').addEventListener('click', ()=>{
+                modalInsta.classList.remove('open');
+                document.body.classList.remove('no-scroll');
+            });
+
+            let modalInstaControls = [...modalInsta.querySelectorAll('.control-btn')];
+
+            modalInstaControls.forEach((btn, l) => {
+
+                btn.addEventListener('click', ()=> {
+                    modalInstaControls.forEach((btn2) => {
+                        btn2.classList.remove('disabled')
+                    });
+                    if (btn.classList.contains('left-btn')) {
+                        instaActiveSlide = instaActiveSlide - 1;
+                        if (instaActiveSlide === 0) {
+                            btn.classList.add('disabled');
+                        } else {
+                            btn.classList.remove('disabled');
+                        }
+                        let newImg = instaItem[instaActiveSlide].querySelector('.img img').dataset.src;
+                        let modalInstaImage = modalInsta.querySelector('.left .img img');
+                        modalInstaImage.src = newImg;
+                    } else {
+                        instaActiveSlide = instaActiveSlide + 1;
+                        if (instaActiveSlide === instaLength) {
+                            btn.classList.add('disabled');
+                        } else {
+                            btn.classList.remove('disabled');
+                        }
+                        let newImg = instaItem[instaActiveSlide].querySelector('.img img').dataset.src;
+                        let modalInstaImage = modalInsta.querySelector('.left .img img');
+                        modalInstaImage.src = newImg;
+                    }
+
+                })
+            })
+
+        }
+}
+
+ifHaveInstaItem();
