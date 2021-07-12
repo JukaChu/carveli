@@ -4512,6 +4512,7 @@ img.lazyload, video.lazyload {
       img.catalog-bg {
         opacity: 0;
         visibility: hidden;
+        mix-blend-mode: normal;
       }
 
       &:hover {
