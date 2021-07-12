@@ -3762,13 +3762,7 @@ img.lazyload, video.lazyload {
     position: relative;
 
 
-    &:first-child {
-      background: #f5f6f4;
 
-      img {
-        mix-blend-mode: darken;
-      }
-    }
 
     &.img--big {
       width: 200%;
@@ -3781,6 +3775,19 @@ img.lazyload, video.lazyload {
       position: absolute;
       height: 100%;
 
+    }
+    &:first-child {
+      background: #f5f6f4;
+      width: 100% !important;
+
+      img {
+        width: 100%;
+        top: 50%;
+        height: auto;
+        object-fit: contain;
+        transform: translate(0, -50%);
+        mix-blend-mode: darken;
+      }
     }
 
   }
