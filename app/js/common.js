@@ -4,34 +4,67 @@ window.onscroll = function () {
 };
 function checkScrollDir() {
     newValue = window.pageYOffset;
-    if (oldValue < newValue) {
-
-        if (document.body.querySelector(".header")) {
-            document.body.querySelector(".header").classList.add('scroll-down');
+    if (window.innerWidth < 1201) {
+        console.log(document.documentElement.scrollTop + 'scrolled from top');
+        if (oldValue > newValue) {
+            if (document.body.querySelector(".header")) {
+                document.body.querySelector(".header").classList.add('scroll-top');
+                document.body.querySelector(".header").classList.remove('scroll-down');
+            }
+        } else {
+            if (document.body.querySelector(".header")) {
+                document.body.querySelector(".header").classList.remove('scroll-top');
+                document.body.querySelector(".header").classList.add('scroll-down');
+            }
         }
-    } else if (oldValue > newValue) {
-        if (document.body.querySelector(".header")) {
-            document.body.querySelector(".header").classList.remove('scroll-down');
+
+    } else {
+        if (oldValue < newValue) {
+
+            if (document.body.querySelector(".header")) {
+                document.body.querySelector(".header").classList.add('scroll-down');
+            }
+        } else if (oldValue > newValue) {
+            if (document.body.querySelector(".header")) {
+                document.body.querySelector(".header").classList.remove('scroll-down');
+            }
         }
     }
+
     oldValue = newValue;
 }
 
 let oldValue = 0;
 let newValue = 0;
 function scrollFunction() {
-    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-        if (document.body.querySelector(".header")) {
-            document.body.querySelector(".header").classList.add('scrolled');
-        }
-        checkScrollDir()
-    } else {
-        if (document.body.querySelector(".header")) {
-            document.body.querySelector(".header").classList.remove('scrolled');
-            document.body.querySelector(".header").classList.remove('scroll-down');
-        }
+    checkScrollDir()
+    if (window.innerWidth < 1201) {
+        console.log($('.header').outerHeight(true) + ' header-height')
+        if (document.body.scrollTop > $('.header').outerHeight(true) || document.documentElement.scrollTop > $('.header').outerHeight(true)) {
+            if (document.body.querySelector(".header")) {
+                document.body.querySelector(".header").classList.add('scrolled');
+            }
+        } else {
+            if (document.body.querySelector(".header")) {
+                document.body.querySelector(".header").classList.remove('scrolled');
+                // document.body.querySelector(".header").classList.remove('scroll-down');
+            }
 
+        }
+    } else {
+        if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+            if (document.body.querySelector(".header")) {
+                document.body.querySelector(".header").classList.add('scrolled');
+            }
+        } else {
+            if (document.body.querySelector(".header")) {
+                document.body.querySelector(".header").classList.remove('scrolled');
+                document.body.querySelector(".header").classList.remove('scroll-down');
+            }
+
+        }
     }
+
 
 }
 
