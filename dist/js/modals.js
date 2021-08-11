@@ -236,12 +236,20 @@ function openBigSearchWindow() {
 
     } else {
         searchInputs.forEach((inp) => {
+            let timerId = setTimeout(() => {
+                bigSerchResult.classList.remove('search-big--foc');
+            }, 200);
+            clearTimeout(timerId);
             inp.addEventListener('focus', () => {
                 bigSerchResult.classList.add('search-big--foc');
             });
-            inp.addEventListener('focusout', () => {
-                bigSerchResult.classList.remove('search-big--foc');
+            inp.addEventListener('focusout', (e) => {
+                timerId = setTimeout(() => {
+                    bigSerchResult.classList.remove('search-big--foc');
+                }, 200);
+
             });
+
             inp.addEventListener('input', () => {
                 let inpVal = inp.value;
                 if (inpVal === '') {
@@ -252,13 +260,17 @@ function openBigSearchWindow() {
             });
             document.addEventListener('click', (e) => {
                 if (e.target.closest('.search-big')) {
-
+                    clearTimeout(timerId);
                     bigSerchResult.classList.add('search-big--foc');
+
                 } else {
-                    if (e.target.closest('input[type="search"')) {
+                    if (e.target == inp) {
 
                     } else {
-                        bigSerchResult.classList.remove('search-big--foc');
+                        if(bigSerchResult) {
+                            bigSerchResult.classList.remove('search-big--foc');
+                        }
+
                     }
 
                 }
