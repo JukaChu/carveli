@@ -4419,6 +4419,24 @@ img.lazyload, video.lazyload {
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
+  position: relative;
+  box-sizing: border-box;
+  padding-right: 20px;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 3px;
+    right: 8px;
+    width: 4px;
+    height: 4px;
+    border-style: solid;
+    border-color: initial;
+    border-image: initial;
+    border-width: 0px 1.5px 1.5px 0px;
+    transform: rotate(45deg);
+  }
 
   p {
     font-family: $main-font;
@@ -4431,17 +4449,29 @@ img.lazyload, video.lazyload {
   }
 
   select {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    top: 50%;
+    transform: translate(0, -50%);
+    color: rgba(255, 255, 255, 0);
     font-family: $main-font;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 17px;
-    color: #222321;
-    outline: none;
+    //color: #222321;
+    //outline: none;
     border: none;
     height: 28px;
     padding: 6px 0;
-    border-bottom: 1px solid #F0F1EE;
+    background: none;
+    &:focus, &:active {
+      outline: black;
+    }
+  }
+  option {
+    color: #222321;
   }
 }
 
