@@ -402,6 +402,7 @@ function startCarousel() {
                 loop: false,
                 slidesPerView: 'auto',
                 slidesPerGroup: 1,
+
                 // If we need pagination
                 simulateTouch: false,
 
@@ -411,8 +412,10 @@ function startCarousel() {
                     prevEl: btnPrev,
                     disabledClass: 'disabled'
                 },
-                cssMode: true,
-                mousewheel: true,
+                mousewheel: {
+                    invert: true,
+                    forceToAxis: true,
+                },
 
                 breakpoints: {
                     240: {

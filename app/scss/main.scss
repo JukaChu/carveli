@@ -2215,7 +2215,12 @@ img.lazyload, video.lazyload {
   box-sizing: border-box;
   transition: transform 0.3s ease-in-out;
 }
-
+.swiper-wrapper {
+  scroll-snap-type: x mandatory;
+}
+.swiper-slide {
+  scroll-snap-align: start start;
+}
 .row-slides__slide {
   width: 25.5% !important;
   //width: 480px !important;
@@ -11269,6 +11274,57 @@ input[type=number] {
       .logged-popup {
         display: block;
       }
+    }
+  }
+  &--phone-number {
+    position: relative;
+    > a {
+      pointer-events: none;
+    }
+    &:hover {
+      .tooltip {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+      }
+    }
+
+  }
+  .tooltip {
+    background: white;
+    padding: 14px 16px;
+    box-sizing: border-box;
+    position: absolute;
+    top: calc(100% + 5px);
+    right: 0;
+    z-index: 100;
+    pointer-events: none;
+    opacity: 0;
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.14));
+    visibility: hidden;
+    &::before {
+      border: 12px solid rgba(255, 255, 255, 0);
+      border-bottom: 12px solid white;
+      position: absolute;
+      display: inline-block;
+      bottom: 100%;
+      right: 0;
+      content: '';
+    }
+    a {
+      font-family: "Lato", sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 17px;
+      color: #222321;
+      display: inline-block;
+      text-decoration: none;
+      padding: 0;
+      &:hover {
+        text-decoration: underline;
+      }
+
     }
   }
 }
